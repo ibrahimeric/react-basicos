@@ -1,5 +1,6 @@
 import '../Styles/App.css';
 import Saludar from './Saludar';
+import Footer from './Footer';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Saludar></Saludar>
+      <Footer></Footer>
     </div>
   );
 }
