@@ -1,0 +1,11 @@
+.principal {
+    font-size: 12px;
+    background-color: rgb(174, 138, 59);
+    height: 300px;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    align-items: center;
+}

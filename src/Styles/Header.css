@@ -1,0 +1,39 @@
+div .header {
+    background-color: aquamarine;
+}
+
+/* button {
+    width: 200px;
+    height: 50px;
+    margin: 25px;
+    transition: all ease 0.3s;
+}
+
+button:hover{
+    scale: 1.1;
+    transform: translate(28px);
+} */
+
+/* section {
+    background-color: brown;
+    display: flex;
+    flex-direction: row; /* alinear en filas
+    gap: 25px;
+} */
+
+/* @media screen and (max-witdh: 400px) {
+    body {
+        background-color: chocolate;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        margin: 25px;
+    }
+} */
+
+/* .GRID{
+    background-color:blueviolet;
+} */

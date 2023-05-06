@@ -4,7 +4,7 @@
 function Saludar(){
     return(
         <div>
-            <h1>El numero 1 es</h1>
+            <p>El numero 1 es</p>
         </div>
     );
 }
