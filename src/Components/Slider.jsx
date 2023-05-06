@@ -28,6 +28,18 @@ const Slider = () => {
                 <li>apellido</li>
             </ul>
         </div>
+        
+        <div className="div">
+            <ul>
+                <li>lista1</li>
+                <li>lista2</li>
+            </ul>
+
+            <ul>
+                <li>nombre</li>
+                <li>apellido</li>
+            </ul>
+        </div>
     </div>
   )
 }
