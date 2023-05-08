@@ -17,12 +17,12 @@ function App() {
   
   return (
     <div className="App">
-      <Header>
+      <Header></Header>
+      <Saludar>
         {/* pasar props */}
         nombre={nombre}
         setNombre={setNombre}
-      </Header>
-      <Saludar></Saludar>
+      </Saludar>
       <Slider></Slider>
       <Body></Body>
       <Footer></Footer>

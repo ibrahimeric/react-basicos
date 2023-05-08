@@ -1,7 +1,7 @@
 // import Saludar from './Saludar.jsx';
 
 
-function Saludar(){
+function Saludar(props){
     return(
         <div>
             <p>El numero 1 es</p>
