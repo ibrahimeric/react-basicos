@@ -1,39 +1,125 @@
-div .header {
-    background-color: aquamarine;
+:root{
+    --facebook: #3b5999;
+    --instagram:#e4405f;
+    --twitter: #55acee;
 }
 
-/* button {
-    width: 200px;
-    height: 50px;
-    margin: 25px;
-    transition: all ease 0.3s;
-}
-
-button:hover{
-    scale: 1.1;
-    transform: translate(28px);
-} */
-
-/* section {
-    background-color: brown;
+.nav{
+    height: 90px;
+    background-color: rgb(251, 251, 251);
     display: flex;
-    flex-direction: row; /* alinear en filas
-    gap: 25px;
-} */
+}
+.nav .navlogo img{
+    height: 90px;
+}
+.navDiv{
+    height: 90px;
+    margin: auto;
+}
+.navList{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.navItem{
+    height: 100%;
+    padding-right: 40px;
+    margin: 0;
+    list-style: none;
+}
+.navLink{
+    line-height: 90px;
+    text-decoration: none;
+    color: black;
+}
 
-/* @media screen and (max-witdh: 400px) {
-    body {
-        background-color: chocolate;
-    }
+.dropdown{
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 85px;
+    width: 150px;
+    list-style: none;
+    background-color: rgb(247, 247, 247);
+    border-radius: 0 3% 3% 3%;
+    padding-left: 10px;
+}
+.dropdowsItem{
+    padding-top: 5px;
+}
+.dropLink{
+    
+    text-decoration: none;
+    color: black;
+}
+.navItem:hover .navLink{
+    color: #3b5999;
+}
+.navItem:hover > ul{
+    display: block;
+}
+.dropdowsItem:hover .dropLink{
+    color: #3b5999;
+}
+.dropdowsItem:hover > ul{
+    display: block;
+}
 
-    section {
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-        margin: 25px;
-    }
-} */
+.icons{
+    width: 190px;
+    margin: auto 0;
+}
+.icons:hover a{
+    filter: blur(2px)
+}
+.iconList{
+    display: flex;
+    margin: auto;
+    padding: 0 10px 0 0;
+}
+.icon{
+    margin: auto;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: 0.2s;
+}
+.icon a{
+    border-radius: 50%;
+    display: block;
+    background: rgb(251, 251, 251);
+    text-decoration: none;
+    color: black;
+    line-height: 50px;
+}
+.icon a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+    filter: none;
+    color: #fff;
+}
+.facebook:hover{
+    background: var(--facebook);
+}
+.instagram:hover{
+    background: var(--instagram);
+}
+.twitter:hover{
+    background: var(--twitter);
+}
 
-/* .GRID{
-    background-color:blueviolet;
-} */
+.user{
+    width: 50px;
+    margin: auto 10px;
+}
+.userList{
+    display: block;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+.userList a{
+    font-size: 25px;
+    color: #3b5999;
+}
