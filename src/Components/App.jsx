@@ -2,7 +2,7 @@ import '../Styles/App.css';
 import Header from './Header'
 import Saludar from './Saludar';
 import Slider from './Slider';
-import Principal from './Principal'
+import Body from './Body';
 import Footer from './Footer';
 
 
@@ -17,7 +17,7 @@ function App() {
       <Header></Header>
       <Saludar></Saludar>
       <Slider></Slider>
-      <Principal></Principal>
+      <Body></Body>
       <Footer></Footer>
     </div>
   );
