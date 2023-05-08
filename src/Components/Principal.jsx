@@ -1,14 +1,33 @@
 import React from 'react'
 import '../Styles/Principal.css';
-
+import air_jordan1 from '../img/air_jordan1.jpg';
+import adidas_dayjogger from '../img/adidas_dayjogger.jpg';
+import nike_airmax97 from '../img/nike_airmax97.jpg';
 const Principal = () => {
   return (
     <div class="principal">
-        <p>Este es el main de la pagina</p>
-        <br />
-        <br />
-        <img src="https://banner2.cleanpng.com/20180410/dbq/kisspng-react-javascript-responsive-web-design-github-angu-github-5accac24ced243.4761515415233628528472.jpg" alt="img de referencia Logo"/>
-    </div>
+        <h1 class="title">PRODUCTOS EN OFERTA</h1>
+        <div class="container">
+            <div class="card">
+            <center>  <img src={air_jordan1} alt="" /></center>
+                <h4>Air Jordan 1 mid</h4>
+                <p>PRUEBA</p>
+                <a href='#'>Comprar</a>
+            </div>
+            <div class="card">
+           <center>   <img src={adidas_dayjogger} alt="" /></center>
+                <h4>Adidas dayjogger</h4>
+                <p>PRUEBA</p>
+                  <a href='#'>Comprar</a>
+            </div>
+            <div class="card">
+           <center> <img src={nike_airmax97} alt="" /></center>
+                <h4>nike air max97</h4>
+                <p>PRUEBA</p>
+                <a href='#'>Comprar</a>
+            </div>
+        </div>
+     </div>
   )
 }
 

@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/react-proyecto/build/static/css/main.21aaa01c.css",
-    "main.js": "/react-proyecto/build/static/js/main.e6a037d0.js",
+    "main.css": "/react-proyecto/build/static/css/main.4c19e3af.css",
+    "main.js": "/react-proyecto/build/static/js/main.6947dd44.js",
+    "static/media/nike_airmax97.jpg": "/react-proyecto/build/static/media/nike_airmax97.c18d23632209e38890e3.jpg",
+    "static/media/air_jordan1.jpg": "/react-proyecto/build/static/media/air_jordan1.f1a9cd38fd5942548e3f.jpg",
+    "static/media/adidas_dayjogger.jpg": "/react-proyecto/build/static/media/adidas_dayjogger.8ac4c7e4080458cd29ce.jpg",
     "index.html": "/react-proyecto/build/index.html",
-    "main.21aaa01c.css.map": "/react-proyecto/build/static/css/main.21aaa01c.css.map",
-    "main.e6a037d0.js.map": "/react-proyecto/build/static/js/main.e6a037d0.js.map"
+    "main.4c19e3af.css.map": "/react-proyecto/build/static/css/main.4c19e3af.css.map",
+    "main.6947dd44.js.map": "/react-proyecto/build/static/js/main.6947dd44.js.map"
   },
   "entrypoints": [
-    "static/css/main.21aaa01c.css",
-    "static/js/main.e6a037d0.js"
+    "static/css/main.4c19e3af.css",
+    "static/js/main.6947dd44.js"
   ]
 }
