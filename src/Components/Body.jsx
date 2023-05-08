@@ -1,9 +1,9 @@
 import React from 'react'
-import '../Styles/Principal.css';
+import '..//Styles/Body.css'
 
 const Principal = () => {
   return (
-    <div class="principal">
+    <div class="body">
         <p>Este es el main de la pagina</p>
         <br />
         <br />
