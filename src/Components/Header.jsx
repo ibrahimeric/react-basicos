@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Styles/Header.css';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
