@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-proyecto/build/static/css/main.f5ca8bb9.css",
+    "main.js": "/react-proyecto/build/static/js/main.0842cda5.js",
+    "static/media/air_jordan1.jpg": "/react-proyecto/build/static/media/air_jordan1.f1a9cd38fd5942548e3f.jpg",
+    "static/media/insta.png": "/react-proyecto/build/static/media/insta.ac32ec0a111aeba03298.png",
+    "static/media/twitter.png": "/react-proyecto/build/static/media/twitter.8e65601e69067aadfe55.png",
+    "static/media/fb.png": "/react-proyecto/build/static/media/fb.bfd1cfff9f9521198b26.png",
+    "index.html": "/react-proyecto/build/index.html",
+    "main.f5ca8bb9.css.map": "/react-proyecto/build/static/css/main.f5ca8bb9.css.map",
+    "main.0842cda5.js.map": "/react-proyecto/build/static/js/main.0842cda5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5ca8bb9.css",
+    "static/js/main.0842cda5.js"
+  ]
+}
