@@ -17,7 +17,7 @@ const Header = () => {
                         <a class="navLink" href="#">Contactanos</a>
                     </li>
                     <li class="navItem">
-                        <a class="navLink" href="#">Categorias</a>
+                        <a class="navLink" href="#">Categorias <i class="toggle-dropdown dropdown-toggle"></i></a>
                         <ul className='dropdown'>
                             <li className="dropdowsItem">
                             <a class="dropLink" href="#">Categoria1</a>
@@ -32,13 +32,6 @@ const Header = () => {
                             <a class="dropLink" href="#">Categoria4</a>
                             </li>
                         </ul>
-                        {/* Dropdown-Menu incompleto 
-                        <div class="dropdownMenu" aria-labelledby="navbarDropdown">
-                            <a class="dropdownItem" href="#">Action</a>
-                            <a class="dropdownItem" href="#">Another action</a>
-                        </div>
-                        */}
-
                     </li>
                 </ul>
             </div>
@@ -51,8 +44,8 @@ const Header = () => {
             </div>
             <div className="user">
                 <ul className='userList'>
-                    <li className="profile"><a href="#"><i class="fa fa-user"></i></a></li>
                     <li className="login"><a href="#"><i class="fa fa-sign-in"></i></a></li>
+                    <li className="profile"><a href="#"><i class="fa fa-user"></i></a></li>
                 </ul>
             </div>
         </nav>
