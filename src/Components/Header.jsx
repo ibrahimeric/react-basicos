@@ -35,6 +35,11 @@ const Header = () => {
                     </li>
                 </ul>
             </div>
+            <div className="cart">
+                <ul className='cartList'>
+                    <li className="buy"><a className='buy-a' href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
             <div className="icons">
                 <ul className='iconList'>
                     <li className="icon"><a className='facebook' href="#"><i class="fa fa-facebook"></i></a></li>
