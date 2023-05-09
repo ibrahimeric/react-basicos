@@ -4,25 +4,14 @@ import Saludar from './Saludar';
 import Slider from './Slider';
 import Body from './Body';
 import Footer from './Footer';
-import { useState } from 'react'; /* Hooks */
-
 
 
 function App() {
 
-  const [contador, setContador] = useState(0)
-
-  const [nombre, setNombre] = useState("")
-  
-  
   return (
     <div className="App">
       <Header></Header>
-      <Saludar>
-        {/* pasar props */}
-        nombre={nombre}
-        setNombre={setNombre}
-      </Saludar>
+      <Saludar></Saludar>
       <Slider></Slider>
       <Body></Body>
       <Footer></Footer>

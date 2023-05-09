@@ -1,13 +1,10 @@
 import React from 'react'
 import '../Styles/Footer.css';
-import fb from '../img/fb.png';
-import twitter from '../img/twitter.png';
-import linkedin from '../img/linkedin.png';
-import insta from '../img/insta.png';
 
 const Footer = () => {
   return (
     <div className="footer">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
       <div className='sb__footer section__padding'>
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
@@ -57,11 +54,12 @@ const Footer = () => {
           </div>
           <div className='sb__footer-links_div'>
             <h4>Comming soon on</h4>
-            <div className='socialmedia'>
-              <p><img src={fb} alt="" /></p>
-              <p><img src={twitter} alt="" /></p>
-              <p><img src={linkedin} alt="" /></p>
-              <p><img src={insta} alt="" /></p>
+            <div className='icon'>
+              <ul className='iconLista'>
+                <li className="iconos"><a className='facebook' href="#"><i class="fa fa-facebook"></i></a></li>
+                <li className="iconos"><a className='instagram' href="#"><i class="fa fa-instagram"></i></a></li>
+                <li className="iconos"><a className='twitter' href="#"><i class="fa fa-twitter"></i></a></li>
+              </ul>
             </div>
           </div>
         </div>

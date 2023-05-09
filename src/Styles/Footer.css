@@ -1,5 +1,11 @@
+/* :root{
+    --facebook: #3b5999;
+    --instagram:#e4405f;
+    --twitter: #55acee;
+} */
+
 .section__padding{
-    padding: 4rem 4rem;
+    padding: 4rem 4rem 0rem;
 }
 
 .footer{
@@ -36,16 +42,62 @@ a{
     text-decoration: none;
 }
 
-.socialmedia{
+
+.icon{
+    width: 190px;
+    margin: auto 0;
+    margin-left: -20px;
+}
+.iconos:hover a{
+    filter: blur(2px)
+}
+.iconLista{
+    display: flex;
+    margin: auto;
+    padding: 0 10px 0 0;
+}
+.iconos{
+    margin: auto;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: 0.2s;
+}
+.iconos a{
+    border-radius: 50%;
+    display: block;
+    background: #2d2d32;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    line-height: 50px;
+}
+.iconos a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+    filter: none;
+    color: #fff;
+}
+/* .facebook:hover{
+    background: var(--facebook);
+}
+.instagram:hover{
+    background: var(--instagram);
+}
+.twitter:hover{
+    background: var(--twitter);
+} */
+
+/* .socialmedia{
     display: flex;
     flex-direction: row;
-}
+} */
 
-.socialmedia img{
+/* .socialmedia img{
     width: 30px;
     height: 30px;
     margin: 0.2rem;
-}
+} */
 
 .sb__footer-links_div h4{
     font-size: 14px;

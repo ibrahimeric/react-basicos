@@ -1,10 +1,10 @@
 // import Saludar from './Saludar.jsx';
 
 
-function Saludar(props){
+function Saludar(){
     return(
         <div>
-            <p>El numero 1 es</p>
+            <p>El saludo {}</p>
         </div>
     );
 }
