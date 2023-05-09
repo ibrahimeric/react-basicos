@@ -20,19 +20,24 @@ const Header = () => {
                         <a class="navLink" href="#">Categorias <i class="toggle-dropdown dropdown-toggle"></i></a>
                         <ul className='dropdown'>
                             <li className="dropdowsItem">
-                            <a class="dropLink" href="#">Categoria1</a>
+                            <a class="dropLink" href="#">Campreras</a>
                             </li>
                             <li className="dropdowsItem">
-                                <a class="dropLink" href="#">Categoria2</a>
+                                <a class="dropLink" href="#">Remeras</a>
                             </li>
                             <li className="dropdowsItem">
-                            <a class="dropLink" href="#">Categoria3</a>
+                            <a class="dropLink" href="#">Pantalones</a>
                             </li>
                             <li className="dropdowsItem">
-                            <a class="dropLink" href="#">Categoria4</a>
+                            <a class="dropLink" href="#">Shorts</a>
                             </li>
                         </ul>
                     </li>
+                </ul>
+            </div>
+            <div className="cart">
+                <ul className='cartList'>
+                    <li className="buy"><a className='buy-a' href="#"><i class="fa fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
             <div className="icons">
