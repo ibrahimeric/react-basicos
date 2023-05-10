@@ -4,37 +4,37 @@
     --twitter: #55acee;
 }
 
-.nav{
+.Hnav{
     height: 80px;
     background-color: rgb(251, 251, 251);
     display: flex;
 }
-.nav .navlogo img{
+.Hnav .navlogo img{
     height: 80px;
 }
-.navDiv{
+.HnavDiv{
     height: 80px;
     margin: auto;
 }
-.navList{
+.HnavList{
     height: 100%;
     width: 100%;
     display: flex;
 }
-.navItem{
+.HnavItem{
     height: 100%;
     padding-right: 40px;
     margin: 0;
     list-style: none;
     padding-top: 10px;
 }
-.navLink{
+.HnavLink{
     line-height: 50px;
     text-decoration: none;
     color: black;
 }
 
-.dropdown{
+.Hdropdown{
     display: none;
     text-align: left;
     position: absolute;
@@ -45,91 +45,90 @@
     border-radius: 0 3% 3% 3%;
     padding-left: 10px;
 }
-.dropdowsItem{
+.HdropdowsItem{
     padding-top: 5px;
 }
-.dropLink{
+.HdropLink{
     
     text-decoration: none;
     color: black;
 }
-.navItem:hover .navLink{
+.HnavItem:hover .HnavLink{
     color: #3b5999;
 }
-.navItem:hover > ul{
+.HnavItem:hover > ul{
     display: block;
 }
-.dropdowsItem:hover .dropLink{
+.HdropdowsItem:hover .HdropLink{
     color: #3b5999;
 }
-.dropdowsItem:hover > ul{
+.HdropdowsItem:hover > ul{
     display: block;
 }
-.icons{
+.Hicons{
     width: 190px;
     margin: auto 0;
     padding-top: 15px;
 }
-.iconList:hover a{
+.HiconList:hover a{
     filter: blur(2px)
 }
-.iconList{
+.HiconList{
     display: flex;
     padding: 0 10px 0 0;
 }
-.icon{
+.Hicon{
     margin: auto;
     list-style: none;
-    width: 50px;
-    height: 50px;
     text-align: center;
     transition: 0.2s;
 }
-.icon a{
+.Hicon a{
+    width: 50px;
     border-radius: 50%;
     display: block;
-    background: rgb(251, 251, 251);
+    background: rgb(208, 45, 45);
     text-decoration: none;
     color: black;
     line-height: 50px;
 }
-.icon a:hover{
+.Hicon a:hover{
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
     filter: none;
     color: #fff;
 }
-.facebook:hover{
+.Hfacebook:hover{
     background: var(--facebook);
 }
-.instagram:hover{
+.Hinstagram:hover{
     background: var(--instagram);
 }
-.twitter:hover{
+.Htwitter:hover{
     background: var(--twitter);
 }
 
-.user{
+.Huser{
     width: 50px;
 }
-.userList{
+.HuserList{
     display: block;
     margin: auto;
     list-style: none;
     padding: 0;
 }
-.userList a{
+.HuserList a{
     font-size: 25px;
     color: #3b5999;
 }
 
-.cart{
+.Hcart{
     padding-right: 10px;
     width: 50px;
     padding-bottom: 7px;
     margin: auto 0;
 }
-.cartList{
+.HcartList{
     padding: 0;
     margin: auto;
     list-style: none;
@@ -137,7 +136,7 @@
     height: 45px;
     text-align: center;
 }
-.buy-a{
+.Hbuy-a{
     border-radius: 50%;
     display: block;
     background: rgb(0, 0, 0);
