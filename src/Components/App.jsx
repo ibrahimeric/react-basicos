@@ -4,7 +4,6 @@ import Saludar from './Saludar';
 import Slider from './Slider';
 import Body from './Body';
 import Footer from './Footer';
-import '../Js/Header.js';
 import { useState } from 'react';
 
 
