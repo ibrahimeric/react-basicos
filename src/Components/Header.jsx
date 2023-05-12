@@ -6,6 +6,7 @@ import logoImg from '../img/Logo-Tienda-de-ropa.png';
 const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts}) => {
 
     const [active, setActive] = useState(false);
+
     const onDeleteProduct = (product) => {
     const results = allProducts.filter(item => item.id !== product.id);
 
@@ -13,11 +14,12 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     setCountProducts(countProducts - product.quantity);
     setAllProducts(results)
     };
+
     const onCleanCart = () => {
         setAllProducts([])
         setCountProducts(0)
         setTotal(0)
-    }
+    };
   return (
     <div>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
