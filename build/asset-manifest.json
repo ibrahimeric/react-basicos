@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-proyecto/build/static/css/main.e9beb412.css",
+    "main.css": "/react-proyecto/build/static/css/main.969184d4.css",
     "main.js": "/react-proyecto/build/static/js/main.dd631152.js",
     "static/media/fondo.jpg": "/react-proyecto/build/static/media/fondo.ba56ba4eac9492d94e97.jpg",
     "static/media/nike_airmax97.jpg": "/react-proyecto/build/static/media/nike_airmax97.c18d23632209e38890e3.jpg",
     "static/media/air_jordan1.jpg": "/react-proyecto/build/static/media/air_jordan1.f1a9cd38fd5942548e3f.jpg",
     "static/media/adidas_dayjogger.jpg": "/react-proyecto/build/static/media/adidas_dayjogger.8ac4c7e4080458cd29ce.jpg",
     "index.html": "/react-proyecto/build/index.html",
-    "main.e9beb412.css.map": "/react-proyecto/build/static/css/main.e9beb412.css.map",
+    "main.969184d4.css.map": "/react-proyecto/build/static/css/main.969184d4.css.map",
     "main.dd631152.js.map": "/react-proyecto/build/static/js/main.dd631152.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9beb412.css",
+    "static/css/main.969184d4.css",
     "static/js/main.dd631152.js"
   ]
 }
