@@ -1,8 +1,8 @@
-/* :root{
+:root{
     --facebook: #3b5999;
     --instagram:#e4405f;
     --twitter: #55acee;
-} */
+}
 
 .section__padding{
     padding: 4rem 4rem 0rem;
@@ -48,7 +48,7 @@ a{
     margin: auto 0;
     margin-left: -20px;
 }
-.iconos:hover a{
+.iconLista:hover a{
     filter: blur(2px)
 }
 .iconLista{
@@ -78,7 +78,7 @@ a{
     filter: none;
     color: #fff;
 }
-/* .facebook:hover{
+.facebook:hover{
     background: var(--facebook);
 }
 .instagram:hover{
@@ -86,18 +86,18 @@ a{
 }
 .twitter:hover{
     background: var(--twitter);
-} */
+}
 
-/* .socialmedia{
+.socialmedia{
     display: flex;
     flex-direction: row;
-} */
+}
 
-/* .socialmedia img{
+.socialmedia img{
     width: 30px;
     height: 30px;
     margin: 0.2rem;
-} */
+}
 
 .sb__footer-links_div h4{
     font-size: 14px;
