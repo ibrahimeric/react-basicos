@@ -1,5 +1,6 @@
 import '../Styles/App.css';
-import Header from './Header'
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from './Header';
 import Saludar from './Saludar';
 import Slider from './Slider';
 import Body from './Body';

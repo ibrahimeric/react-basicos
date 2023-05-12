@@ -8,65 +8,64 @@ import fondo from '..//img/fondo.jpg'
 const Principal = () => {
   return (
     <div class="body" >
-    
-        <h1>PRODUCTOS DE OFERTA</h1>
+      <h1>PRODUCTOS DE OFERTA</h1>
         
-       <div class="fondo"></div>
+      <div class="fondo"></div>
         <div class="container">
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-           <p>AIR JORDAN 1
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+            <p>AIR JORDAN 1
               $1200
-           </p>
-            </div>
+            </p>
+          </div>
 
-            <div class="card">
-             <center> <img src={nike_airmax97} /></center>
-            </div>
+          <div class="card">
+            <center> <img src={nike_airmax97} /></center>
+          </div>
 
-            <div class="card">
-          <center><img src={adidas_dayjogger} /></center>
-            </div>
+          <div class="card">
+            <center><img src={adidas_dayjogger} /></center>
+          </div>
 
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-            </div>
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+          </div>
 
-            <div class="card">
-             <center> <img src={nike_airmax97} /></center>
-            </div>
+          <div class="card">
+            <center> <img src={nike_airmax97} /></center>
+          </div>
 
-            <div class="card">
-          <center><img src={adidas_dayjogger} /></center>
-            </div>
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-            </div>
+          <div class="card">
+            <center><img src={adidas_dayjogger} /></center>
+          </div>
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+          </div>
 
-            <div class="card">
-             <center> <img src={nike_airmax97} /></center>
-            </div>
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-            </div>
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-            </div>
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-            </div>
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-            </div>
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-            </div>
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-            </div>
-            <div class="card">
-           <center>   <img src={air_jordan1} /> </center>
-            </div>
+          <div class="card">
+            <center> <img src={nike_airmax97} /></center>
+          </div>
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+          </div>
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+          </div>
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+          </div>
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+          </div>
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+          </div>
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+          </div>
+          <div class="card">
+            <center>   <img src={air_jordan1} /> </center>
+          </div>
 
         </div> 
         <div class="imgn"></div>
