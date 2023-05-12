@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Styles/Header.css';
 import { useState } from 'react';
+import logoImg from '../img/Logo-Tienda-de-ropa.png';
 
 const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts}) => {
 
@@ -21,7 +22,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     <div>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <nav className="Hnav">
-            <a className="Hnavlogo" href="#"><img src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_1280.png" alt="logo"/></a>
+            <a className="Hnavlogo" href="#"><img src={logoImg} alt="logo"/></a>
 
             <div className="HnavDiv">
                 <ul className="HnavList">

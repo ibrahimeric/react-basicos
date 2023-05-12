@@ -5,12 +5,16 @@
 }
 
 .Hnav{
+    position: fixed;
+    width: 100%;
     height: 80px;
     background-color: rgb(251, 251, 251);
     display: flex;
+    z-index: 1000;
 }
-.Hnav .navlogo img{
+.Hnav .Hnavlogo, .Hnav .Hnavlogo img{
     height: 80px;
+    width: 80px;
 }
 .HnavDiv{
     height: 80px;
