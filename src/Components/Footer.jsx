@@ -56,9 +56,9 @@ const Footer = () => {
             <h4>Comming soon on</h4>
             <div className='icon'>
               <ul className='iconLista'>
-                <li className="iconos"><a className='facebook' href="#"><i class="fa fa-facebook"></i></a></li>
-                <li className="iconos"><a className='instagram' href="#"><i class="fa fa-instagram"></i></a></li>
-                <li className="iconos"><a className='twitter' href="#"><i class="fa fa-twitter"></i></a></li>
+                <li className="iconos"><a className='facebook' href="#"><i className="fa fa-facebook"></i></a></li>
+                <li className="iconos"><a className='instagram' href="#"><i className="fa fa-instagram"></i></a></li>
+                <li className="iconos"><a className='twitter' href="#"><i className="fa fa-twitter"></i></a></li>
               </ul>
             </div>
           </div>

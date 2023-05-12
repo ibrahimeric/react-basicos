@@ -30,7 +30,7 @@ title, h1{
 
 .container .card{
     width: 200px;
-    height: 180px;
+    height: 230px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(228, 53, 53, 0.2);
     overflow: hidden;
@@ -55,3 +55,11 @@ img{
     height: 100px;
 }
 
+.card button{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
