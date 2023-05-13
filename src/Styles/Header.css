@@ -53,18 +53,17 @@
     padding-top: 5px;
 }
 .HdropLink{
-    
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 .HnavItem:hover .HnavLink{
-    color: #3b5999;
+    color: #548aff;
 }
 .HnavItem:hover > ul{
     display: block;
 }
 .HdropdowsItem:hover .HdropLink{
-    color: #3b5999;
+    color: #548aff;
 }
 .HdropdowsItem:hover > ul{
     display: block;
@@ -167,20 +166,6 @@
     font-size: 12px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .Hcontainer-cart-products{
     position: absolute;
     top: 80px;
@@ -278,4 +263,109 @@
     background-color: #515151;
     transform: scale(1.03);
     border-radius: 10px;
+}
+
+
+
+
+@media screen and (max-width: 1030px){
+    .Hbars__menu{
+        width: 30px;
+        height: 30px;
+        margin: auto 0;
+        cursor: pointer;
+    }
+    .Hbars__menu span{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        margin-top: 6px;
+        transition: all .5s;
+    }
+    .Hline2__bars-menu{
+        position: relative;
+        left: 0;
+    }
+    .HactiveLine1__bars-menu{
+        transform: rotate(45deg) translate(-2px, 1px);
+        transform-origin: 0px 100%;
+        translate: 5px;
+    }
+    .HactiveLine2__bars-menu{
+        opacity: 0;
+        position: relative;
+        left: 30px;
+    }
+    .HactiveLine3__bars-menu{
+        transform: rotate(-45deg) translate(-4px, 2px);
+        transform-origin: 0px 100%;
+        translate: 5px;
+    }
+    .HnavList{
+        display: block;
+        position: absolute;
+        right: -100vw;
+        transition: all .5s;
+        top: 80px;
+        height: calc(100vh - 80px);
+        padding: 0;
+        border-radius: 0 0 0 100%;
+        text-align: center;
+        width: 100%;
+        padding-top: 10vh;
+    }
+    .HactiveNavList{
+        background-color: #000;
+        border-radius: 0 0 0 50%;
+        translate: -100vw;
+    }
+    .HnavItem{
+        margin: auto;
+        height: 70px;
+        width: 190px;
+        list-style: none;
+        padding: 0;
+    }
+    .HnavLink, .HdropLink{
+        color: #fff;
+    }
+    .HactiveDropdown{
+        display: none;
+        text-align: left;
+        position: relative;
+        top: 0;
+        left: 50px;
+        width: 150px;
+        list-style: none;
+        background-color: transparent;
+        border-radius: 0 3% 3% 3%;
+        padding: 0;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 600px){
+    .Hcart{
+        margin-right: 10px;
+    }
+    .Hicons{
+        width: 0;
+    }
+    .HactiveIcons{
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .HiconList{
+        position: absolute;
+        top: 95px;
+        right: -100vw;
+        transition: all 0.5s;
+    }
+    .HactiveIconList{
+        right: 20px;
+    }
+    .HactiveIcon a{
+        color: #fff;
+    }
 }
