@@ -25,6 +25,7 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
   };
 
   return (
+    // comentario
     <div className="body" >
     
         <h1>PRODUCTOS DE OFERTA</h1>
