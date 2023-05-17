@@ -28,6 +28,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     const [Scroll, setScroll] = useState(false);
     window.onscroll = function(){
         if(window.innerWidth > 600 || active == true || barsAnimate == true){
+            setScroll(false);
             return;
         }
         Desplazamiento_Actual = window.pageYOffset;
@@ -74,7 +75,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
             </div>
             <div className="Hcart">
                 <ul className='HcartList'>
-                    <li className="Hbuy"><a className='Hbuy-a' href="#" onClick={() => setActive(!active)}><i className="fa fa-shopping-cart"></i>
+                    <li className="Hbuy"><a className='Hbuy-a' onClick={() => setActive(!active)}><i className="fa fa-shopping-cart"></i>
                     <div className="Hcount-products">
 					    <span id="Hcontador-productos">{countProducts}</span>
 				    </div>
