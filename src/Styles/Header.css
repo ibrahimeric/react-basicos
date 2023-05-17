@@ -133,7 +133,7 @@
     padding: 0;
     margin: auto;
     list-style: none;
-    width: 30px;
+    width: 55px;
     height: 30px;
     text-align: center;
 }
@@ -170,13 +170,11 @@
     position: absolute;
     top: 80px;
     right: 0;
-
     background-color: #fff;
     width: 400px;
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
-    
 }
 
 .Hcart-product{
@@ -272,7 +270,7 @@
     .Hbars__menu{
         width: 30px;
         height: 30px;
-        margin: auto 0;
+        margin: auto 10px auto 0;
         cursor: pointer;
     }
     .Hbars__menu span{
@@ -345,8 +343,29 @@
     }
 }
 @media screen and (max-width: 600px){
+    .Hnav{
+        height: 40px;
+        transition: all .4s;
+    }
+    .HnavUp{
+        transform: translateY(-40px);
+    }
+    .HnavDiv{
+        height: 40px;
+    }
+    .Hnav .Hnavlogo, .Hnav .Hnavlogo img{
+    height: 40px;
+    width: 40px;
+    }
+    .HnavList{
+        top: 40px;
+        height: calc(100vh - 40px);
+    }
     .Hcart{
         margin-right: 10px;
+    }
+    .Hcontainer-cart-products{
+        top: 40px;
     }
     .Hicons{
         width: 0;
@@ -358,7 +377,7 @@
     }
     .HiconList{
         position: absolute;
-        top: 95px;
+        top: 55px;
         right: -100vw;
         transition: all 0.5s;
     }
@@ -367,5 +386,16 @@
     }
     .HactiveIcon a{
         color: #fff;
+    }
+    .Huser{
+        margin-right: 10px;
+        display: flex;
+    }
+    .HuserList{
+        display: flex;
+        margin: auto 0;
+    }
+    .Hlogin{
+        margin-right: 10px;
     }
 }

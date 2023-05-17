@@ -22,10 +22,27 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         setTotal(0)
     };
 
+    
+    let ubicacionPrincipal = window.pageYOffset;
+    let Desplazamiento_Actual;
+    const [Scroll, setScroll] = useState(false);
+    window.onscroll = function(){
+        if(window.innerWidth > 600 || active == true || barsAnimate == true){
+            return;
+        }
+        Desplazamiento_Actual = window.pageYOffset;
+        if(ubicacionPrincipal >= Desplazamiento_Actual){
+            setScroll(false);
+        }
+        else if(Desplazamiento_Actual > 40){
+            setScroll(true);
+        }
+        ubicacionPrincipal = Desplazamiento_Actual;
+    }
   return (
     <div>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <nav className="Hnav">
+        <nav className={`Hnav ${Scroll ? 'HnavUp' : ''}`}>
             <a className="Hnavlogo" href="#"><img src={logoImg} alt="logo"/></a>
 
             <div className="HnavDiv">
