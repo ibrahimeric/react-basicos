@@ -355,7 +355,7 @@
 @media screen and (max-width: 600px){
     .Hnav{
         height: 40px;
-        transition: all .4s;
+        transition: all .3s;
     }
     .HnavUp{
         transform: translateY(-40px);
