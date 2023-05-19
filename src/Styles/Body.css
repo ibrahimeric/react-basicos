@@ -30,7 +30,7 @@ title, h1{
 
 .container .card{
     width: 200px;
-    height: 230px;
+    height: 250px; /* comentario prueba*/
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(228, 53, 53, 0.2);
     overflow: hidden;
