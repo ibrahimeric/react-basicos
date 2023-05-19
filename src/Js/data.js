@@ -1,6 +1,6 @@
 // Importamos las imagenes que vamos a utilizar
 import air_jordan1 from '../img/air_jordan1.jpg';
-import pantalon from '../img/pantalon.webp';
+import short_boca from '../img/short_boca.webp'
 import nike_airmax97 from '../img/nike_airmax97.jpg'
 import short_adidas from '../img/short adidas.webp'
 import short_nike from '../img/short nike.png'
@@ -31,9 +31,9 @@ export const data = [
     },
     {
         id:3,
-        nameProduct: 'Pantalon PAMPERO',
+        nameProduct: 'Short Adidas BOCA',
         price: 12002,
-        urlImage: pantalon,
+        urlImage: short_boca,
         quantity: 1,
     },
     {
@@ -44,28 +44,28 @@ export const data = [
         quantity: 1,
     },
     {
-        id:4,
+        id:5,
         nameProduct: 'Short NIKE',
         price: 4203,
         urlImage: short_nike,
         quantity: 1,
     },
     {
-        id:4,
+        id:6,
         nameProduct:'Campera NIKE', //cola
         price: 10203,
         urlImage:campera_nike ,
         quantity: 1,
     },
     {
-        id:4,
+        id:7,
         nameProduct: 'Zapatillas ADIDAS',
         price: 15203,
         urlImage: adidas_dayjogger,
         quantity: 1,
     },
     {
-        id:4,
+        id:8,
         nameProduct: 'Chaleco COLUMBIA',
         price: 30203,
         urlImage: chaleco_columbia,
