@@ -6,6 +6,7 @@ import Slider from './Slider';
 import Body from './Body';
 import Footer from './Footer';
 import { useState } from 'react';
+import Tp1 from './Tp1';
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
 
   return (
     <div className="App">
+      {/* <Tp1></Tp1> */}
+
       <Header allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
       total = {total} 
