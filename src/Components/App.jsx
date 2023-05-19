@@ -1,11 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from './Header';
-import Saludar from './Saludar';
 import Slider from './Slider';
 import Body from './Body';
 import Footer from './Footer';
 import { useState } from 'react';
-import Tp1 from './Tp1';
+// import Tp1 from './Tp1';
 
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
       setTotal = {setTotal} 
       countProducts = {countProducts} 
       setCountProducts = {setCountProducts}></Header>
-      <Saludar></Saludar>
       <Slider></Slider>
       <Body allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
