@@ -1,4 +1,3 @@
-import '../Styles/App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from './Header';
 import Saludar from './Saludar';

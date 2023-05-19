@@ -6,6 +6,8 @@ import logoImg from '../img/Logo-Tienda-de-ropa.png';
 const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts}) => {
 
     const [active, setActive] = useState(false);
+    const [barsAnimate, setbarsAnimate] = useState(false);
+
     const onDeleteProduct = (product) => {
     const results = allProducts.filter(item => item.id !== product.id);
 
@@ -13,28 +15,48 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     setCountProducts(countProducts - product.quantity);
     setAllProducts(results)
     };
+
     const onCleanCart = () => {
         setAllProducts([])
         setCountProducts(0)
         setTotal(0)
+    };
+
+    
+    let ubicacionPrincipal = window.pageYOffset;
+    let Desplazamiento_Actual;
+    const [Scroll, setScroll] = useState(false);
+    window.onscroll = function(){
+        if(window.innerWidth > 600 || active == true || barsAnimate == true){
+            setScroll(false);
+            return;
+        }
+        Desplazamiento_Actual = window.pageYOffset;
+        if(ubicacionPrincipal >= Desplazamiento_Actual){
+            setScroll(false);
+        }
+        else if(Desplazamiento_Actual > 40){
+            setScroll(true);
+        }
+        ubicacionPrincipal = Desplazamiento_Actual;
     }
   return (
     <div>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <nav className="Hnav">
+        <nav className={`Hnav ${Scroll ? 'HnavUp' : ''}`}>
             <a className="Hnavlogo" href="#"><img src={logoImg} alt="logo"/></a>
 
             <div className="HnavDiv">
-                <ul className="HnavList">
-                    <li className="HnavItem">
+                <ul className={`HnavList ${barsAnimate ? 'HactiveNavList' : ''}`}>
+                    <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         <a className="HnavLink" href="#">Inicio</a>
                     </li>
-                    <li className="HnavItem">
+                    <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         <a className="HnavLink" href="#">Contactanos</a>
                     </li>
-                    <li className="HnavItem">
+                    <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         <a className="HnavLink" href="#">Categorias <i className="Htoggle-dropdown dropdown-toggle"></i></a>
-                        <ul className='Hdropdown'>
+                        <ul className={`Hdropdown ${barsAnimate ? 'HactiveDropdown' : ''}`}>
                             <li className="HdropdowsItem">
                             <a className="HdropLink" href="#">Campreras</a>
                             </li>
@@ -53,7 +75,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
             </div>
             <div className="Hcart">
                 <ul className='HcartList'>
-                    <li className="Hbuy"><a className='Hbuy-a' href="#" onClick={() => setActive(!active)}><i className="fa fa-shopping-cart"></i>
+                    <li className="Hbuy"><a className='Hbuy-a' onClick={() => setActive(!active)}><i className="fa fa-shopping-cart"></i>
                     <div className="Hcount-products">
 					    <span id="Hcontador-productos">{countProducts}</span>
 				    </div>
@@ -109,10 +131,10 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
 			</div>
 
             <div className="Hicons">
-                <ul className='HiconList'>
-                    <li className="Hicon"><a className='Hfacebook' href="#"><i className="fa fa-facebook"></i></a></li>
-                    <li className="Hicon"><a className='Hinstagram' href="#"><i className="fa fa-instagram"></i></a></li>
-                    <li className="Hicon"><a className='Htwitter' href="#"><i className="fa fa-twitter"></i></a></li>
+                <ul className={`HiconList ${barsAnimate ? 'HactiveIconList' : ''}`}>
+                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hfacebook' href="#"><i className="fa fa-facebook"></i></a></li>
+                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hinstagram' href="#"><i className="fa fa-instagram"></i></a></li>
+                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Htwitter' href="#"><i className="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
             <div className="Huser">
@@ -120,6 +142,11 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
                     <li className="Hlogin"><a href="#"><i className="fa fa-sign-in"></i></a></li>
                     <li className="Hprofile"><a href="#"><i className="fa fa-user"></i></a></li>
                 </ul>
+            </div>
+            <div className="Hbars__menu" onClick={() => setbarsAnimate(!barsAnimate)}>
+                <span className={`Hline1__bars-menu ${barsAnimate ? 'HactiveLine1__bars-menu' : ''}`}></span>
+                <span className={`Hline2__bars-menu ${barsAnimate ? 'HactiveLine2__bars-menu' : ''}`}></span>
+                <span className={`Hline3__bars-menu ${barsAnimate ? 'HactiveLine3__bars-menu' : ''}`}></span>
             </div>
         </nav>
     </div>
