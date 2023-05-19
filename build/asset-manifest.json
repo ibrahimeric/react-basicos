@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-proyecto/build/static/css/main.799b674a.css",
-    "main.js": "/react-proyecto/build/static/js/main.28c996b2.js",
+    "main.css": "/react-proyecto/build/static/css/main.658e8166.css",
+    "main.js": "/react-proyecto/build/static/js/main.832ce7e7.js",
     "static/media/fondo.jpg": "/react-proyecto/build/static/media/fondo.ba56ba4eac9492d94e97.jpg",
     "static/media/nike_airmax97.jpg": "/react-proyecto/build/static/media/nike_airmax97.c18d23632209e38890e3.jpg",
     "static/media/short nike.png": "/react-proyecto/build/static/media/short nike.0bbf7a6bde93b5d7a972.png",
@@ -13,11 +13,11 @@
     "static/media/short adidas.webp": "/react-proyecto/build/static/media/short adidas.df62b738bdebfc224387.webp",
     "static/media/pantalon.webp": "/react-proyecto/build/static/media/pantalon.68fa065e853ace05f43a.webp",
     "index.html": "/react-proyecto/build/index.html",
-    "main.799b674a.css.map": "/react-proyecto/build/static/css/main.799b674a.css.map",
-    "main.28c996b2.js.map": "/react-proyecto/build/static/js/main.28c996b2.js.map"
+    "main.658e8166.css.map": "/react-proyecto/build/static/css/main.658e8166.css.map",
+    "main.832ce7e7.js.map": "/react-proyecto/build/static/js/main.832ce7e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.799b674a.css",
-    "static/js/main.28c996b2.js"
+    "static/css/main.658e8166.css",
+    "static/js/main.832ce7e7.js"
   ]
 }
