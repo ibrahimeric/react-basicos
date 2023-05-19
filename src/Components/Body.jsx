@@ -1,5 +1,9 @@
 import React from 'react'
 import '../Styles/Body.css'
+import air_jordan1 from '../img/air_jordan1.jpg'
+import nike_airmax97 from '../img/nike_airmax97.jpg'
+import adidas_dayjogger from '..//img/adidas_dayjogger.jpg'
+import fondo from '..//img/fondo.jpg'
 // Importamos el archivo data.js que contiene todos los producto.
 import {data} from '../Js/data.js'
 
