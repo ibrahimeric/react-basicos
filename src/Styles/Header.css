@@ -3,7 +3,6 @@
     --instagram:#e4405f;
     --twitter: #55acee;
 }
-
 .Hnav{
     position: fixed;
     width: 100%;
@@ -133,7 +132,7 @@
     padding: 0;
     margin: auto;
     list-style: none;
-    width: 30px;
+    width: 55px;
     height: 30px;
     text-align: center;
 }
@@ -146,11 +145,22 @@
     text-decoration: none;
     color: #000;
     line-height: 45px;
-    
 }
-
-.Hcount-products{
-    
+.Hrow-product{
+    max-height: 320px;
+    overflow-y: scroll;
+}
+.Hrow-product::-webkit-scrollbar {
+    width: 3px;
+}
+.Hrow-product::-webkit-scrollbar-thumb{
+    background-color: #c4c4c4;
+    border-radius: 50px;
+}
+.Hrow-product::-webkit-scrollbar-thumb:hover{
+    background-color: #a5a5a5;
+}
+.Hcount-products{    
     background-color: #000;
     color: #fff;
     padding: 9px;
@@ -170,47 +180,48 @@
     position: absolute;
     top: 80px;
     right: 0;
-
     background-color: #fff;
     width: 400px;
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-    border-radius: 10px;
-    
+    border-radius: 0 0 10px 10px;
 }
 
 .Hcart-product{
     display: flex;
     justify-content: space-between;
-    padding: 20px 30px 20px 30px;
+    padding: 20px 30px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 }
 
 .Hinfo-cart-product{
     display: flex;
     justify-content: space-between;
-    flex: 0.8;
+    flex: 0.9;
 }
 
 .Htitulo-producto-carrito{
     font-size: 20px;
-    margin: 0;
+    margin: auto 0;
 }
 
 .Hprecio-producto-carrito{
     font-weight: 700;
     font-size: 20px;
     margin-left: 10px;
+    margin: auto 0;
 }
 
 .Hcantidad-producto-carrito{
     font-weight: 400;
     font-size: 20px;
+    margin: auto 0;
 }
 
 .Hicon-close{
     width: 25px;
     height: 25px;
+    margin: auto 0;
 }
 
 .Hicon-close:hover{
@@ -265,14 +276,11 @@
     border-radius: 10px;
 }
 
-
-
-
 @media screen and (max-width: 1030px){
     .Hbars__menu{
         width: 30px;
         height: 30px;
-        margin: auto 0;
+        margin: auto 10px auto 0;
         cursor: pointer;
     }
     .Hbars__menu span{
@@ -345,8 +353,33 @@
     }
 }
 @media screen and (max-width: 600px){
+    .Hnav{
+        height: 40px;
+        transition: all .3s;
+    }
+    .HnavUp{
+        transform: translateY(-40px);
+    }
+    .HnavDiv{
+        height: 40px;
+    }
+    .Hnav .Hnavlogo, .Hnav .Hnavlogo img{
+    height: 40px;
+    width: 40px;
+    }
+    .HnavList{
+        top: 40px;
+        height: calc(100vh - 40px);
+    }
     .Hcart{
         margin-right: 10px;
+    }
+    .Hrow-product{
+        max-height: 250px;
+    }
+    .Hcontainer-cart-products{
+        top: 40px;
+        width: 100%;
     }
     .Hicons{
         width: 0;
@@ -358,9 +391,9 @@
     }
     .HiconList{
         position: absolute;
-        top: 95px;
+        top: 55px;
         right: -100vw;
-        transition: all 0.5s;
+        transition: all 0.3s;
     }
     .HactiveIconList{
         right: 20px;
@@ -368,4 +401,24 @@
     .HactiveIcon a{
         color: #fff;
     }
+    .Huser{
+        margin-right: 10px;
+        display: flex;
+    }
+    .HuserList{
+        display: flex;
+        margin: auto 0;
+    }
+    .Hlogin{
+        margin-right: 10px;
+    }
 }
+@media screen and (max-width: 300px) {
+    .Hcart-product{
+        padding: 20px 5px;
+    }
+    .Hinfo-cart-product{
+        flex: .95;
+    }
+}
+
