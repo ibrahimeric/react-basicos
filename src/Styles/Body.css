@@ -8,14 +8,18 @@ html, .body{
     font-family: sans-serif;
     letter-spacing: 0.03em;
     line-height: 1.6;
-    background-color: rgba(251, 17, 251, 0.362);
+    background-image: url('../img/fondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 title, h1{
     text-align: center;
     font-size: 40px;
-    color: black;
-    margin-top: 100px;
+    background-color: rgb(255, 255, 0);
+    color: red;
+    margin-top: 0px;
     font-weight: 100;
 }
 
@@ -30,7 +34,7 @@ title, h1{
 
 .container .card{
     width: 200px;
-    height: 250px; /* comentario prueba*/
+    height: 250px; /* comentario pruebaa*/
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(228, 53, 53, 0.2);
     overflow: hidden;
