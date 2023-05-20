@@ -14,7 +14,7 @@ export const data = [
         // agregar al carrito. De lo contrario ocurriran errores.
         id:1,
         // Aqui indicamos las categorias del producto
-        categoria: 'oferta zapatillas',
+        categoria: 'ofertas zapatillas',
         // Aqui indicamos el nombre del producto
         nameProduct: 'AIR JORDAN 1',
         // Aqui colocamos el precio sin signo peso, solo el número
@@ -26,7 +26,7 @@ export const data = [
     },
     {
         id:2,
-        categoria: 'oferta zapatillas',
+        categoria: 'ofertas zapatillas',
         nameProduct: 'NIKE AIRMAX 97',
         price: 37000,
         urlImage: nike_airmax97,
@@ -34,7 +34,7 @@ export const data = [
     },
     {
         id:3,
-        categoria: 'oferta short',
+        categoria: 'ofertas short',
         nameProduct: 'Short Adidas BOCA',
         price: 12002,
         urlImage: short_boca,
@@ -42,7 +42,7 @@ export const data = [
     },
     {
         id:4,
-        categoria: 'oferta shorts',
+        categoria: 'ofertas shorts',
         nameProduct: 'Short ADIDAS',
         price: 7303,
         urlImage: short_adidas,
@@ -50,7 +50,7 @@ export const data = [
     },
     {
         id:5,
-        categoria: 'oferta shorts',
+        categoria: 'ofertas shorts',
         nameProduct: 'Short NIKE',
         price: 4203,
         urlImage: short_nike,
@@ -58,7 +58,7 @@ export const data = [
     },
     {
         id:6,
-        categoria: 'oferta camperas',
+        categoria: 'ofertas camperas',
         nameProduct:'Campera NIKE', //cola
         price: 10203,
         urlImage:campera_nike ,
@@ -66,7 +66,7 @@ export const data = [
     },
     {
         id:7,
-        categoria: 'oferta zapatillas',
+        categoria: 'ofertas zapatillas',
         nameProduct: 'Zapatillas ADIDAS',
         price: 15203,
         urlImage: adidas_dayjogger,
@@ -74,7 +74,7 @@ export const data = [
     },
     {
         id:8,
-        categoria: 'oferta camperas',
+        categoria: 'ofertas camperas',
         nameProduct: 'Chaleco COLUMBIA',
         price: 30203,
         urlImage: chaleco_columbia,

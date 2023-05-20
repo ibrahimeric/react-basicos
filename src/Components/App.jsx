@@ -12,6 +12,7 @@ function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [total, setTotal] = useState(0);
   const [countProducts, setCountProducts] = useState(0);
+  const [categorias, setCategorias] = useState('OFERTAS');
 
   let product = (data.filter((dato) =>
     dato.categoria.toLowerCase().includes('oferta'.toLocaleLowerCase())))
@@ -29,7 +30,9 @@ function App() {
       countProducts = {countProducts} 
       setCountProducts = {setCountProducts}
       products = {products}
-      setProducts = {setProducts}></Header>
+      setProducts = {setProducts}
+      categorias = {categorias}
+      setCategorias = {setCategorias}></Header>
       <Slider></Slider>
       <Body allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
@@ -38,7 +41,9 @@ function App() {
       countProducts = {countProducts} 
       setCountProducts = {setCountProducts}
       products = {products}
-      setProducts = {setProducts}></Body>
+      setProducts = {setProducts}
+      categorias = {categorias}
+      setCategorias = {setCategorias}></Body>
       <Footer></Footer>
     </div>
   );
