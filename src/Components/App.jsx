@@ -4,6 +4,7 @@ import Slider from './Slider';
 import Body from './Body';
 import Footer from './Footer';
 import { useState } from 'react';
+import {data} from '../Js/data.js'
 // import Tp1 from './Tp1';
 
 
@@ -11,6 +12,11 @@ function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [total, setTotal] = useState(0);
   const [countProducts, setCountProducts] = useState(0);
+
+  let product = (data.filter((dato) =>
+    dato.categoria.toLowerCase().includes('oferta'.toLocaleLowerCase())))
+
+  const [products, setProducts] = useState(product);
 
   return (
     <div className="App">
@@ -21,14 +27,18 @@ function App() {
       total = {total} 
       setTotal = {setTotal} 
       countProducts = {countProducts} 
-      setCountProducts = {setCountProducts}></Header>
+      setCountProducts = {setCountProducts}
+      products = {products}
+      setProducts = {setProducts}></Header>
       <Slider></Slider>
       <Body allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
       total = {total} 
       setTotal = {setTotal} 
       countProducts = {countProducts} 
-      setCountProducts = {setCountProducts}></Body>
+      setCountProducts = {setCountProducts}
+      products = {products}
+      setProducts = {setProducts}></Body>
       <Footer></Footer>
     </div>
   );

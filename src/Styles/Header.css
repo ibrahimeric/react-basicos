@@ -122,7 +122,9 @@
     font-size: 25px;
     color: #3b5999;
 }
-
+.HdropLink{
+    cursor: pointer;
+}
 .Hcart{
     display: block;
     width: 60px;
