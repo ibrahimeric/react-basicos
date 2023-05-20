@@ -14,7 +14,7 @@ html, .body{
     background-size: cover;
 }
 
-title, h1{
+.title{
     text-align: center;
     font-size: 40px;
     background-color: rgb(255, 255, 0);
@@ -68,3 +68,17 @@ img{
     cursor: pointer;
 }
 
+.productNotFound{
+    background-color: #fff;
+    height: 100px;
+    border-radius: 20px;
+    margin: 50px 0;
+    padding: 0 30px;
+}
+.productNotFound h1{
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    margin: auto;
+    line-height: 100px;    
+}
