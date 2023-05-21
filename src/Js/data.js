@@ -7,6 +7,20 @@ import short_nike from '../img/short nike.png'
 import campera_nike from '../img/campera_nike.jpg'
 import adidas_dayjogger from '../img/adidas_dayjogger.jpg'
 import chaleco_columbia from '../img/chaleco_hombre_columbia.webp'
+import campera1 from '../img/imgCamperas/campera 1.webp'
+import campera2 from '../img/imgCamperas/campera 2.webp'
+import campera3 from '../img/imgCamperas/campera 3.webp'
+import campera4 from '../img/imgCamperas/campera 4.webp'
+import campera5 from '../img/imgCamperas/campera 5.webp'
+import campera6 from '../img/imgCamperas/campera 6.webp'
+import campera7 from '../img/imgCamperas/campera 7.webp'
+import campera8 from '../img/imgCamperas/campera 8.webp'
+import campera9 from '../img/imgCamperas/campera 9.webp'
+import campera10 from '../img/imgCamperas/campera 10.webp'
+import campera11 from '../img/imgCamperas/campera 11.webp'
+import campera12 from '../img/imgCamperas/campera 12.webp'
+import campera13 from '../img/imgCamperas/campera 13.webp'
+
 
 export const data = [
     {
@@ -78,6 +92,110 @@ export const data = [
         nameProduct: 'Chaleco COLUMBIA',
         price: 30203,
         urlImage: chaleco_columbia,
+        quantity: 1,
+    },
+    {
+        id: 9,
+        categoria: 'camperas',
+        nameProduct: 'Campera coatsmen Neopren Térmica',
+        price: 14200,
+        urlImage: campera1,
+        quantity: 1,
+    },
+    {
+        id: 10,
+        categoria: 'camperas',
+        nameProduct: 'Campera Sico Urban Con Capucha',
+        price: 16500,
+        urlImage: campera2,
+        quantity: 1,
+    },
+    {
+        id: 11,
+        categoria: 'camperas',
+        nameProduct: 'Campera Polar Cuello Alto',
+        price: 9900,
+        urlImage: campera3,
+        quantity: 1,
+    },
+    {
+        id: 12,
+        categoria: 'camperas',
+        nameProduct: 'Campera Térmica Redufit',
+        price: 10900,
+        urlImage: campera4,
+        quantity: 1,
+    },
+    {
+        id: 13,
+        categoria: 'camperas',
+        nameProduct: 'Campera Capucha Gol de Oro',
+        price: 5850,
+        urlImage: campera5,
+        quantity: 1,
+    },
+    {
+        id: 14,
+        categoria: 'camperas',
+        nameProduct: 'Camperas Gabytex Tipo Canguro',
+        price: 5199,
+        urlImage: campera6,
+        quantity: 1,
+    },
+    {
+        id: 15,
+        categoria: 'camperas',
+        nameProduct: 'Campera Macowens Inflada Clásica',
+        price: 25999,
+        urlImage: campera7,
+        quantity: 1,
+    },
+    {
+        id: 16,
+        categoria: 'camperas',
+        nameProduct: 'Campera Con Capucha Arinsal',
+        price: 28900,
+        urlImage: campera8,
+        quantity: 1,
+    },
+    {
+        id: 17,
+        categoria: 'camperas',
+        nameProduct: 'Campera Ghy Polo Club',
+        price: 21900,
+        urlImage: campera9,
+        quantity: 1,
+    },
+    {
+        id: 18,
+        categoria: 'camperas',
+        nameProduct: 'Campera Inflable Pluma Y Piel',
+        price: 26000,
+        urlImage: campera10,
+        quantity: 1,
+    },
+    {
+        id: 19,
+        categoria: 'camperas',
+        nameProduct: 'Campera G6 Con Corderito',
+        price: 19999,
+        urlImage: campera11,
+        quantity: 1,
+    },
+    {
+        id: 20,
+        categoria: 'camperas',
+        nameProduct: 'Campera Parka Con Corderito',
+        price: 18999,
+        urlImage: campera12,
+        quantity: 1,
+    },
+    {
+        id: 21,
+        categoria: 'camperas',
+        nameProduct: 'Campera Puma Classics',
+        price: 46999,
+        urlImage: campera13,
         quantity: 1,
     },
 ];

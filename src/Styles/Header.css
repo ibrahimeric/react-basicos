@@ -139,6 +139,7 @@
     text-align: center;
 }
 .Hbuy-a{
+    cursor: pointer;
     font-size: 25px;
     width: 48px;
     height: 30px;
