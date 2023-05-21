@@ -48,6 +48,16 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         dato.categoria.toLowerCase().includes(filter.toLocaleLowerCase())))
         setCategorias(filter.toUpperCase())
     }
+
+
+
+
+
+
+    
+
+
+
   return (
     <div>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -86,14 +96,13 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
             </div>
             <div className="Hcart">
                 <ul className='HcartList'>
-                    <li className="Hbuy"><a className='Hbuy-a' onClick={() => setActive(!active)}><i className="fa fa-shopping-cart"></i>
-                    <div className="Hcount-products">
+                    <li className="Hbuy"><a className={`Hbuy-a ${countProducts === 0 ? 'Hbuy-aColor' : ''}`} onClick={() => setActive(!active)}><i className="Hbuy-li fa fa-shopping-cart"></i>
+                    <div className={`Hcount-products ${countProducts === 0 ? 'Hcount-productsColor' : ''}`}>
 					    <span id="Hcontador-productos">{countProducts}</span>
 				    </div>
                     </a></li>
                 </ul>
             </div>
-
 
 
 
