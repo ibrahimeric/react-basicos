@@ -175,7 +175,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 15px;
 }
 #Hcontador-productos{
     font-size: 12px;

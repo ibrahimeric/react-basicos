@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Tp1></Tp1> */}
+      {/* <Tp1></Tp1> f*/}
 
       <Header allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
