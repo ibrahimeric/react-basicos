@@ -8,6 +8,22 @@ import campera_nike from '../img/campera_nike.jpg'
 import adidas_dayjogger from '../img/adidas_dayjogger.jpg'
 import chaleco_columbia from '../img/chaleco_hombre_columbia.webp'
 
+//categoria shorts
+import short1 from '../img/img_Shorts/short adidas camo.webp'
+import short2 from '../img/img_Shorts/short adidas dame.webp'
+import short3 from '../img/img_Shorts/short adidas original adiplay.webp'
+import short4 from '../img/img_Shorts/short adidas studio.webp'
+import short5 from '../img/img_Shorts/short champio muti.webp'
+import short6 from  '../img/img_Shorts/short diadora4.webp'
+import short7 from '../img/img_Shorts/short nike circa.webp'
+import short8 from '../img/img_Shorts/short nike giannis.webp'
+import short9 from '../img/img_Shorts/short puma classics.webp'
+import short10 from '../img/img_Shorts/short_o neill.webp'
+import short11 from '../img/img_Shorts/short_oneil vert.webp'
+import short12 from '../img/img_Shorts/short_topper baumm.webp'
+import short13 from '../img/img_Shorts/short_topper rx3.webp'
+
+
 // CAMPERAS
 import campera1 from '../img/imgCamperas/campera 1.webp'
 import campera2 from '../img/imgCamperas/campera 2.webp'
@@ -469,6 +485,114 @@ export const data = [
         quantity: 1,
     },
    
+    //cat short
+
+    {
+        id: 51,
+        categoria: 'Shorts',
+        nameProduct: 'short adidas camo',
+        price: 34.999,
+        urlImage: short1,
+        quantity: 1,
+    },
+    {
+        id: 52,
+        categoria: 'Shorts',
+        nameProduct: 'short adidas dame',
+        price: 29.999,
+        urlImage: short2,
+        quantity: 1,
+    },
+    {
+        id: 53,
+        categoria: 'Shorts',
+        nameProduct: 'short adidas original adiplay',
+        price: 25.999,
+        urlImage: short3,
+        quantity: 1,
+    },
+
+    {
+        id: 54,
+        categoria: 'Shorts',
+        nameProduct: 'Short Adidas Studio',
+        price: 25.999,
+        urlImage: short4,
+        quantity: 1,
+    },
+    {
+        id: 55,
+        categoria: 'Shorts',
+        nameProduct: 'Short Champion Muti',
+        price: 13.749,
+        urlImage: short5,
+        quantity: 1,
+    },
+    {
+        id: 56,
+        categoria: 'Shorts',
+        nameProduct: 'Short Diadora',
+        price: 18.878,
+        urlImage: short6,
+        quantity: 1,
+    },
     
+    {
+        id: 57,
+        categoria: 'Shorts',
+        nameProduct: 'Short Nike Circa',
+        price: 38.522,
+        urlImage: short7,
+        quantity: 1,
+    },
+    {
+        id: 58,
+        categoria: 'Shorts',
+        nameProduct: 'Short Nike Giannis',
+        price: 26.399,
+        urlImage: short8,
+        quantity: 1,
+    },
+    {
+        id: 59,
+        categoria: 'Shorts',
+        nameProduct: 'Short Puma Classic',
+        price: 16.999,
+        urlImage: short9,
+        quantity: 1,
+    },
+    
+    {
+        id: 60,
+        categoria: 'Shorts',
+        nameProduct: 'Short O Neill',
+        price: 8.174,
+        urlImage: short10,
+        quantity: 1,
+    },
+    {
+        id: 61,
+        categoria: 'Shorts',
+        nameProduct: 'Short O Neill Vert',
+        price: 5.999,
+        urlImage: short11,
+        quantity: 1,
+    },
+    {
+        id: 62,
+        categoria: 'Shorts',
+        nameProduct: 'Short Topper Baumm',
+        price: 11.559,
+        urlImage: short12,
+        quantity: 1,
+    },
+    {
+        id: 63,
+        categoria: 'Shorts',
+        nameProduct: 'Short Topper Rx3',
+        price: 9.079,
+        urlImage: short13,
+        quantity: 1,
+    },
     
 ];
