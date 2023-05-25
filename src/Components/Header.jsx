@@ -31,7 +31,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     let Desplazamiento_Actual;
     const [Scroll, setScroll] = useState(false);
     window.onscroll = function(){
-        if(window.innerWidth > 600 || active == true || barsAnimate == true){
+        if(window.innerWidth > 600 || active === true || barsAnimate === true){
             setScroll(false);
             return;
         }

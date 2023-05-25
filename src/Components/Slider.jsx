@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React from 'react'
->>>>>>> 68542b443dd5b83e347ed33c343175479245898c
 import Carousel from 'react-bootstrap/Carousel';
 
 function Slider() {
