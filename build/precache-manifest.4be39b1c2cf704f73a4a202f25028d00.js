@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "8bfd2b4a99ce4fc7b754",
-    "url": "/react-proyecto/build/static/css/main.2bc610d1.chunk.css"
+    "revision": "073a99401fc4e6cd4af9",
+    "url": "/react-proyecto/build/static/css/main.a26662ac.chunk.css"
   },
   {
-    "revision": "8bfd2b4a99ce4fc7b754",
-    "url": "/react-proyecto/build/static/js/main.98fcc092.chunk.js"
+    "revision": "073a99401fc4e6cd4af9",
+    "url": "/react-proyecto/build/static/js/main.853f759b.chunk.js"
   },
   {
     "revision": "b8d1836ed842e1d8efc7",
     "url": "/react-proyecto/build/static/js/runtime~main.df2269ba.js"
   },
   {
-    "revision": "406cf2123c22ba3f73d5",
+    "revision": "55d10326c9bb9e90f8b0",
     "url": "/react-proyecto/build/static/css/2.deabc7ba.chunk.css"
   },
   {
-    "revision": "406cf2123c22ba3f73d5",
-    "url": "/react-proyecto/build/static/js/2.6c30f345.chunk.js"
+    "revision": "55d10326c9bb9e90f8b0",
+    "url": "/react-proyecto/build/static/js/2.4af3a342.chunk.js"
   },
   {
     "revision": "c46c57de4ff0cbd5701874910ae4a1cd",
@@ -108,11 +108,91 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/campera 13.9b66811b.webp"
   },
   {
+    "revision": "92b06656875d90c29c6db38fc08423d1",
+    "url": "/react-proyecto/build/static/media/pantalon01.92b06656.webp"
+  },
+  {
+    "revision": "72024a4cb4eab3cd5279b17ce4fae930",
+    "url": "/react-proyecto/build/static/media/pantalon02.72024a4c.webp"
+  },
+  {
+    "revision": "cf98b3c6f6a8c7a2e9b71b805990269a",
+    "url": "/react-proyecto/build/static/media/pantalon03.cf98b3c6.webp"
+  },
+  {
+    "revision": "25eb66eae85b8a8bee6531747551f41d",
+    "url": "/react-proyecto/build/static/media/pantalon04.25eb66ea.webp"
+  },
+  {
+    "revision": "666b99b7b36a68d01d19e05c4e8eb493",
+    "url": "/react-proyecto/build/static/media/pantalon05.666b99b7.webp"
+  },
+  {
+    "revision": "dd519b759eee0981e204b9e5f4187693",
+    "url": "/react-proyecto/build/static/media/pantalon06.dd519b75.webp"
+  },
+  {
+    "revision": "8ec8f183bdd9f3edac5caf2ac2dcf774",
+    "url": "/react-proyecto/build/static/media/pantalon07.8ec8f183.webp"
+  },
+  {
+    "revision": "9a30f91ae55be0d0bd2128e755640afd",
+    "url": "/react-proyecto/build/static/media/pantalon08.9a30f91a.webp"
+  },
+  {
+    "revision": "4469797df9a948e9691fb6c335958958",
+    "url": "/react-proyecto/build/static/media/pantalon09.4469797d.webp"
+  },
+  {
+    "revision": "ecf5defd0dbb46bd5dd89a12bbe70015",
+    "url": "/react-proyecto/build/static/media/pantalon10.ecf5defd.webp"
+  },
+  {
+    "revision": "94e535e7243ff60e9e33b1aeb2082eab",
+    "url": "/react-proyecto/build/static/media/pantalon11.94e535e7.webp"
+  },
+  {
+    "revision": "d73aeee325459b78fe61e5ef566df2c6",
+    "url": "/react-proyecto/build/static/media/pantalon12.d73aeee3.webp"
+  },
+  {
+    "revision": "23f4c199349e5488970707331886956b",
+    "url": "/react-proyecto/build/static/media/pantalon13.23f4c199.webp"
+  },
+  {
+    "revision": "c5061ddffeb8ec7af4b3f0543bb57ca3",
+    "url": "/react-proyecto/build/static/media/pantalon14.c5061ddf.webp"
+  },
+  {
+    "revision": "93480a5cb7a26963c675c31f0f0ca7e9",
+    "url": "/react-proyecto/build/static/media/pantalon15.93480a5c.webp"
+  },
+  {
+    "revision": "bb66caba155a0eb6029fac9c6f0259da",
+    "url": "/react-proyecto/build/static/media/pantalon16.bb66caba.webp"
+  },
+  {
+    "revision": "9c941b600e9e4dd170e8d63dcdbb2bed",
+    "url": "/react-proyecto/build/static/media/pantalon17.9c941b60.webp"
+  },
+  {
+    "revision": "ed5e16e1edecf04f3e4d170bcbb6d683",
+    "url": "/react-proyecto/build/static/media/pantalon18.ed5e16e1.webp"
+  },
+  {
+    "revision": "13ddf9433484b3cf58a141cf7ae8fcfb",
+    "url": "/react-proyecto/build/static/media/pantalon19.13ddf943.webp"
+  },
+  {
+    "revision": "c99b2392d404358729f7134fb4af89a4",
+    "url": "/react-proyecto/build/static/media/pantalon20.c99b2392.webp"
+  },
+  {
     "revision": "f8fdf4f11412d59c86d91290c91e857a",
     "url": "/react-proyecto/build/static/media/fondo.f8fdf4f1.jpg"
   },
   {
-    "revision": "9b529256e3d6884785e1c1f78b55bf1f",
+    "revision": "cad1eb0148eda1df1e75a66d3b3f0c8c",
     "url": "/react-proyecto/build/index.html"
   }
 ];
