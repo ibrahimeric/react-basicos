@@ -35,7 +35,7 @@ html, .body{
 
 .card{
     width: 400px;
-    height: 550px; /* comentario pruebaa*/
+    height: 700px; /* comentario pruebaa*/
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(228, 53, 53, 0.2);
     overflow: hidden;
