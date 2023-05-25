@@ -122,11 +122,14 @@
     font-size: 25px;
     color: #3b5999;
 }
-
+.HdropLink{
+    cursor: pointer;
+}
 .Hcart{
     display: block;
     width: 60px;
     margin: auto 0;
+    position: relative;
 }
 .HcartList{
     padding: 0;
@@ -137,6 +140,7 @@
     text-align: center;
 }
 .Hbuy-a{
+    cursor: pointer;
     font-size: 25px;
     width: 48px;
     height: 30px;
@@ -145,6 +149,9 @@
     text-decoration: none;
     color: #000;
     line-height: 45px;
+}
+.Hbuy-aColor{
+    color: #636363;
 }
 .Hrow-product{
     max-height: 320px;
@@ -160,7 +167,7 @@
 .Hrow-product::-webkit-scrollbar-thumb:hover{
     background-color: #a5a5a5;
 }
-.Hcount-products{    
+.Hcount-products{
     background-color: #000;
     color: #fff;
     padding: 9px;
@@ -169,11 +176,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 15px;
 }
-
 #Hcontador-productos{
     font-size: 12px;
+}
+.Hcount-productsColor{
+    background-color: #636363;
 }
 
 .Hcontainer-cart-products{
@@ -190,31 +199,32 @@
 .Hcart-product{
     display: flex;
     justify-content: space-between;
-    padding: 20px 30px;
+    padding: 20px 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 }
 
 .Hinfo-cart-product{
     display: flex;
     justify-content: space-between;
-    flex: 0.9;
+    flex: 0.95;
+    gap: 5px;
 }
 
 .Htitulo-producto-carrito{
-    font-size: 20px;
+    font-size: 18px;
     margin: auto 0;
+    margin-right: auto;
 }
 
 .Hprecio-producto-carrito{
     font-weight: 700;
     font-size: 20px;
-    margin-left: 10px;
-    margin: auto 0;
+    margin: auto 0 auto 5px;
 }
 
 .Hcantidad-producto-carrito{
-    font-weight: 400;
     font-size: 20px;
+    width: 40px;
     margin: auto 0;
 }
 
@@ -274,6 +284,29 @@
     background-color: #515151;
     transform: scale(1.03);
     border-radius: 10px;
+}
+
+.animation{
+    position: absolute;
+    right: 100%;
+    place-items: end;
+    display: grid;
+}
+#animado{
+    height: max-content;
+    width: max-content;
+    color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+}
+.animate{
+    animation: movimiento;
+    animation-duration: .4s;
+}
+@keyframes movimiento {
+    0%{transform: translateY(10px);}
+    100%{transform: translateY(-30px);
+    Color: transparent;}
 }
 
 @media screen and (max-width: 1030px){

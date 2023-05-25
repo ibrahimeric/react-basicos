@@ -2,8 +2,10 @@ import React from 'react'
 import '../Styles/Header.css';
 import { useState } from 'react';
 import logoImg from '../img/Logo-Tienda-de-ropa.png';
+// Importamos el archivo data.js que contiene todos los producto.
+import {data} from '../Js/data.js'
 
-const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts}) => {
+const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, products, setProducts, categorias, setCategorias, animate, setAnimate}) => {
 
     const [active, setActive] = useState(false);
     const [barsAnimate, setbarsAnimate] = useState(false);
@@ -13,11 +15,13 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
 
     setTotal(total - product.price * product.quantity);
     setCountProducts(countProducts - product.quantity);
+    animationSubstract('-' + product.quantity)
     setAllProducts(results)
     };
 
     const onCleanCart = () => {
         setAllProducts([])
+        animationSubstract('-' + countProducts)
         setCountProducts(0)
         setTotal(0)
     };
@@ -40,6 +44,28 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         }
         ubicacionPrincipal = Desplazamiento_Actual;
     }
+    
+    function selectCategoria(filter){
+        setProducts(data.filter((dato) =>
+        dato.categoria.toLowerCase().includes(filter.toLocaleLowerCase())))
+        setCategorias(filter.toUpperCase())
+    }
+
+    function animationSubstract(number){
+        document.getElementById('animado').textContent = number;
+        document.getElementById('animado').style.color = "rgb(255, 0, 0)";
+        setAnimate(true)
+        
+        setTimeout(function(){document.getElementById('animado').textContent = ''
+        setAnimate(false)}, 300)
+    }
+
+
+
+    
+
+
+
   return (
     <div>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -57,32 +83,37 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         <a className="HnavLink" href="#">Categorias <i className="Htoggle-dropdown dropdown-toggle"></i></a>
                         <ul className={`Hdropdown ${barsAnimate ? 'HactiveDropdown' : ''}`}>
-                            <li className="HdropdowsItem">
-                            <a className="HdropLink" href="#">Campreras</a>
+                        <li className="HdropdowsItem">
+                            <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Ofertas</a>
                             </li>
                             <li className="HdropdowsItem">
-                                <a className="HdropLink" href="#">Remeras</a>
+                            <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Camperas</a>
                             </li>
                             <li className="HdropdowsItem">
-                            <a className="HdropLink" href="#">Pantalones</a>
+                            <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Pantalones</a>
                             </li>
                             <li className="HdropdowsItem">
-                            <a className="HdropLink" href="#">Shorts</a>
+                            <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Shorts</a>
+                            </li>
+                            <li className="HdropdowsItem">
+                                <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Zapatillas</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <div className="Hcart">
+                <div className="animation">
+                    <div id='animado' className={` ${animate? 'animate' : ''}`}></div>
+                </div>
                 <ul className='HcartList'>
-                    <li className="Hbuy"><a className='Hbuy-a' onClick={() => setActive(!active)}><i className="fa fa-shopping-cart"></i>
-                    <div className="Hcount-products">
+                    <li className="Hbuy"><a className={`Hbuy-a ${countProducts === 0 ? 'Hbuy-aColor' : ''}`} onClick={() => setActive(!active)}><i className="Hbuy-li fa fa-shopping-cart"></i>
+                    <div className={`Hcount-products ${countProducts === 0 ? 'Hcount-productsColor' : ''}`}>
 					    <span id="Hcontador-productos">{countProducts}</span>
 				    </div>
                     </a></li>
                 </ul>
             </div>
-
 
 
 

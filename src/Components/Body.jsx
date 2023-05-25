@@ -1,13 +1,8 @@
 import React from 'react'
 import '../Styles/Body.css'
-import air_jordan1 from '../img/air_jordan1.jpg'
-import nike_airmax97 from '../img/nike_airmax97.jpg'
-import adidas_dayjogger from '..//img/adidas_dayjogger.jpg'
-import fondo from '..//img/fondo.jpg'
-// Importamos el archivo data.js que contiene todos los producto.
-import {data} from '../Js/data.js'
 
-const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal}) => {
+
+const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal, products, setProducts, categorias, setCategorias, animate, setAnimate}) => {
   
   // Metodo para añadir productos al carrito
   const onAddProduct = product => {
@@ -16,25 +11,36 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
       
       setTotal(total + product.price * product.quantity);
       setCountProducts(countProducts + product.quantity);
+      animationSum();
       return setAllProducts([...products]);
     }
 
     setTotal(total + product.price * product.quantity);
     setCountProducts(countProducts + product.quantity);
     setAllProducts([...allProducts, product]);
+    animationSum();
   };
+  
+  function animationSum(){
+    document.getElementById('animado').textContent = '+1';
+    document.getElementById('animado').style.color = "rgb(13, 255, 0)";
+    setAnimate(true)
+    
+    setTimeout(function(){document.getElementById('animado').textContent = ''
+    setAnimate(false)}, 300)
+  }
 
   return (
     // comentario
     <div className="body" >
-    
-        <h1>PRODUCTOS DE OFERTA</h1>
+        
+         <h1 className='title'>{categorias}</h1>
         
         <div className="fondo"></div>
         <div className="container">
           {/* Aquí ejecutamos un map (Es como un foreach) para mostrar todos los productos que se encuentran cargados en el archivo data.js */}
           {/* Con la constante product vamos añadiendo todos los productos que se encuentran en data.js */}
-              {data.map(product => (
+              {products.length ? products.map(product => (
                 // Creamos un div y le añadimos la clase card y el id del producto con product.id
                 <div className="card" key={product.id}>
                   {/* Cargamos la imagen con product.urlImage y el nombre del producto en alt con product.nameProduct */}
@@ -47,7 +53,11 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
                   añade el producto al carrito*/}
                   <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
                 </div>
-              ))}
+              )): (
+                <div className="productNotFound">
+                  <h1>No se encontraron productos en esta categoria</h1>
+                </div>
+              )}
         </div> 
         <div className="imgn"></div>
     </div>
