@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/react-proyecto/build/static/css/main.ea458d86.css",
-    "main.js": "/react-proyecto/build/static/js/main.f3973a0e.js",
+    "main.css": "/react-proyecto/build/static/css/main.a0a764ea.css",
+    "main.js": "/react-proyecto/build/static/js/main.cc0c76ca.js",
     "static/media/fondo.jpg": "/react-proyecto/build/static/media/fondo.ba56ba4eac9492d94e97.jpg",
+    "static/media/slider3.jpg": "/react-proyecto/build/static/media/slider3.2fc631cf28ea02d4f28a.jpg",
     "static/media/nike_airmax97.jpg": "/react-proyecto/build/static/media/nike_airmax97.c18d23632209e38890e3.jpg",
     "static/media/remera7.jpg": "/react-proyecto/build/static/media/remera7.61db26381073f98a278a.jpg",
     "static/media/short nike.png": "/react-proyecto/build/static/media/short nike.0bbf7a6bde93b5d7a972.png",
+    "static/media/slider2.webp": "/react-proyecto/build/static/media/slider2.2797506b5f8fdeea229d.webp",
+    "static/media/slider1.jpg": "/react-proyecto/build/static/media/slider1.3f9193fda9e9b2aab285.jpg",
     "static/media/remera6.jpg": "/react-proyecto/build/static/media/remera6.c0509761aff25bc1af00.jpg",
     "static/media/air_jordan1.jpg": "/react-proyecto/build/static/media/air_jordan1.f1a9cd38fd5942548e3f.jpg",
     "static/media/campera_nike.jpg": "/react-proyecto/build/static/media/campera_nike.56009dd7a8d69c385b8f.jpg",
     "static/media/Logo-Tienda-de-ropa.png": "/react-proyecto/build/static/media/Logo-Tienda-de-ropa.57ed09cce1c7cbf6f6a8.png",
+    "static/media/remera3.jpeg": "/react-proyecto/build/static/media/remera3.36d4856fc440ab7592b2.jpeg",
     "static/media/remera9.jpg": "/react-proyecto/build/static/media/remera9.2a1eba7a8889c8f4bb23.jpg",
     "static/media/adidas_dayjogger.jpg": "/react-proyecto/build/static/media/adidas_dayjogger.8ac4c7e4080458cd29ce.jpg",
     "static/media/remera8.jpg": "/react-proyecto/build/static/media/remera8.22d8f857d012375ae983.jpg",
@@ -22,13 +26,13 @@
     "static/media/campera 11.webp": "/react-proyecto/build/static/media/campera 11.ec3f18bc69af385a614f.webp",
     "static/media/short nike circa.webp": "/react-proyecto/build/static/media/short nike circa.af30ee23028af21fa07d.webp",
     "static/media/pantalon13.webp": "/react-proyecto/build/static/media/pantalon13.81bab8ce6cd820b98cd7.webp",
-    "static/media/remera3.jpeg": "/react-proyecto/build/static/media/remera3.da21127a9c09c1c0113d.jpeg",
     "static/media/remera2.webp": "/react-proyecto/build/static/media/remera2.f3997cee2a9cf1f40ebe.webp",
     "static/media/short adidas dame.webp": "/react-proyecto/build/static/media/short adidas dame.39b1da393631aafd64b6.webp",
     "static/media/short adidas.webp": "/react-proyecto/build/static/media/short adidas.df62b738bdebfc224387.webp",
     "static/media/campera 7.webp": "/react-proyecto/build/static/media/campera 7.409f614f9162f348541b.webp",
     "static/media/campera 6.webp": "/react-proyecto/build/static/media/campera 6.b23e929283edecb48b92.webp",
     "static/media/remera1.webp": "/react-proyecto/build/static/media/remera1.addb43da2830912fe9ac.webp",
+    "static/media/remera4.webp": "/react-proyecto/build/static/media/remera4.7480cd9c4e65b9e189cf.webp",
     "static/media/short nike giannis.webp": "/react-proyecto/build/static/media/short nike giannis.d2c7b084a9ca3624b382.webp",
     "static/media/pantalon06.webp": "/react-proyecto/build/static/media/pantalon06.9f3f5bc966ac36fbe884.webp",
     "static/media/campera 3.webp": "/react-proyecto/build/static/media/campera 3.b6b085a5549a69618d98.webp",
@@ -61,18 +65,17 @@
     "static/media/short adidas studio.webp": "/react-proyecto/build/static/media/short adidas studio.d4bbf7d275b48edd2ad9.webp",
     "static/media/pantalon11.webp": "/react-proyecto/build/static/media/pantalon11.952371df172586136876.webp",
     "static/media/short_topper rx3.webp": "/react-proyecto/build/static/media/short_topper rx3.e2a585fef2230eeac013.webp",
-    "static/media/remera4.webp": "/react-proyecto/build/static/media/remera4.c723312634f82c363297.webp",
     "static/media/pantalon02.webp": "/react-proyecto/build/static/media/pantalon02.afb5f0e12669ed83a382.webp",
     "static/media/pantalon16.webp": "/react-proyecto/build/static/media/pantalon16.6a123f8137a83593d2e6.webp",
     "static/media/short puma classics.webp": "/react-proyecto/build/static/media/short puma classics.5466fec9607c5e88a871.webp",
     "static/media/pantalon04.webp": "/react-proyecto/build/static/media/pantalon04.d794902ec053b95b6e1e.webp",
     "static/media/short_boca.webp": "/react-proyecto/build/static/media/short_boca.810d22f404fa5598b673.webp",
     "index.html": "/react-proyecto/build/index.html",
-    "main.ea458d86.css.map": "/react-proyecto/build/static/css/main.ea458d86.css.map",
-    "main.f3973a0e.js.map": "/react-proyecto/build/static/js/main.f3973a0e.js.map"
+    "main.a0a764ea.css.map": "/react-proyecto/build/static/css/main.a0a764ea.css.map",
+    "main.cc0c76ca.js.map": "/react-proyecto/build/static/js/main.cc0c76ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea458d86.css",
-    "static/js/main.f3973a0e.js"
+    "static/css/main.a0a764ea.css",
+    "static/js/main.cc0c76ca.js"
   ]
 }
