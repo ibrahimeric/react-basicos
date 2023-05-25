@@ -9,29 +9,29 @@ const Footer = () => {
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
             <h4>Menu</h4>
-            <a href="/Inicio">
+            <a href="#">
               <p>Inicio</p>
             </a>
-            <a href="/Redes sociales">
+            <a href="#">
               <p>Contactanos</p>
             </a>
-            <a href="/Categorias">
+            <a href="#">
               <p>Categorias</p>
             </a>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Productos</h4>
-            <a href="/Camperas">
+            <a href="#">
               <p>Camperas</p>
             </a>
-            <a href="/Remeras">
-              <p>Remeras</p>
-            </a>
-            <a href="/Pantalones">
+            <a href="#">
               <p>Pantalones</p>
             </a>
-            <a href="/Shorts">
+            <a href="#">
               <p>Shorts</p>
+            </a>
+            <a href="#">
+              <p>Zapatillas</p>
             </a>
           </div>
           <div className='sb__footer-links_div'>
