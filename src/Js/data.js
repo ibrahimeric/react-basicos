@@ -7,6 +7,8 @@ import short_nike from '../img/short nike.png'
 import campera_nike from '../img/campera_nike.jpg'
 import adidas_dayjogger from '../img/adidas_dayjogger.jpg'
 import chaleco_columbia from '../img/chaleco_hombre_columbia.webp'
+
+// CAMPERAS
 import campera1 from '../img/imgCamperas/campera 1.webp'
 import campera2 from '../img/imgCamperas/campera 2.webp'
 import campera3 from '../img/imgCamperas/campera 3.webp'
