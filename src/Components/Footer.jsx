@@ -1,7 +1,13 @@
 import React from 'react'
 import '../Styles/Footer.css';
+import {data} from '../Js/data.js'
 
-const Footer = () => {
+const Footer = ({products, setProducts, categorias, setCategorias}) => {
+  function selectCategoria(filter){
+    setProducts(data.filter((dato) =>
+    dato.categoria.toLowerCase().includes(filter.toLocaleLowerCase())))
+    setCategorias(filter.toUpperCase())
+  }
   return (
     <div className="footer">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -21,16 +27,16 @@ const Footer = () => {
           </div>
           <div className='sb__footer-links_div'>
             <h4>Productos</h4>
-            <a href="/Camperas">
+            <a href="#" onClick={evt => selectCategoria(evt.target.textContent)}>
               <p>Camperas</p>
             </a>
-            <a href="/Remeras">
+            <a href="#" onClick={evt => selectCategoria(evt.target.textContent)}>
               <p>Remeras</p>
             </a>
-            <a href="/Pantalones">
+            <a href="#" onClick={evt => selectCategoria(evt.target.textContent)}>
               <p>Pantalones</p>
             </a>
-            <a href="/Shorts">
+            <a href="#" onClick={evt => selectCategoria(evt.target.textContent)}>
               <p>Shorts</p>
             </a>
           </div>

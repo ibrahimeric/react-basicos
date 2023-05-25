@@ -36,7 +36,7 @@ function App() {
       <Slider></Slider>
       <Body allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
-      total = {total} 
+      total = {total}
       setTotal = {setTotal} 
       countProducts = {countProducts} 
       setCountProducts = {setCountProducts}
@@ -46,7 +46,11 @@ function App() {
       setCategorias = {setCategorias}
       animate = {animate} 
       setAnimate = {setAnimate}></Body>
-      <Footer></Footer>
+      <Footer
+      products = {products}
+      setProducts = {setProducts}
+      categorias = {categorias}
+      setCategorias = {setCategorias}></Footer>
     </div>
   );
 }
