@@ -431,7 +431,7 @@ export const data = [
     {
         id: 44,
         categoria: 'remeras',
-        nameProduct: 'Remera Lisa Modal Hombre',
+        nameProduct: 'REMERA BEIGE OVERSIZE LARGE BA',
         price: 5200,
         urlImage: remera3,
         quantity: 1,
@@ -439,7 +439,7 @@ export const data = [
     {
         id: 45,
         categoria: 'remeras',
-        nameProduct: 'REMERON MEGA [ NEGRO ]',
+        nameProduct: 'REMERA BORDO OVERSIZE LARGE BA',
         price: 3200,
         urlImage: remera4,
         quantity: 1,
