@@ -21,7 +21,6 @@ function App() {
 
   return (
     <div className="App">
-
       <Header allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
       total = {total} 
