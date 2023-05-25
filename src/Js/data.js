@@ -46,6 +46,19 @@ import pantalon18 from '../img/Pantalones/pantalon18.webp'
 import pantalon19 from '../img/Pantalones/pantalon19.webp'
 import pantalon20 from '../img/Pantalones/pantalon20.webp'
 
+
+//REMERAS
+import remera1 from '../img/imgRemeras/remera1.webp'
+import remera2 from '../img/imgRemeras/remera2.webp'
+import remera3 from '../img/imgRemeras/remera3.jpeg'
+import remera4 from '../img/imgRemeras/remera4.webp'
+import remera5 from '../img/imgRemeras/remera5.webp'
+import remera6 from '../img/imgRemeras/remera6.jpg'
+import remera7 from '../img/imgRemeras/remera7.jpg'
+import remera8 from '../img/imgRemeras/remera8.jpg'
+import remera9 from '../img/imgRemeras/remera9.jpg'
+
+
 export const data = [
     {
         // Aqui indicamos el id que debe ser siempre distinto ya que con ese numero sabemos cual producto seleccionó el usuario y debemos 
@@ -383,4 +396,79 @@ export const data = [
         urlImage: pantalon20,
         quantity: 1,
     },
+    {
+        id: 42,
+        categoria: 'remeras',
+        nameProduct: 'Remera Nike Hombre NSW Tee Diy Futura Negro',
+        price: 4200,
+        urlImage: remera1,
+        quantity: 1,
+    },
+    {
+        id: 43,
+        categoria: 'remeras',
+        nameProduct: 'REMERA MANGA LARGA QUIKSILVER TOWN HALL HOMBRE',
+        price: 4200,
+        urlImage: remera2,
+        quantity: 1,
+    },
+    {
+        id: 44,
+        categoria: 'remeras',
+        nameProduct: 'Remera Lisa Modal Hombre',
+        price: 5200,
+        urlImage: remera3,
+        quantity: 1,
+    },
+    {
+        id: 45,
+        categoria: 'remeras',
+        nameProduct: 'REMERON MEGA [ NEGRO ]',
+        price: 3200,
+        urlImage: remera4,
+        quantity: 1,
+    },
+    {
+        id: 46,
+        categoria: 'remeras',
+        nameProduct: 'REMERA OVERSIZE HOMBRE REMERON ALGODÓN MANGA CORTA PREMIUM',
+        price: 6200,
+        urlImage: remera5,
+        quantity: 1,
+    },
+    {
+        id: 47,
+        categoria: 'remeras',
+        nameProduct: 'Remera Oversize | KTK',
+        price: 4600,
+        urlImage: remera6,
+        quantity: 1,
+    },
+    {
+        id: 48,
+        categoria: 'remeras',
+        nameProduct: 'Remeras Oversize de Hombre | Burn',
+        price: 4900,
+        urlImage: remera7,
+        quantity: 1,
+    },
+    {
+        id: 49,
+        categoria: 'remeras',
+        nameProduct: 'REMERA OVERSIZE LISA',
+        price: 5100,
+        urlImage: remera8,
+        quantity: 1,
+    },
+    {
+        id: 50,
+        categoria: 'remeras',
+        nameProduct: 'Remera de hombre THRASHER GOLD-ROSA',
+        price: 4600,
+        urlImage: remera9,
+        quantity: 1,
+    },
+   
+    
+    
 ];

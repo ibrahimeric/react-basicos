@@ -99,6 +99,9 @@ return (
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
                                 <p className="HdropLink">Zapatillas</p>
                             </li>
+                            <li className="HdropdowsItem">
+                                <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Remeras</a>
+                                </li>
                         </ul>
                     </li>
                 </ul>
