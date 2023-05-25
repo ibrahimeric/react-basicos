@@ -15,13 +15,13 @@ const Footer = ({products, setProducts, categorias, setCategorias}) => {
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
             <h4>Menu</h4>
-            <a href="/Inicio">
+            <a href="#">
               <p>Inicio</p>
             </a>
-            <a href="/Redes sociales">
+            <a href="#">
               <p id='contacto'>Contactanos</p>
             </a>
-            <a href="/Categorias">
+            <a href="#">
               <p>Categorias</p>
             </a>
           </div>
@@ -71,7 +71,7 @@ const Footer = ({products, setProducts, categorias, setCategorias}) => {
         <div className='sb__footer-below'>
           <div className='sb__footer-copyright'>
             <p>
-              ©{new Date().getFullYear()} Tienda de Ropa, Tucumán, Argentina
+              ©{new Date().getFullYear()} Total Look, Tucumán, Argentina
             </p>
           </div>
           <div className='sb__footer-below-links'>
