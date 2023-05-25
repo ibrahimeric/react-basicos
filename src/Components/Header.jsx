@@ -46,6 +46,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     }
     
     function selectCategoria(filter){
+        setbarsAnimate(false);
         setProducts(data.filter((dato) =>
         dato.categoria.toLowerCase().includes(filter.toLocaleLowerCase())))
         setCategorias(filter.toUpperCase())
@@ -54,10 +55,10 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     function animationSubstract(number){
         document.getElementById('animado').textContent = number;
         document.getElementById('animado').style.color = "rgb(255, 0, 0)";
-        setAnimate(true)
+        setAnimate(2)
         
         setTimeout(function(){document.getElementById('animado').textContent = ''
-        setAnimate(false)}, 300)
+        setAnimate(0)}, 300)
     }
 
 
@@ -78,25 +79,25 @@ return (
                         <a className="HnavLink" href="#">Inicio</a>
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
-                        <a className="HnavLink" href="#">Contactanos</a>
+                        <a className="HnavLink" href="#contacto">Contactanos</a>
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         <a className="HnavLink" href="#">Categorias <i className="Htoggle-dropdown dropdown-toggle"></i></a>
                         <ul className={`Hdropdown ${barsAnimate ? 'HactiveDropdown' : ''}`}>
-                        <li className="HdropdowsItem">
-                            <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Ofertas</a>
+                            <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
+                                <a href="#categorias"><p className="HdropLink">Ofertas</p></a>
                             </li>
-                            <li className="HdropdowsItem">
-                            <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Camperas</a>
+                            <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
+                                <p className="HdropLink">Camperas</p>
                             </li>
-                            <li className="HdropdowsItem">
-                            <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Pantalones</a>
+                            <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
+                                <p className="HdropLink">Pantalones</p>
                             </li>
-                            <li className="HdropdowsItem">
-                            <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Shorts</a>
+                            <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
+                                <p className="HdropLink">Shorts</p>
                             </li>
-                            <li className="HdropdowsItem">
-                                <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Zapatillas</a>
+                            <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
+                                <p className="HdropLink">Zapatillas</p>
                             </li>
                         </ul>
                     </li>
@@ -104,7 +105,7 @@ return (
             </div>
             <div className="Hcart">
                 <div className="animation">
-                    <div id='animado' className={` ${animate? 'animate' : ''}`}></div>
+                    <div id='animado' className={` ${animate !== 0? animate === 1? 'animateUp' : 'animateDown' : ''}`}></div>
                 </div>
                 <ul className='HcartList'>
                     <li className="Hbuy"><a className={`Hbuy-a ${countProducts === 0 ? 'Hbuy-aColor' : ''}`} onClick={() => setActive(!active)}><i className="Hbuy-li fa fa-shopping-cart"></i>

@@ -17,7 +17,7 @@ function App() {
     dato.categoria.toLowerCase().includes('oferta'.toLocaleLowerCase())))
 
   const [products, setProducts] = useState(product);
-  const [animate, setAnimate] = useState(true);
+  const [animate, setAnimate] = useState(0);
 
   return (
     <div className="App">

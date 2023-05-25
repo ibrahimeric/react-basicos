@@ -24,17 +24,17 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
   function animationSum(){
     document.getElementById('animado').textContent = '+1';
     document.getElementById('animado').style.color = "rgb(13, 255, 0)";
-    setAnimate(true)
+    setAnimate(1)
     
     setTimeout(function(){document.getElementById('animado').textContent = ''
-    setAnimate(false)}, 300)
+    setAnimate(0)}, 300)
   }
 
   return (
     // comentario
     <div className="body" >
         
-         <h1 className='title'>{categorias}</h1>
+         <h1 className='title' id='categorias'>{categorias}</h1>
         
         <div className="fondo"></div>
         <div className="container">

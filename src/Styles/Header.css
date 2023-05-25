@@ -52,8 +52,7 @@
     padding-top: 5px;
 }
 .HdropLink{
-    text-decoration: none;
-    color: #000;
+    margin: 0;
 }
 .HnavItem:hover .HnavLink{
     color: #548aff;
@@ -299,13 +298,22 @@
     font-size: 14px;
     font-weight: bold;
 }
-.animate{
-    animation: movimiento;
+.animateUp{
+    animation: animateUp;
     animation-duration: .4s;
 }
-@keyframes movimiento {
+@keyframes animateUp {
     0%{transform: translateY(10px);}
     100%{transform: translateY(-30px);
+    Color: transparent;}
+}
+.animateDown{
+    animation: animateDown;
+    animation-duration: .4s;
+}
+@keyframes animateDown {
+    0%{transform: translateY(-10px);}
+    100%{transform: translateY(10px);
     Color: transparent;}
 }
 
@@ -371,8 +379,11 @@
     .HnavLink, .HdropLink{
         color: #fff;
     }
+    .Hdropdown{
+        visibility: hidden;
+    }
     .HactiveDropdown{
-        display: none;
+        visibility: visible;
         text-align: left;
         position: relative;
         top: 0;
