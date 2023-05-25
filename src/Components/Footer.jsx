@@ -8,52 +8,49 @@ const Footer = () => {
       <div className='sb__footer section__padding'>
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
-            <h4>For Business</h4>
-            <a href="/employer">
-              <p>Employer</p>
+            <h4>Menu</h4>
+            <a href="/Inicio">
+              <p>Inicio</p>
             </a>
-            <a href="/healthplan">
-              <p>Health Plan</p>
+            <a href="/Redes sociales">
+              <p>Contactanos</p>
             </a>
-            <a href="/individual">
-              <p>Employer</p>
-            </a>
-          </div>
-          <div className='sb__footer-links_div'>
-            <h4>Resources</h4>
-            <a href="/resource">
-              <p>Resource center</p>
-            </a>
-            <a href="/resource">
-              <p>Testimonials</p>
-            </a>
-            <a href="/resource">
-              <p>STV</p>
+            <a href="/Categorias">
+              <p>Categorias</p>
             </a>
           </div>
           <div className='sb__footer-links_div'>
-            <h4>Partners</h4>
-            <a href="/employer">
-              <p>Swing Tech</p>
+            <h4>Productos</h4>
+            <a href="/Camperas">
+              <p>Camperas</p>
+            </a>
+            <a href="/Remeras">
+              <p>Remeras</p>
+            </a>
+            <a href="/Pantalones">
+              <p>Pantalones</p>
+            </a>
+            <a href="/Shorts">
+              <p>Shorts</p>
             </a>
           </div>
           <div className='sb__footer-links_div'>
-            <h4>Company</h4>
-            <a href="/about">
-              <p>About</p>
+            <h4>Empresa</h4>
+            <a href="#">
+              <p>Quienes somos</p>
             </a>
-            <a href="/press">
-              <p>Press</p>
+            <a href="#">
+              <p>Favoritos</p>
             </a>
-            <a href="/career">
-              <p>Career</p>
+            <a href="#">
+              <p>¿Cómo comprar?</p>
             </a>
-            <a href="/contact">
-              <p>Contact</p>
+            <a href="#">
+              <p>Mi cuenta</p>
             </a>
           </div>
           <div className='sb__footer-links_div'>
-            <h4>Comming soon on</h4>
+            <h4>Redes sociales</h4>
             <div className='icon'>
               <ul className='iconLista'>
                 <li className="iconos"><a className='facebook' href="#"><i className="fa fa-facebook"></i></a></li>
@@ -68,14 +65,14 @@ const Footer = () => {
         <div className='sb__footer-below'>
           <div className='sb__footer-copyright'>
             <p>
-              @{new Date().getFullYear()} CodeInn. All right reserverd.
+              ©{new Date().getFullYear()} Tienda de Ropa, Tucumán, Argentina
             </p>
           </div>
           <div className='sb__footer-below-links'>
-            <a href="/terms"><div><p>Terms & Conditions</p></div></a>
-            <a href="/privacy"><div><p>Privacy</p></div></a>
-            <a href="/security"><div><p>Security</p></div></a>
-            <a href="/cookie"><div><p>Cookie Declaration</p></div></a>
+            <a href="#"><div><p>Terminos y Condiciones</p></div></a>
+            <a href="#"><div><p>Politica de Privacidad</p></div></a>
+            <a href="#"><div><p>Seguridad</p></div></a>
+            <a href="#"><div><p>Cookies</p></div></a>
           </div>
         </div>
       </div>
