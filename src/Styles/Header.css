@@ -129,6 +129,7 @@
     display: block;
     width: 60px;
     margin: auto 0;
+    position: relative;
 }
 .HcartList{
     padding: 0;
@@ -283,6 +284,29 @@
     background-color: #515151;
     transform: scale(1.03);
     border-radius: 10px;
+}
+
+.animation{
+    position: absolute;
+    right: 100%;
+    place-items: end;
+    display: grid;
+}
+#animado{
+    height: max-content;
+    width: max-content;
+    color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+}
+.animate{
+    animation: movimiento;
+    animation-duration: .4s;
+}
+@keyframes movimiento {
+    0%{transform: translateY(10px);}
+    100%{transform: translateY(-30px);
+    Color: transparent;}
 }
 
 @media screen and (max-width: 1030px){
