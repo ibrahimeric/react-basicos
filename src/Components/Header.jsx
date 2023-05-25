@@ -66,7 +66,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
 
 
 
-  return (
+return (
     <div>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <nav className={`Hnav ${Scroll ? 'HnavUp' : ''}`}>
