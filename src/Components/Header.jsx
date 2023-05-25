@@ -88,16 +88,16 @@ return (
                                 <a href="#categorias"><p className="HdropLink">Ofertas</p></a>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <p className="HdropLink">Camperas</p>
+                                <a href="#categorias"><p className="HdropLink">Camperas</p></a>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <p className="HdropLink">Pantalones</p>
+                                <a href="#categorias"><p className="HdropLink">Pantalones</p></a>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <p className="HdropLink">Shorts</p>
+                                <a href="#categorias"><p className="HdropLink">Shorts</p></a>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <p className="HdropLink">Zapatillas</p>
+                                <a href="#categorias"><p className="HdropLink">Zapatillas</p></a>
                             </li>
                             <li className="HdropdowsItem">
                                 <a className="HdropLink" onClick={evt => selectCategoria(evt.target.text)}>Remeras</a>

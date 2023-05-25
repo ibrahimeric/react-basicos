@@ -121,6 +121,9 @@
     font-size: 25px;
     color: #3b5999;
 }
+.HdropdowsItem a{
+    color: #000;
+}
 .HdropLink{
     cursor: pointer;
 }
