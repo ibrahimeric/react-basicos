@@ -18,10 +18,11 @@ function App() {
     dato.categoria.toLowerCase().includes('oferta'.toLocaleLowerCase())))
 
   const [products, setProducts] = useState(product);
+  const [animate, setAnimate] = useState(true);
 
   return (
     <div className="App">
-      {/* <Tp1></Tp1> f*/}
+      {/* <Tp1></Tp1> */}
 
       <Header allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
@@ -32,7 +33,9 @@ function App() {
       products = {products}
       setProducts = {setProducts}
       categorias = {categorias}
-      setCategorias = {setCategorias}></Header>
+      setCategorias = {setCategorias}
+      animate = {animate} 
+      setAnimate = {setAnimate}></Header>
       <Slider></Slider>
       <Body allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
@@ -43,7 +46,9 @@ function App() {
       products = {products}
       setProducts = {setProducts}
       categorias = {categorias}
-      setCategorias = {setCategorias}></Body>
+      setCategorias = {setCategorias}
+      animate = {animate} 
+      setAnimate = {setAnimate}></Body>
       <Footer></Footer>
     </div>
   );

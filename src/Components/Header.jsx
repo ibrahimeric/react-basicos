@@ -5,7 +5,7 @@ import logoImg from '../img/Logo-Tienda-de-ropa.png';
 // Importamos el archivo data.js que contiene todos los producto.
 import {data} from '../Js/data.js'
 
-const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, products, setProducts, categorias, setCategorias}) => {
+const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, products, setProducts, categorias, setCategorias, animate, setAnimate}) => {
 
     const [active, setActive] = useState(false);
     const [barsAnimate, setbarsAnimate] = useState(false);
@@ -15,11 +15,13 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
 
     setTotal(total - product.price * product.quantity);
     setCountProducts(countProducts - product.quantity);
+    animationSubstract('-' + product.quantity)
     setAllProducts(results)
     };
 
     const onCleanCart = () => {
         setAllProducts([])
+        animationSubstract('-' + countProducts)
         setCountProducts(0)
         setTotal(0)
     };
@@ -49,8 +51,14 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         setCategorias(filter.toUpperCase())
     }
 
-
-
+    function animationSubstract(number){
+        document.getElementById('animado').textContent = number;
+        document.getElementById('animado').style.color = "rgb(255, 0, 0)";
+        setAnimate(true)
+        
+        setTimeout(function(){document.getElementById('animado').textContent = ''
+        setAnimate(false)}, 300)
+    }
 
 
 
@@ -95,6 +103,9 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
                 </ul>
             </div>
             <div className="Hcart">
+                <div className="animation">
+                    <div id='animado' className={` ${animate? 'animate' : ''}`}></div>
+                </div>
                 <ul className='HcartList'>
                     <li className="Hbuy"><a className={`Hbuy-a ${countProducts === 0 ? 'Hbuy-aColor' : ''}`} onClick={() => setActive(!active)}><i className="Hbuy-li fa fa-shopping-cart"></i>
                     <div className={`Hcount-products ${countProducts === 0 ? 'Hcount-productsColor' : ''}`}>

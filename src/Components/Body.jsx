@@ -2,7 +2,7 @@ import React from 'react'
 import '../Styles/Body.css'
 
 
-const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal, products, setProducts, categorias, setCategorias}) => {
+const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal, products, setProducts, categorias, setCategorias, animate, setAnimate}) => {
   
   // Metodo para añadir productos al carrito
   const onAddProduct = product => {
@@ -11,15 +11,24 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
       
       setTotal(total + product.price * product.quantity);
       setCountProducts(countProducts + product.quantity);
+      animationSum();
       return setAllProducts([...products]);
     }
 
     setTotal(total + product.price * product.quantity);
     setCountProducts(countProducts + product.quantity);
     setAllProducts([...allProducts, product]);
+    animationSum();
   };
   
-  
+  function animationSum(){
+    document.getElementById('animado').textContent = '+1';
+    document.getElementById('animado').style.color = "rgb(13, 255, 0)";
+    setAnimate(true)
+    
+    setTimeout(function(){document.getElementById('animado').textContent = ''
+    setAnimate(false)}, 300)
+  }
 
   return (
     // comentario
