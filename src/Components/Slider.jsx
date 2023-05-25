@@ -1,13 +1,17 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
+import slider1 from '../img/Slider/slider1.jpg';
+import slider2 from '../img/Slider/slider2.webp';
+import slider3 from '../img/Slider/slider3.jpg';
+import '../Styles/Slider.css'
 
 function Slider() {
   return (
     <Carousel>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-100"
-          src="https://images.hdqwalls.com/download/lai-da-palpuogna-lake-in-switzerland-5k-9v-3840x2160.jpg"
+          className="carousel"
+          src={slider1}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -17,8 +21,8 @@ function Slider() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-100"
-          src="https://images.hdqwalls.com/download/seagulls-in-switzerland-3840x2160.jpg"
+          className="carousel"
+          src={slider2}
           alt="Second slide"
         />
 
@@ -29,8 +33,8 @@ function Slider() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-100"
-          src="https://images.hdqwalls.com/download/forests-czech-republic-parks-bohemian-switzerland-am-3840x2160.jpg"
+          className="carousel"
+          src={slider3}
           alt="Third slide"
         />
 
