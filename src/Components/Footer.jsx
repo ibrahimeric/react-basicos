@@ -19,7 +19,7 @@ const Footer = ({products, setProducts, categorias, setCategorias}) => {
               <p>Inicio</p>
             </a>
             <a href="/Redes sociales">
-              <p>Contactanos</p>
+              <p id='contacto'>Contactanos</p>
             </a>
             <a href="/Categorias">
               <p>Categorias</p>
