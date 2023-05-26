@@ -1,8 +1,8 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import slider1 from '../img/Slider/slider1.jpg';
+import slider1 from '../img/Slider/slider1.webp';
 import slider2 from '../img/Slider/slider2.webp';
-import slider3 from '../img/Slider/slider3.jpg';
+import slider3 from '../img/Slider/slider3.webp';
 import '../Styles/Slider.css'
 
 function Slider() {

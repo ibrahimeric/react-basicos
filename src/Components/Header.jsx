@@ -47,6 +47,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     let ubicacionPrincipal = window.pageYOffset;
     let Desplazamiento_Actual;
     const [Scroll, setScroll] = useState(false);
+    
     window.onscroll = function(){
         if(window.innerWidth > 600 || active == true || barsAnimate == true){
             setScroll(false);
@@ -74,8 +75,11 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         document.getElementById('animado').style.color = "rgb(255, 0, 0)";
         setAnimate(2)
         
-        setTimeout(function(){document.getElementById('animado').textContent = ''
+        setTimeout(function(){document.getElementById('animado').textContent = '';
         setAnimate(0)}, 300)
+
+        if(countProducts + parseFloat(number) === 0)
+            setActive(false)
     }
 
 

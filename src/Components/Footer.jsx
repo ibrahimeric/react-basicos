@@ -8,6 +8,7 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
     dato.categoria.toLowerCase().includes(filter.toLocaleLowerCase())))
     setCategorias(filter.toUpperCase())
   }
+  
   return (
     <div className="footer">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
