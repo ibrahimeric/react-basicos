@@ -47,6 +47,7 @@ html, .body{
 
 .card:hover{
     transform: translateY(-15px);
+    color: red;
     box-shadow: 0 12px 16px rgb(31, 31, 31.0.3);
 }
 .card p{
