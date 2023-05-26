@@ -3,6 +3,9 @@
     --instagram:#e4405f;
     --twitter: #55acee;
 }
+.header{
+    height: 80px;
+}
 .Hnav{
     position: fixed;
     width: 100%;
@@ -26,22 +29,26 @@
 }
 .HnavItem{
     height: 100%;
-    padding-right: 40px;
     margin: 0;
     list-style: none;
     padding-top: 10px;
+    position: relative;
+
+    
 }
 .HnavLink{
     line-height: 50px;
     text-decoration: none;
     color: black;
+    padding: 21px 20px 32px 20px;
+    cursor: pointer;
 }
-
 .Hdropdown{
     display: none;
     text-align: left;
     position: absolute;
     top: 75px;
+    left: 20px;
     width: 150px;
     list-style: none;
     background-color: rgb(247, 247, 247);
@@ -400,6 +407,9 @@
     }
 }
 @media screen and (max-width: 600px){
+    .header{
+        height: 40px;
+    }
     .Hnav{
         height: 40px;
         transition: all .3s;

@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Styles/Header.css';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import logoImg from '../img/Logo-Tienda-de-ropa.png';
 // Importamos el archivo data.js que contiene todos los producto.
 import {data} from '../Js/data.js'
@@ -10,7 +10,24 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     const [active, setActive] = useState(false);
     const [barsAnimate, setbarsAnimate] = useState(false);
 
-    const onDeleteProduct = (product) => {
+    useEffect(() => {
+        let cart = localStorage.getItem('cart')
+        let count = localStorage.getItem('count')
+        let total = localStorage.getItem('total')
+        if(cart){
+            setAllProducts(JSON.parse(cart))
+            setCountProducts(parseFloat(count))
+            setTotal(parseFloat(total))
+        }
+    }, [ ])
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(allProducts))
+        localStorage.setItem('count', countProducts)
+        localStorage.setItem('total', total)
+    }, [allProducts])
+
+    function onDeleteProduct(product){
     const results = allProducts.filter(item => item.id !== product.id);
 
     setTotal(total - product.price * product.quantity);
@@ -19,7 +36,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     setAllProducts(results)
     };
 
-    const onCleanCart = () => {
+    function onCleanCart() {
         setAllProducts([])
         animationSubstract('-' + countProducts)
         setCountProducts(0)
@@ -68,10 +85,10 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
 
 
 return (
-    <div>
+    <div className='header'>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <nav className={`Hnav ${Scroll ? 'HnavUp' : ''}`}>
-            <a className="Hnavlogo" href="#"><img src={logoImg} alt="logo"/></a>
+            <a className="Hnavlogo" href="https://ibrahimeric.github.io/react-proyecto/build/"><img src={logoImg} alt="logo"/></a>
 
             <div className="HnavDiv">
                 <ul className={`HnavList ${barsAnimate ? 'HactiveNavList' : ''}`}>
@@ -82,7 +99,7 @@ return (
                         <a className="HnavLink" href="#contacto">Contactanos</a>
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
-                        <a className="HnavLink" href="#">Categorias <i className="Htoggle-dropdown dropdown-toggle"></i></a>
+                        <a className="HnavLink">Categorias <i className="Htoggle-dropdown dropdown-toggle"></i></a>
                         <ul className={`Hdropdown ${barsAnimate ? 'HactiveDropdown' : ''}`}>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
                                 <a href="#categorias"><p className="HdropLink">Ofertas</p></a>
@@ -167,9 +184,9 @@ return (
 
             <div className="Hicons">
                 <ul className={`HiconList ${barsAnimate ? 'HactiveIconList' : ''}`}>
-                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hfacebook' href="#"><i className="fa fa-facebook"></i></a></li>
-                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hinstagram' href="#"><i className="fa fa-instagram"></i></a></li>
-                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Htwitter' href="#"><i className="fa fa-twitter"></i></a></li>
+                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hfacebook' href="https://www.facebook.com/leomessi/"><i className="fa fa-facebook"></i></a></li>
+                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hinstagram' href="https://www.instagram.com/leomessi/"><i className="fa fa-instagram"></i></a></li>
+                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Htwitter' href="https://twitter.com/leomessisite/"><i className="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
             <div className="Huser">

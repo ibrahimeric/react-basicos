@@ -59,9 +59,9 @@ const Footer = ({products, setProducts, categorias, setCategorias}) => {
             <h4>Redes sociales</h4>
             <div className='icon'>
               <ul className='iconLista'>
-                <li className="iconos"><a className='facebook' href="#"><i className="fa fa-facebook"></i></a></li>
-                <li className="iconos"><a className='instagram' href="#"><i className="fa fa-instagram"></i></a></li>
-                <li className="iconos"><a className='twitter' href="#"><i className="fa fa-twitter"></i></a></li>
+                <li className="iconos"><a className='facebook' href="https://www.facebook.com/leomessi/"><i className="fa fa-facebook"></i></a></li>
+                <li className="iconos"><a className='instagram' href="https://www.instagram.com/leomessi/"><i className="fa fa-instagram"></i></a></li>
+                <li className="iconos"><a className='twitter' href="https://twitter.com/leomessisite/"><i className="fa fa-twitter"></i></a></li>
               </ul>
             </div>
           </div>
