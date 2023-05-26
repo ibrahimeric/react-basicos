@@ -18,6 +18,7 @@ function App() {
 
   const [products, setProducts] = useState(product);
   const [animate, setAnimate] = useState(0);
+  const [contacto, setContacto] = useState(false);
 
   return (
     <div className="App">
@@ -27,12 +28,12 @@ function App() {
       setTotal = {setTotal} 
       countProducts = {countProducts} 
       setCountProducts = {setCountProducts}
-      products = {products}
       setProducts = {setProducts}
-      categorias = {categorias}
       setCategorias = {setCategorias}
       animate = {animate} 
-      setAnimate = {setAnimate}></Header>
+      setAnimate = {setAnimate}
+      contacto = {contacto} 
+      setContacto = {setContacto}></Header>
       <Slider></Slider>
       <Body allProducts = {allProducts} 
       setAllProducts = {setAllProducts} 
@@ -41,16 +42,12 @@ function App() {
       countProducts = {countProducts} 
       setCountProducts = {setCountProducts}
       products = {products}
-      setProducts = {setProducts}
       categorias = {categorias}
-      setCategorias = {setCategorias}
-      animate = {animate} 
       setAnimate = {setAnimate}></Body>
       <Footer
-      products = {products}
       setProducts = {setProducts}
-      categorias = {categorias}
-      setCategorias = {setCategorias}></Footer>
+      setCategorias = {setCategorias}
+      setContacto = {setContacto}></Footer>
     </div>
   );
 }

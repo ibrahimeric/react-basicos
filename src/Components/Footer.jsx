@@ -2,7 +2,7 @@ import React from 'react'
 import '../Styles/Footer.css';
 import {data} from '../Js/data.js'
 
-const Footer = ({products, setProducts, categorias, setCategorias}) => {
+const Footer = ({setProducts, setCategorias, setContacto}) => {
   function selectCategoria(filter){
     setProducts(data.filter((dato) =>
     dato.categoria.toLowerCase().includes(filter.toLocaleLowerCase())))
@@ -19,7 +19,7 @@ const Footer = ({products, setProducts, categorias, setCategorias}) => {
               <p>Inicio</p>
             </a>
             <a href="#">
-              <p id='contacto'>Contactanos</p>
+              <p id='contacto' onClick={() => setContacto(true)}>Contactanos</p>
             </a>
             <a href="#">
               <p>Categorias</p>
@@ -59,9 +59,9 @@ const Footer = ({products, setProducts, categorias, setCategorias}) => {
             <h4>Redes sociales</h4>
             <div className='icon'>
               <ul className='iconLista'>
-                <li className="iconos"><a className='facebook' href="https://www.facebook.com/leomessi/"><i className="fa fa-facebook"></i></a></li>
-                <li className="iconos"><a className='instagram' href="https://www.instagram.com/leomessi/"><i className="fa fa-instagram"></i></a></li>
-                <li className="iconos"><a className='twitter' href="https://twitter.com/leomessisite/"><i className="fa fa-twitter"></i></a></li>
+                <li className="iconos"><a className='facebook' href="https://www.facebook.com/leomessi/" target='_blank'><i className="fa fa-facebook"></i></a></li>
+                <li className="iconos"><a className='instagram' href="https://www.instagram.com/leomessi/" target='_blank'><i className="fa fa-instagram"></i></a></li>
+                <li className="iconos"><a className='twitter' href="https://twitter.com/leomessisite/" target='_blank'><i className="fa fa-twitter"></i></a></li>
               </ul>
             </div>
           </div>

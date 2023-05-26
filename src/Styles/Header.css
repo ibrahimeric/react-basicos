@@ -12,7 +12,7 @@
     height: 80px;
     background-color: rgb(251, 251, 251);
     display: flex;
-    z-index: 1000;
+    z-index: 10;
 }
 .Hnav .Hnavlogo, .Hnav .Hnavlogo img{
     height: 80px;
@@ -33,8 +33,6 @@
     list-style: none;
     padding-top: 10px;
     position: relative;
-
-    
 }
 .HnavLink{
     line-height: 50px;
@@ -43,6 +41,105 @@
     padding: 21px 20px 32px 20px;
     cursor: pointer;
 }
+
+
+
+
+.containerInfoContact{
+    visibility: hidden;
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 99;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: .0;
+    transition: all 0.3s;
+}
+.activecontainerInfoContact{
+    visibility: visible;
+    opacity: 1;
+}
+.infoContact{
+    position: absolute;
+    inset: 20% 0 0 0;
+    margin: 0 auto;
+    background-color: rgb(245, 245, 245);
+    width: 500px;
+    height: max-content;
+    border-radius: 20px;
+    padding: 5px 10px;
+    z-index: 100;
+    opacity: .0;
+}
+.activeinfoContact{
+    opacity: 1;
+}
+.infoContact h6{
+    font-size: 24px;
+    text-align: center;
+}
+.infoContact svg{
+    position: absolute;
+    right: 10px;
+}
+.infoContact p{
+    margin: 0;
+    margin-bottom: 5px;
+    width: 95%;
+}
+.contactanos{
+    list-style: none;
+    padding: 0;
+}
+.contactos, .contactos a{
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 18px;
+}
+.direccion:hover, .direccion:hover i{
+    color: #276ae6;
+    text-decoration: underline;
+}
+.whatsapp:hover, .whatsapp:hover i{
+    color: #25D366;
+    text-decoration: underline;
+}
+.celular:hover, .celular:hover i{
+    color: #039237;
+    text-decoration: underline;
+}
+.mail:hover, .mail:hover i{
+    color: #c71a1a;
+    text-decoration: underline;
+}
+.HiconsContact{
+    width: 200px;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.HiconContact i{
+    line-height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+}
+.HiconContact .fa-facebook{
+    background-color: var(--facebook);
+}
+.HiconContact .fa-instagram{
+    background-color: var(--instagram);
+}.HiconContact .fa-twitter{
+    background-color: var(--twitter);
+}
+
+
+
+
+
+
 .Hdropdown{
     display: none;
     text-align: left;
@@ -468,6 +565,20 @@
     }
     .Hlogin{
         margin-right: 10px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .infoContact{
+        margin: 0 auto;
+        width: 95%;
+        padding: 5px 10px;
+    }
+    .infoContact h6{
+        font-size: 19px;
+    }
+    .contactos, .contactos a{
+        color: #000;
+        font-size: 17px;
     }
 }
 @media screen and (max-width: 300px) {
