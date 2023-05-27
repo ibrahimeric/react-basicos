@@ -4,6 +4,7 @@ import { useState, useEffect} from 'react';
 import logoImg from '../img/Logo-Tienda-de-ropa.png';
 // Importamos el archivo data.js que contiene todos los producto.
 import {data} from '../Js/data.js'
+import { Link } from 'react-router-dom';
 
 const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto}) => {
 
@@ -49,7 +50,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     const [Scroll, setScroll] = useState(false);
     
     window.onscroll = function(){
-        if(window.innerWidth > 600 || active == true || barsAnimate == true){
+        if(window.innerWidth > 600 || active === true || barsAnimate === true){
             setScroll(false);
             return;
         }
@@ -97,7 +98,7 @@ return (
             <div className="HnavDiv">
                 <ul className={`HnavList ${barsAnimate ? 'HactiveNavList' : ''}`}>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
-                        <a className="HnavLink" href="#">Inicio</a>
+                        <Link className="HnavLink" to="/">Inicio</Link>
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         <a className="HnavLink" onClick={() => {setContacto(true); setbarsAnimate(false)}}>Contactanos</a>
@@ -186,15 +187,15 @@ return (
 
             <div className="Hicons">
                 <ul className={`HiconList ${barsAnimate ? 'HactiveIconList' : ''}`}>
-                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hfacebook' href="https://www.facebook.com/leomessi/" target='_blank'><i className="fa fa-facebook"></i></a></li>
-                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hinstagram' href="https://www.instagram.com/leomessi/" target='_blank'><i className="fa fa-instagram"></i></a></li>
-                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Htwitter' href="https://twitter.com/leomessisite/" target='_blank'><i className="fa fa-twitter"></i></a></li>
+                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hfacebook' href="https://www.facebook.com/leomessi/" target='_blank' rel="noopener noreferrer"><i className="fa fa-facebook"></i></a></li>
+                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Hinstagram' href="https://www.instagram.com/leomessi/" target='_blank' rel="noopener noreferrer"><i className="fa fa-instagram"></i></a></li>
+                    <li className={`Hicon ${barsAnimate ? 'HactiveIcon' : ''}`}><a className='Htwitter' href="https://twitter.com/leomessisite/" target='_blank' rel="noopener noreferrer"><i className="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
             <div className="Huser">
                 <ul className='HuserList'>
-                    <li className="Hlogin"><a href="#"><i className="fa fa-sign-in"></i></a></li>
-                    <li className="Hprofile"><a href="#"><i className="fa fa-user"></i></a></li>
+                    <li className="Hlogin"><Link to="/login"><i className="fa fa-sign-in"></i></Link></li>
+                    <li className="Hprofile"><Link to="/acount"><i className="fa fa-user"></i></Link></li>
                 </ul>
             </div>
             <div className="Hbars__menu" onClick={() => setbarsAnimate(!barsAnimate)}>
@@ -220,16 +221,16 @@ return (
 		        </svg>
                 <h6>Total Look - Contactos</h6>
                 <ul className='contactanos'>
-                    <li className='contactos'><a className='direccion' href="https://www.google.com.gt/maps/place/La+Oferta/@-27.3477648,-65.5910017,18z/data=!4m10!1m2!2m1!1sla+oferta!3m6!1s0x9423cf5c99bfe997:0x1e14071c27ac474d!8m2!3d-27.3466769!4d-65.5894634!15sCglsYSBvZmVydGFaCyIJbGEgb2ZlcnRhkgEOY2xvdGhpbmdfc3RvcmXgAQA!16s%2Fg%2F11b7xmqvg8?entry=ttu" target='_blank'><i className="mail fa fa-map-marker"></i> Buenos Aires 60, Concepción, Tucumán, Argentina.</a></li>
-                    <li className='contactos'><a className='whatsapp' href="https://api.whatsapp.com/send?phone=3865-396343&text=Hola, estoy interesado en comprar tus productos" target='_blank'><i className="fa fa-whatsapp"></i> WhatsApp</a></li>
-                    <li className='contactos'><a className='celular' href="tel:+5493865-396343" target='_blank'><i className="fa fa-phone"></i> +54 9 3865-396343</a></li>
-                    <li className='contactos'><a className='mail' href="mailto:totallook@totallook.com?Subject=Me%20Interesa%20un%20producto" target='_blank'><i className="mail fa fa-envelope-o"></i> totallook@totallook.com</a></li>
+                    <li className='contactos'><a className='direccion' href="https://www.google.com.gt/maps/place/La+Oferta/@-27.3477648,-65.5910017,18z/data=!4m10!1m2!2m1!1sla+oferta!3m6!1s0x9423cf5c99bfe997:0x1e14071c27ac474d!8m2!3d-27.3466769!4d-65.5894634!15sCglsYSBvZmVydGFaCyIJbGEgb2ZlcnRhkgEOY2xvdGhpbmdfc3RvcmXgAQA!16s%2Fg%2F11b7xmqvg8?entry=ttu" target='_blank' rel="noopener noreferrer"><i className="mail fa fa-map-marker"></i> Buenos Aires 60, Concepción, Tucumán, Argentina.</a></li>
+                    <li className='contactos'><a className='whatsapp' href="https://api.whatsapp.com/send?phone=3865-396343&text=Hola, estoy interesado en comprar tus productos" target='_blank' rel="noopener noreferrer"><i className="fa fa-whatsapp"></i> WhatsApp</a></li>
+                    <li className='contactos'><a className='celular' href="tel:+5493865-396343" target='_blank' rel="noopener noreferrer"><i className="fa fa-phone"></i> +54 9 3865-396343</a></li>
+                    <li className='contactos'><a className='mail' href="mailto:totallook@totallook.com?Subject=Me%20Interesa%20un%20producto" target='_blank' rel="noopener noreferrer"><i className="mail fa fa-envelope-o"></i> totallook@totallook.com</a></li>
                 </ul>
                 <h6>Nuestras redes sociales</h6>
                 <div className="HiconsContact">
-                    <a className='HiconContact' href="https://www.facebook.com/leomessi/" target='_blank'><i className="fa fa-facebook"></i></a>
-                    <a className='HiconContact' href="https://www.instagram.com/leomessi/" target='_blank'><i className="fa fa-instagram"></i></a>
-                    <a className='HiconContact' href="https://twitter.com/leomessisite/" target='_blank'><i className="fa fa-twitter"></i></a>
+                    <a className='HiconContact' href="https://www.facebook.com/leomessi/" target='_blank' rel="noopener noreferrer"><i className="fa fa-facebook"></i></a>
+                    <a className='HiconContact' href="https://www.instagram.com/leomessi/" target='_blank' rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>
+                    <a className='HiconContact' href="https://twitter.com/leomessisite/" target='_blank' rel="noopener noreferrer"><i className="fa fa-twitter"></i></a>
                 </div>
             </div>
         </div>
