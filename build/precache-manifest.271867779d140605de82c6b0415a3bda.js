@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "960c04414d818dbc17b7",
-    "url": "/react-proyecto/build/static/css/main.542d3235.chunk.css"
+    "revision": "fa9d2322d00b13e00d7e",
+    "url": "/react-proyecto/build/static/css/main.e68bee79.chunk.css"
   },
   {
-    "revision": "960c04414d818dbc17b7",
-    "url": "/react-proyecto/build/static/js/main.5ce6daeb.chunk.js"
+    "revision": "fa9d2322d00b13e00d7e",
+    "url": "/react-proyecto/build/static/js/main.65808c97.chunk.js"
   },
   {
     "revision": "b8d1836ed842e1d8efc7",
@@ -300,7 +300,7 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/SignUp.ea5be8bd.webp"
   },
   {
-    "revision": "3146aee2b7a5de1adb8a48a52c7f4570",
+    "revision": "a6e1b5ce60075d481ab359b424bcca43",
     "url": "/react-proyecto/build/index.html"
   }
 ];
