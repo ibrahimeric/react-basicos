@@ -6,6 +6,9 @@
 .header{
     height: 80px;
 }
+.header a{
+    text-decoration: none;
+}
 .Hnav{
     position: fixed;
     width: 100%;
@@ -134,12 +137,6 @@
 }.HiconContact .fa-twitter{
     background-color: var(--twitter);
 }
-
-
-
-
-
-
 .Hdropdown{
     display: none;
     text-align: left;

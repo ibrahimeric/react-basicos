@@ -98,7 +98,7 @@ return (
             <div className="HnavDiv">
                 <ul className={`HnavList ${barsAnimate ? 'HactiveNavList' : ''}`}>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
-                        <Link className="HnavLink" to="/">Inicio</Link>
+                        <Link className="HnavLink" to="/react-proyecto/build/">Inicio</Link>
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         <a className="HnavLink" onClick={() => {setContacto(true); setbarsAnimate(false)}}>Contactanos</a>
@@ -194,8 +194,8 @@ return (
             </div>
             <div className="Huser">
                 <ul className='HuserList'>
-                    <li className="Hlogin"><Link to="/login"><i className="fa fa-sign-in"></i></Link></li>
-                    <li className="Hprofile"><Link to="/acount"><i className="fa fa-user"></i></Link></li>
+                    <li className="Hlogin"><Link to="/react-proyecto/build/login"><i className="fa fa-sign-in"></i></Link></li>
+                    <li className="Hprofile"><Link to="/react-proyecto/build/acount"><i className="fa fa-user"></i></Link></li>
                 </ul>
             </div>
             <div className="Hbars__menu" onClick={() => setbarsAnimate(!barsAnimate)}>

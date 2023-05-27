@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Styles/Footer.css';
 import {data} from '../Js/data.js'
+import { Link } from 'react-router-dom';
 
 const Footer = ({setProducts, setCategorias, setContacto}) => {
   function selectCategoria(filter){
@@ -16,9 +17,9 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
             <h4>Menu</h4>
-            <a href="#">
-              <p>Inicio</p>
-            </a>
+            <Link to="/react-proyecto/build/">
+            <p>Inicio</p>
+            </Link>
             <a href="#">
               <p id='contacto' onClick={() => setContacto(true)}>Contactanos</p>
             </a>

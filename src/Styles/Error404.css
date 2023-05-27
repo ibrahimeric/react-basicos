@@ -51,6 +51,7 @@
     margin: 38px auto 0;
     border-radius: 41px;
     width: max-content;
+    text-decoration: none;
 }
 @media screen and (max-width:370px) {
     .containerError404{

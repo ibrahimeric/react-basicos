@@ -35,7 +35,7 @@ function App() {
         contacto = {contacto} setContacto = {setContacto}/>
         
         <Routes>
-          <Route path="/" element={<>
+          <Route path="/react-proyecto/build/" element={<>
             <Slider/>
             <Body allProducts = {allProducts} setAllProducts = {setAllProducts} 
             total = {total} setTotal = {setTotal} 
@@ -44,7 +44,7 @@ function App() {
             categorias = {categorias}
             setAnimate = {setAnimate}/>
             </>} />
-            <Route path='/login' element={<Signup/>}/>
+            <Route path='/react-proyecto/build/login' element={<Signup/>}/>
             <Route path='*' element={<Error404/>}/>
         </Routes>
 
