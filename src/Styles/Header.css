@@ -501,6 +501,9 @@
     }
 }
 @media screen and (max-width: 600px){
+    *{
+        scroll-padding-top: 0;
+    }
     .header{
         height: 40px;
     }
