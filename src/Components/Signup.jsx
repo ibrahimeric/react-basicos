@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Styles/Signup.css'
+// Importamos el Hook useState
 import { useState } from 'react'
 
 const Signup = () => {
@@ -15,27 +16,34 @@ const Signup = () => {
     lower = false,
     upper = false,
     numbers = false;
-    
+    /* Con este for recorremos una por una todas las letras de la contraseña ingresada por el usuario. */
     for (let i = 0; i < password.length; i++){
+      /* Declaramos la constante char en la que vamos a almacenar el valor unicode de las letras una a la vez. */
       const char = password.charCodeAt (i);
+      /* En este if comprobamos si la variable upper es false y si el valor unicode almacenado en char corresponde a una letra mayuscula. */
       if (!upper && char >= 65 && char <= 90) {
-        if(strengthIndicator === -1 || password.length > 7){
+        /* En este if verificamos la longitud de la contraseña es mayor a 4 o si el valor almacenado en strengthIndicator es igual a -1 lo que significa que todavia no se indicó la seguridad de la contraseña. En caso de cumplirse una de estas condiciones se incrementa en 1 el valor de la variable strengthIndicator */
+        if(strengthIndicator === -1 || password.length > 4){
           upper = true;
           strengthIndicator++;
         }
       }
+      /* En este if comprobamos si la variable numbers es false y si el valor unicode almacenado en char corresponde a un numero. */
       if (!numbers && char >= 48 && char <= 57) {
-        if(strengthIndicator === -1 || password.length > 4){
+        /* En este if verificamos la longitud de la contraseña es mayor a 7 o si el valor almacenado en strengthIndicator es igual a -1 lo que significa que todavia no se indicó la seguridad de la contraseña. En caso de cumplirse una de estas condiciones se incrementa en 1 el valor de la variable strengthIndicator */
+        if(strengthIndicator === -1 || password.length > 7){
           numbers = true;
           strengthIndicator++;
         }
       }
+      /* En este if comprobamos si la variable lower es false y si el valor unicode almacenado en char corresponde a una letra minuscula. */
       if (!lower && char >= 97 && char <= 122) {
         lower = true;
         strengthIndicator++;
       }
     }
-      setStrength(strengthLabels [strengthIndicator]);
+    /* Asignamos a la constante strength el nivel de seguridad de la contraseña dependiendo del valor de strengthIndicator. */
+    setStrength(strengthLabels [strengthIndicator]);
   };
 
 
@@ -50,13 +58,15 @@ const Signup = () => {
               placeholder="Correo electronico"/>
 
               <h6>Contraseña:</h6>
+              {/* Con el evento onChange llamamos a la constante getStrength cada vez que se realiza un cambio en el contenido del input */}
               <input name="password" spellCheck="false"
               type="password" placeholder="Contraseña"
               onChange={evt => getStrength(evt.target.value)}/>
-
+              {/* Asignamos una clase con el nombre almacenado en la constante strength */}
               <div className={`bars ${strength}`}>
                 <div></div>
               </div>
+              {/* Indicamos la seguridad de la contraseña mostrando la palabra contraseña seguido del valor de la variable strength */}
               <div className="strength">{strength &&<>Contraseña {strength}</>}</div>
               
               <input type="button" value="Iniciar sesión" />
