@@ -6,7 +6,10 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
   
   // Metodo para añadir productos al carrito
   const onAddProduct = product => {
+    /* Verificamos si el id del producto coincide con el id de algun 
+    producto almacenado en el carrito */
     if(allProducts.find(item => item.id === product.id)){
+
       const products = allProducts.map(item => item.id === product.id? {...item, quantity: item.quantity +1} : item);
       
       setTotal(total + product.price * product.quantity);
@@ -14,18 +17,33 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
       animationSum();
       return setAllProducts([...products]);
     }
-
+    /* Si no se cumple la condición agregamos el producto al carrito.
+    */
+    /* Asignamos a la constante total el nuevo monto sumando el 
+    precio por la cantidad del producto agregado */
     setTotal(total + product.price * product.quantity);
+    /* Asignamos a la constante countProducts la nueva cantidad 
+    sumando la cantidad agregada */
     setCountProducts(countProducts + product.quantity);
+    /* Asignamos a la variable allProducts los productos agregados 
+    anteriormente mas el nuevo producto */
     setAllProducts([...allProducts, product]);
+    /* Llamamos a la funcion animationSum para iniciar una animación 
+    */
     animationSum();
   };
   
+  /* Funcion para iniciar una animacion */
   function animationSum(){
+    /* Asignamos el valor +1 al elemento con id 'animado' */
     document.getElementById('animado').textContent = '+1';
+    /* Asignamos un color al elemento con id 'animado' */
     document.getElementById('animado').style.color = "rgb(13, 255, 0)";
+    /* Asignamos el valor 1 a la constante animate */
     setAnimate(1)
-    
+    /* Con la función setTimeout asignamos un valor nulo al elemento 
+    con id 'animado' y el valor 0 a la constante animate luego de 
+    haber transcurrido 300ms */
     setTimeout(function(){document.getElementById('animado').textContent = ''
     setAnimate(0)}, 300)
   }
@@ -33,12 +51,13 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
   return (
     // comentario
     <div className="body" >
-        
+        {/* Mostramos con el h1 el valor de la constante categoria */}
          <h1 className='title' id='categorias'>{categorias}</h1>
         
         <div className="fondo"></div>
         <div className="container">
-          {/* Aquí ejecutamos un map (Es como un foreach) para mostrar todos los productos que se encuentran cargados en el archivo data.js */}
+          {/* Comprobamos si products es distinto de nulo. En caso de cumplirse la condicion se muestran los productos. En caso contrario se muestra un mensaje indicando que no se encontraron productos */}
+          {/* Aquí ejecutamos un map para mostrar todos los productos que se encuentran cargados en el archivo data.js */}
           {/* Con la constante product vamos añadiendo todos los productos que se encuentran en data.js */}
               {products.length ? products.map(product => (
                 // Creamos un div y le añadimos la clase card y el id del producto con product.id

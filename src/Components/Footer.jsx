@@ -4,15 +4,22 @@ import {data} from '../Js/data.js'
 import { Link } from 'react-router-dom';
 
 const Footer = ({setProducts, setCategorias, setContacto}) => {
-  function selectCategoria(filter){
-    setProducts(data.filter((dato) =>
-    dato.categoria.toLowerCase().includes(filter.toLocaleLowerCase())))
-    setCategorias(filter.toUpperCase())
-  }
+      /*Funcion para filtrar los productos por categorias*/
+      function selectCategoria(filter){
+        /*Filtramos los productos utilizando la funcion filter para 
+        comparar si las categorias de los productos almacenados en 
+        data contienen el nombre de la categoria recibida por el 
+        parametro filter. El resultado lo almacenamos en la constante 
+        products*/
+        setProducts(data.filter((dato) =>
+        dato.categoria.toLowerCase().includes(filter.toLocaleLowerCase())))
+        /*Almacenamos en la constante categorias el valor del 
+        parametro filter en mayusculas*/
+        setCategorias(filter.toUpperCase())
+    }
   
   return (
     <div className="footer">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
       <div className='sb__footer section__padding'>
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
@@ -21,24 +28,23 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
             <p>Inicio</p>
             </Link>
             <a href="#">
+              {/* Abrimos el formulario de contacto */}
               <p id='contacto' onClick={() => setContacto(true)}>Contactanos</p>
-            </a>
-            <a href="#">
-              <p>Categorias</p>
             </a>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Productos</h4>
-            <a href="#" onClick={evt => selectCategoria(evt.target.textContent)}>
+            {/* Con el evento onClick seleccionamos la categoria */}
+            <a href="#categorias" onClick={evt => selectCategoria(evt.target.textContent)}>
               <p>Camperas</p>
             </a>
-            <a href="#" onClick={evt => selectCategoria(evt.target.textContent)}>
+            <a href="#categorias" onClick={evt => selectCategoria(evt.target.textContent)}>
               <p>Remeras</p>
             </a>
-            <a href="#" onClick={evt => selectCategoria(evt.target.textContent)}>
+            <a href="#categorias" onClick={evt => selectCategoria(evt.target.textContent)}>
               <p>Pantalones</p>
             </a>
-            <a href="#" onClick={evt => selectCategoria(evt.target.textContent)}>
+            <a href="#categorias" onClick={evt => selectCategoria(evt.target.textContent)}>
               <p>Shorts</p>
             </a>
           </div>
@@ -53,9 +59,9 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
             <a href="#">
               <p>¿Cómo comprar?</p>
             </a>
-            <a href="#">
+            <Link to="/react-proyecto/build/login">
               <p>Mi cuenta</p>
-            </a>
+              </Link>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Redes sociales</h4>

@@ -73,15 +73,15 @@
     transition: .4s;
     width: 0%;
 }
-.bars.weak div{
+.bars.debil div{
     background-color: #e24c71;
     width: 33.33%;
 }
-.bars.medium div{
+.bars.mediana div{
     background-color: #f39845;
     width: 66.66%;
 }
-.bars.strong div{
+.bars.fuerte div{
     background-color: #57c558;
     width: 100%;
 }
@@ -98,8 +98,5 @@
     .containerSignUp{
         width: auto;
         margin: 0 5px;
-    }
-    .containerSignUp .img{
-        
     }
 }
