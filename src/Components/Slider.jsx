@@ -15,8 +15,8 @@ function Slider() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>hola</p>
+          <h3>La nueva tendencia</h3>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -27,8 +27,8 @@ function Slider() {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>alfin</p>
+          <h3>Exprésate</h3>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -39,10 +39,8 @@ function Slider() {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            xd
-          </p>
+          <h3>Comparte</h3>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
