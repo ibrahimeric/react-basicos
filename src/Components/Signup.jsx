@@ -12,7 +12,7 @@ const Signup = () => {
   /* Declaramos la constante getStrenght que obtiene como parametro la contraseña ingresada por el usuario y establece el valor de strength de acuerdo a la seguridad de la contraseña ingresada */
   const getStrength = (password) => {
     /* Declaramos la variable strengthIndicator y le asignamos el valor -1 y las variables lower, upper y numbers a las cuales le asignamos el valor false */
-    let strengthIndicator = -1, 
+    let strengthIndicator = -1,
     lower = false,
     upper = false,
     numbers = false;
@@ -43,7 +43,7 @@ const Signup = () => {
       }
     }
     /* Asignamos a la constante strength el nivel de seguridad de la contraseña dependiendo del valor de strengthIndicator. */
-    setStrength(strengthLabels [strengthIndicator]);
+    setStrength(strengthLabels[strengthIndicator]);
   };
 
 

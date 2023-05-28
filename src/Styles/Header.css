@@ -34,15 +34,20 @@
     height: 100%;
     margin: 0;
     list-style: none;
-    padding-top: 10px;
+    
     position: relative;
 }
 .HnavLink{
-    line-height: 50px;
+    line-height: 80px;
     text-decoration: none;
     color: black;
-    padding: 21px 20px 32px 20px;
+    padding: 26px 20px 27px 20px;
     cursor: pointer;
+}
+.HnavItem > p{
+    line-height: normal;
+    padding: 26px 20px 27px 20px;
+    margin: 0;
 }
 
 

@@ -136,10 +136,10 @@ return (
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         {/* Al hacer click en contactanos se asigna el valor true a la constante contacto y el valor false a la variable barsAnimate. De modo que se oculta el menu (Solo se puede observar en dispositivos con ancho de pantalla inferior a 1030px) y se muestra la tarjeta de contacto.*/}
-                        <a className="HnavLink" onClick={() => {setContacto(true); setbarsAnimate(false)}}>Contactanos</a>
+                        <p className="HnavLink" onClick={() => {setContacto(true); setbarsAnimate(false)}}>Contactanos</p>
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
-                        <a className="HnavLink">Categorias <i className="Htoggle-dropdown dropdown-toggle"></i></a>
+                        <p className="HnavLink">Categorias <i className="Htoggle-dropdown dropdown-toggle"></i></p>
                         <ul className={`Hdropdown ${barsAnimate ? 'HactiveDropdown' : ''}`}>
                             {/* Al precionar se ejecuta la funcion selectCategoria y se le envia como parametro el nombre de la categoria */}
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
@@ -169,12 +169,15 @@ return (
                 <ul className='HcartList'>
                     {/* Se comprueba si el valor de la constante countProducts es igual a 0. En caso de cumplirse la condicion se asigna la clase Hbuy-aColor que sirve para cambiar el color del carrito */}
                     {/* Tambien cuenta con un evento onClick que asigna a la constante active su valor contrario. De manera que al precionar el carrito se pueda tanto mostrar como ocultar la lista de productos almacenados */}
-                    <li className="Hbuy"><a className={`Hbuy-a ${countProducts === 0 ? 'Hbuy-aColor' : ''}`} onClick={() => setActive(!active)}><i className="Hbuy-li fa fa-shopping-cart"></i>
-                    {/* Se comprueba si el valor de la constante countProducts es igual a 0. En caso de cumplirse la condicion se asigna la clase Hcount-productsColor que sirve para cambiar el color de fondo del numero que indica la cantidad total de productos en el carrito */}
-                    <div className={`Hcount-products ${countProducts === 0 ? 'Hcount-productsColor' : ''}`}>
-					    <span id="Hcontador-productos">{countProducts}</span>
-				    </div>
-                    </a></li>
+                    <li className="Hbuy">
+                        <div className={`Hbuy-a ${countProducts === 0 ? 'Hbuy-aColor' : ''}`} onClick={() => setActive(!active)}>
+                            <i className="Hbuy-li fa fa-shopping-cart"></i>
+                            {/* Se comprueba si el valor de la constante countProducts es igual a 0. En caso de cumplirse la condicion se asigna la clase Hcount-productsColor que sirve para cambiar el color de fondo del numero que indica la cantidad total de productos en el carrito */}
+                            <div className={`Hcount-products ${countProducts === 0 ? 'Hcount-productsColor' : ''}`}>
+					            <span id="Hcontador-productos">{countProducts}</span>
+				            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
 

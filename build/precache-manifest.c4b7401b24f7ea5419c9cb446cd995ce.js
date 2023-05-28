@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "f8b5d84cb56305a5b6b4",
-    "url": "/react-proyecto/build/static/css/main.05c7d454.chunk.css"
+    "revision": "5aaa7cf5d6bf7f1d1272",
+    "url": "/react-proyecto/build/static/css/main.2df13a95.chunk.css"
   },
   {
-    "revision": "f8b5d84cb56305a5b6b4",
-    "url": "/react-proyecto/build/static/js/main.edf3fc0b.chunk.js"
+    "revision": "5aaa7cf5d6bf7f1d1272",
+    "url": "/react-proyecto/build/static/js/main.f111c654.chunk.js"
   },
   {
     "revision": "b8d1836ed842e1d8efc7",
@@ -280,15 +280,15 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/fondo.f8fdf4f1.jpg"
   },
   {
-    "revision": "52dd8d1f4e474c27c2a6f6a640f6c9d5",
-    "url": "/react-proyecto/build/static/media/fondoError404.52dd8d1f.webp"
+    "revision": "1af277a7acea1f8d41d39f040bb00d92",
+    "url": "/react-proyecto/build/static/media/fondoError404.1af277a7.webp"
   },
   {
     "revision": "ea5be8bd52c8712137066f2c9f810ff7",
     "url": "/react-proyecto/build/static/media/SignUp.ea5be8bd.webp"
   },
   {
-    "revision": "9bebb388a8206c66335eba9689706ccd",
+    "revision": "30ee5c807380c135075b9b42ef3167c4",
     "url": "/react-proyecto/build/index.html"
   }
 ];
