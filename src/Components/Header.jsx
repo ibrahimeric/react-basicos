@@ -220,7 +220,7 @@ return (
                                     <span className="Htotal-pagar">${total}</span>
                                 </div>
                                 {/* Al precionar el boton se ejecuta la funcion onCloanCart que elimina todos los productos del carrito */}
-                                <button className="Hbtn-clear-all" onClick={onCleanCart()}>
+                                <button className="Hbtn-clear-all" onClick={() => onCleanCart()}>
                                     Vaciar carrito
                                 </button>
                             </>
