@@ -27,10 +27,8 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
             <Link to="/react-proyecto/build/">
             <p>Inicio</p>
             </Link>
-            <a href="#">
               {/* Abrimos el formulario de contacto */}
               <p id='contacto' onClick={() => setContacto(true)}>Contactanos</p>
-            </a>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Productos</h4>
@@ -61,7 +59,7 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
             </a>
             <Link to="/react-proyecto/build/login">
               <p>Mi cuenta</p>
-              </Link>
+            </Link>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Redes sociales</h4>
