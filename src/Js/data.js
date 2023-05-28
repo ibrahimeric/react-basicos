@@ -1,11 +1,8 @@
 // Importamos las imagenes que vamos a utilizar
-import air_jordan1 from '../img/air_jordan1.jpg';
 import short_boca from '../img/short_boca.webp'
-import nike_airmax97 from '../img/nike_airmax97.jpg'
 import short_adidas from '../img/short adidas.webp'
 import short_nike from '../img/short nike.png'
 import campera_nike from '../img/campera_nike.jpg'
-import adidas_dayjogger from '../img/adidas_dayjogger.jpg'
 import chaleco_columbia from '../img/chaleco_hombre_columbia.webp'
 
 //categoria shorts
@@ -79,32 +76,16 @@ export const data = [
     {
         // Aqui indicamos el id que debe ser siempre distinto ya que con ese numero sabemos cual producto seleccionó el usuario y debemos 
         // agregar al carrito. De lo contrario ocurriran errores.
-        id: 1,
-        // Aqui indicamos las categorias del producto
-        categoria: 'ofertas zapatillas',
-        // Aqui indicamos el nombre del producto
-        nameProduct: 'AIR JORDAN 1',
-        // Aqui colocamos el precio sin signo peso, solo el número
-        price: 1200,
-        // Aqui colocamos la ruta de la imagen
-        urlImage: air_jordan1,
-        // quantity es la cantidad. Debe ser siempre "1" para que se sume un producto al carrito al seleccionarlo.
-        quantity: 1,
-    },
-    {
-        id: 2,
-        categoria: 'ofertas zapatillas',
-        nameProduct: 'NIKE AIRMAX 97',
-        price: 37000,
-        urlImage: nike_airmax97,
-        quantity: 1,
-    },
-    {
         id: 3,
-        categoria: 'ofertas short',
+        // Aqui indicamos las categorias del producto
+        categoria: 'ofertas shorts',
+        // Aqui indicamos el nombre del producto
         nameProduct: 'Short Adidas BOCA',
+        // Aqui colocamos el precio sin signo peso, solo el número
         price: 12002,
+        // Aqui colocamos la ruta de la imagen
         urlImage: short_boca,
+        // quantity es la cantidad. Debe ser siempre "1" para que se sume un producto al carrito al seleccionarlo.
         quantity: 1,
     },
     {
@@ -132,16 +113,8 @@ export const data = [
         quantity: 1,
     },
     {
-        id: 7,
-        categoria: 'ofertas zapatillas',
-        nameProduct: 'Zapatillas ADIDAS',
-        price: 15203,
-        urlImage: adidas_dayjogger,
-        quantity: 1,
-    },
-    {
         id: 8,
-        categoria: 'ofertas camperas',
+        categoria: 'camperas',
         nameProduct: 'Chaleco COLUMBIA',
         price: 30203,
         urlImage: chaleco_columbia,
@@ -149,7 +122,7 @@ export const data = [
     },
     {
         id: 9,
-        categoria: 'camperas',
+        categoria: 'ofertas camperas',
         nameProduct: 'Campera coatsmen Neopren Térmica',
         price: 14200,
         urlImage: campera1,
@@ -157,7 +130,7 @@ export const data = [
     },
     {
         id: 10,
-        categoria: 'camperas',
+        categoria: 'ofertas camperas',
         nameProduct: 'Campera Sico Urban Con Capucha',
         price: 16500,
         urlImage: campera2,
@@ -269,7 +242,7 @@ export const data = [
     },
     {
         id: 24,
-        categoria: 'pantalones',
+        categoria: 'ofertas pantalones',
         nameProduct: 'Pantalón Copernico de gabardina Modern fit',
         price: 29500,
         urlImage: pantalon03,
@@ -318,7 +291,7 @@ export const data = [
     },
     {
         id: 30,
-        categoria: 'pantalones',
+        categoria: 'ofertas pantalones',
         nameProduct: 'Pantalón Fulton de gabardina Modern fit',
         price: 29500,
         urlImage: pantalon09,
@@ -422,7 +395,7 @@ export const data = [
     },
     {
         id: 43,
-        categoria: 'remeras',
+        categoria: 'ofertas remeras',
         nameProduct: 'REMERA MANGA LARGA QUIKSILVER TOWN HALL HOMBRE',
         price: 4200,
         urlImage: remera2,
@@ -438,7 +411,7 @@ export const data = [
     },
     {
         id: 45,
-        categoria: 'remeras',
+        categoria: 'ofertas remeras',
         nameProduct: 'REMERA BORDO OVERSIZE LARGE BA',
         price: 3200,
         urlImage: remera4,

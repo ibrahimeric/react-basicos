@@ -155,9 +155,6 @@ return (
                                 <a href="#categorias"><p className="HdropLink">Shorts</p></a>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Zapatillas</p></a>
-                            </li>
-                            <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
                                 <a href="#categorias"><p className="HdropLink">Remeras</p></a>
                             </li>
                         </ul>

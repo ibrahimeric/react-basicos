@@ -1,39 +1,31 @@
 self.__precacheManifest = [
   {
-    "revision": "f0d9764086577371a194",
+    "revision": "9cbc317bcb3920470af9",
     "url": "/react-proyecto/build/static/css/main.ac825cc2.chunk.css"
   },
   {
-    "revision": "f0d9764086577371a194",
-    "url": "/react-proyecto/build/static/js/main.cd8a57a1.chunk.js"
+    "revision": "9cbc317bcb3920470af9",
+    "url": "/react-proyecto/build/static/js/main.cdabef94.chunk.js"
   },
   {
     "revision": "b8d1836ed842e1d8efc7",
     "url": "/react-proyecto/build/static/js/runtime~main.df2269ba.js"
   },
   {
-    "revision": "a1651c12906b130646c5",
+    "revision": "dd653011e570945cf3dc",
     "url": "/react-proyecto/build/static/css/2.ea13d538.chunk.css"
   },
   {
-    "revision": "a1651c12906b130646c5",
-    "url": "/react-proyecto/build/static/js/2.093b3390.chunk.js"
+    "revision": "dd653011e570945cf3dc",
+    "url": "/react-proyecto/build/static/js/2.1286bcad.chunk.js"
   },
   {
     "revision": "c46c57de4ff0cbd5701874910ae4a1cd",
     "url": "/react-proyecto/build/static/media/Logo-Tienda-de-ropa.c46c57de.png"
   },
   {
-    "revision": "5aeeba04fccd5c54dbdbf6eb628c0dae",
-    "url": "/react-proyecto/build/static/media/air_jordan1.5aeeba04.jpg"
-  },
-  {
     "revision": "61de839d444581a3a36f5106d7ac3c60",
     "url": "/react-proyecto/build/static/media/short_boca.61de839d.webp"
-  },
-  {
-    "revision": "c3a3f6dd69ee7bf6a5bdbc6a4171f8de",
-    "url": "/react-proyecto/build/static/media/nike_airmax97.c3a3f6dd.jpg"
   },
   {
     "revision": "b371a140f7660f2164b432be7e6283db",
@@ -46,10 +38,6 @@ self.__precacheManifest = [
   {
     "revision": "0b4eb4e832bc902c210925f7e2f936cb",
     "url": "/react-proyecto/build/static/media/campera_nike.0b4eb4e8.jpg"
-  },
-  {
-    "revision": "ef87e648da2f0c005858693c8104970f",
-    "url": "/react-proyecto/build/static/media/adidas_dayjogger.ef87e648.jpg"
   },
   {
     "revision": "19d7e953d04fc03170003a12790a8766",
@@ -300,7 +288,7 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/SignUp.ea5be8bd.webp"
   },
   {
-    "revision": "4aa07760c6a7a7ad0fc5692e96853c01",
+    "revision": "8a8968c42aa04e71c7042a8a4778d338",
     "url": "/react-proyecto/build/index.html"
   }
 ];
