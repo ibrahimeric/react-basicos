@@ -49,7 +49,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         /*Llamamos a la funcion animationSubstract para que se ejecute una animacion*/
         animationSubstract('-' + product.quantity);
     };
-
+    
     /*Funcion para eliminar todos los productos del carrito*/
     function onCleanCart() {
         /*Asignamos una matriz vacia a la constante allProducts*/
@@ -88,6 +88,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         /*Asignamos la nueva ubicación del scroll a la variable UbicacionPrincipal*/
         ubicacionPrincipal = Desplazamiento_Actual;
     }
+
     /*Funcion para filtrar los productos por categorias*/
     function selectCategoria(filter){
         /*Cerramos el menu de navegación. esto sirve si el ancho de pantalla es menor a 600px*/

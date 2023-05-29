@@ -10,7 +10,7 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
     producto almacenado en el carrito */
     if(allProducts.find(item => item.id === product.id)){
 
-      const products = allProducts.map(item => item.id === product.id? {...item, quantity: item.quantity +1} : item);
+      const products = allProducts.map(item => item.id === product.id? {...item, quantity: item.quantity + 1} : item);
       
       setTotal(total + product.price * product.quantity);
       setCountProducts(countProducts + product.quantity);

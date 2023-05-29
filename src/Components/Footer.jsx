@@ -49,7 +49,7 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
           <div className='sb__footer-links_div'>
             <h4>Empresa</h4>
             <Link to="/react-proyecto/build/about">
-              Quienes somos
+              <p>Quienes somos</p>
             </Link>
             <a href="#">
               <p>Favoritos</p>
