@@ -13,6 +13,7 @@ import { useState } from 'react';
 import {data} from '../Js/data.js'
 /* Importamos los componentes Routes, Route y BrowserRouter al cual asignamos el alias Router */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { About } from './About';
 
 function App() {
   /* Declaramos la constante allproducts para almacenar los productos del carrito y le asignamos como valor una matriz vacia */
@@ -63,6 +64,7 @@ function App() {
             <Route path='/react-proyecto/build/login' element={<Signup/>}/>
             {/* en caso de que la URL ingresada por el usuario no coincida con la ruta de ningun Route Mostramos el Error 404 colocando un asterisco como valor en la ruta del Route */}
             <Route path='*' element={<Error404/>}/>
+            <Route path='/react-proyecto/build/about' element={<About></About>}/>  
         </Routes>
 
         {/* Iniciamos el componente Header y le pasamos los parametros necesarios */}
