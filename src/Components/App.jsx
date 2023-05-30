@@ -12,7 +12,7 @@ import { useState } from 'react';
 /* Importamos el archivo data.js que contiene los productos */
 import {data} from '../Js/data.js'
 /* Importamos los componentes Routes, Route y BrowserRouter al cual asignamos el alias Router */
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { About } from './About';
 
 function App() {
