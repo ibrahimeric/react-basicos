@@ -62,9 +62,9 @@ function App() {
             setAnimate = {setAnimate}/>
             </>} />
             <Route path='/react-proyecto/build/login' element={<Signup/>}/>
+            <Route path='/react-proyecto/build/about' element={<About></About>}/>  
             {/* en caso de que la URL ingresada por el usuario no coincida con la ruta de ningun Route Mostramos el Error 404 colocando un asterisco como valor en la ruta del Route */}
             <Route path='*' element={<Error404/>}/>
-            <Route path='/react-proyecto/build/about' element={<About></About>}/>  
         </Routes>
 
         {/* Iniciamos el componente Header y le pasamos los parametros necesarios */}

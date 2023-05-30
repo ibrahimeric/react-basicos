@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "058de33b18af2051cb49",
-    "url": "/react-proyecto/build/static/css/main.5b399a26.chunk.css"
+    "revision": "03a8b6bdb18c886fdfc1",
+    "url": "/react-proyecto/build/static/css/main.17f3afe1.chunk.css"
   },
   {
-    "revision": "058de33b18af2051cb49",
-    "url": "/react-proyecto/build/static/js/main.9eec1cd0.chunk.js"
+    "revision": "03a8b6bdb18c886fdfc1",
+    "url": "/react-proyecto/build/static/js/main.ce3ccb6d.chunk.js"
   },
   {
     "revision": "b8d1836ed842e1d8efc7",
@@ -22,26 +22,6 @@ self.__precacheManifest = [
   {
     "revision": "c46c57de4ff0cbd5701874910ae4a1cd",
     "url": "/react-proyecto/build/static/media/Logo-Tienda-de-ropa.c46c57de.png"
-  },
-  {
-    "revision": "61de839d444581a3a36f5106d7ac3c60",
-    "url": "/react-proyecto/build/static/media/short_boca.61de839d.webp"
-  },
-  {
-    "revision": "b371a140f7660f2164b432be7e6283db",
-    "url": "/react-proyecto/build/static/media/short adidas.b371a140.webp"
-  },
-  {
-    "revision": "dc331c848920d18bb0565c9fe82db171",
-    "url": "/react-proyecto/build/static/media/short nike.dc331c84.png"
-  },
-  {
-    "revision": "0b4eb4e832bc902c210925f7e2f936cb",
-    "url": "/react-proyecto/build/static/media/campera_nike.0b4eb4e8.jpg"
-  },
-  {
-    "revision": "19d7e953d04fc03170003a12790a8766",
-    "url": "/react-proyecto/build/static/media/chaleco_hombre_columbia.19d7e953.webp"
   },
   {
     "revision": "afc3f56b9ad94b0e0295077f40d3d4d7",
@@ -96,6 +76,18 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/short_topper rx3.918f7e6f.webp"
   },
   {
+    "revision": "61de839d444581a3a36f5106d7ac3c60",
+    "url": "/react-proyecto/build/static/media/short_boca.61de839d.webp"
+  },
+  {
+    "revision": "b371a140f7660f2164b432be7e6283db",
+    "url": "/react-proyecto/build/static/media/short adidas.b371a140.webp"
+  },
+  {
+    "revision": "5635cca7797046444220af6802028a5d",
+    "url": "/react-proyecto/build/static/media/short-nike.5635cca7.webp"
+  },
+  {
     "revision": "aa4abe1dc74c3a5f9b42531f7b2ef50b",
     "url": "/react-proyecto/build/static/media/campera 1.aa4abe1d.webp"
   },
@@ -146,6 +138,14 @@ self.__precacheManifest = [
   {
     "revision": "9b66811ba492007a66222c0a13896471",
     "url": "/react-proyecto/build/static/media/campera 13.9b66811b.webp"
+  },
+  {
+    "revision": "523bafc21d3bdc544708fa169e482e81",
+    "url": "/react-proyecto/build/static/media/campera_nike.523bafc2.webp"
+  },
+  {
+    "revision": "19d7e953d04fc03170003a12790a8766",
+    "url": "/react-proyecto/build/static/media/chaleco_hombre_columbia.19d7e953.webp"
   },
   {
     "revision": "92b06656875d90c29c6db38fc08423d1",
@@ -236,8 +236,8 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/remera2.b2a704d1.webp"
   },
   {
-    "revision": "4e9346149ecef2601ccdb3a09addf665",
-    "url": "/react-proyecto/build/static/media/remera3.4e934614.jpeg"
+    "revision": "407cddca9ea7d3d0f7be8d54329ed8bf",
+    "url": "/react-proyecto/build/static/media/remera3.407cddca.webp"
   },
   {
     "revision": "dbe690e6be8fe7eea81dc19cb8e64671",
@@ -248,20 +248,20 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/remera5.da9aa83d.webp"
   },
   {
-    "revision": "4baf3f41d87f323fa9b58c8cf0b5a037",
-    "url": "/react-proyecto/build/static/media/remera6.4baf3f41.jpg"
+    "revision": "8e43938a6c4202a777f8a05a1ab07acc",
+    "url": "/react-proyecto/build/static/media/remera6.8e43938a.jpg"
   },
   {
-    "revision": "9f79f4430089a2b2c232f849d498f628",
-    "url": "/react-proyecto/build/static/media/remera7.9f79f443.jpg"
+    "revision": "2d5fb56c11dc7e64b50ac5d840dbfa87",
+    "url": "/react-proyecto/build/static/media/remera7.2d5fb56c.webp"
   },
   {
-    "revision": "989ad9d826e79794a8b1a2bb597aa3f9",
-    "url": "/react-proyecto/build/static/media/remera8.989ad9d8.jpg"
+    "revision": "b5c01c31153c999112fef34794c5980c",
+    "url": "/react-proyecto/build/static/media/remera8.b5c01c31.webp"
   },
   {
-    "revision": "661fee16446724c7b1d854e3e85b0296",
-    "url": "/react-proyecto/build/static/media/remera9.661fee16.jpg"
+    "revision": "b8a406c2dea2403ec8f70d23de3dde3b",
+    "url": "/react-proyecto/build/static/media/remera9.b8a406c2.webp"
   },
   {
     "revision": "bd83c711dce9b2a82fceafa5fbee0b46",
@@ -272,12 +272,12 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/slider2.208cc5eb.webp"
   },
   {
-    "revision": "0ed535995fd105417b1cd5177ab8b8a3",
-    "url": "/react-proyecto/build/static/media/slider3.0ed53599.webp"
+    "revision": "7d1ed05f30065478e04aed822329d355",
+    "url": "/react-proyecto/build/static/media/slider3.7d1ed05f.webp"
   },
   {
-    "revision": "f8fdf4f11412d59c86d91290c91e857a",
-    "url": "/react-proyecto/build/static/media/fondo.f8fdf4f1.jpg"
+    "revision": "24844e4f23b4db167b5e56a5238026cd",
+    "url": "/react-proyecto/build/static/media/fondo.24844e4f.webp"
   },
   {
     "revision": "1af277a7acea1f8d41d39f040bb00d92",
@@ -288,7 +288,7 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/SignUp.ea5be8bd.webp"
   },
   {
-    "revision": "45d0f55e5d6024adf8d2899270fd7472",
+    "revision": "0b92a7aea7741d199b7cb5402ca72a1a",
     "url": "/react-proyecto/build/index.html"
   }
 ];
