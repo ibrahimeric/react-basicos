@@ -50,7 +50,7 @@ function App() {
         {/* Utilizamos el componente Routes que se encarga de renderizar el componente Route cuya ruta coincida con la URL ingresada por el usuario */}
         <Routes>
           {/* Utilizamos el componente Route para llamar a los componentes que necesitamos cargar en caso de que el usuario ingrese una ruta especifica */}
-          <Route path="/react-proyecto/build/" element={<>
+          <Route path="/" element={<>
           {/* Iniciamos el componente Slider */}
             <Slider/>
             {/* Iniciamos el componente Body y le pasamos los parametros necesarios */}
@@ -61,10 +61,11 @@ function App() {
             categorias = {categorias}
             setAnimate = {setAnimate}/>
             </>} />
-            <Route path='/react-proyecto/build/login' element={<Signup/>}/>
-            <Route path='/react-proyecto/build/about' element={<About></About>}/>  
+            <Route path='/login' element={<Signup/>}/>
+            <Route path='/about' element={<About></About>}/>  
             {/* en caso de que la URL ingresada por el usuario no coincida con la ruta de ningun Route Mostramos el Error 404 colocando un asterisco como valor en la ruta del Route */}
             <Route path='*' element={<Error404/>}/>
+            
         </Routes>
 
         {/* Iniciamos el componente Header y le pasamos los parametros necesarios */}

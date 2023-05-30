@@ -133,7 +133,7 @@ return (
                 <ul className={`HnavList ${barsAnimate ? 'HactiveNavList' : ''}`}>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         {/* Utilizamos la etiqueta Link para redireccionar a otra pagina del proyecto. Al utilizar esta etiqueta solo se realiza el renderizado de los componentes que no estaban cargados en la pagina. La diferencia con utilizar la etiqueta <a></a> es que dicha etiqueta recarga toda la pagina.*/}
-                        <Link className="HnavLink" to="/react-proyecto/build/" onClick={() => setbarsAnimate(false)}>Inicio</Link>
+                        <Link className="HnavLink" to="/" onClick={() => setbarsAnimate(false)}>Inicio</Link>
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         {/* Al hacer click en contactanos se asigna el valor true a la constante contacto y el valor false a la variable barsAnimate. De modo que se oculta el menu (Solo se puede observar en dispositivos con ancho de pantalla inferior a 1030px) y se muestra la tarjeta de contacto.*/}
@@ -243,8 +243,8 @@ return (
             </div>
             <div className="Huser">
                 <ul className='HuserList'>
-                    <li className="Hlogin"><Link to="/react-proyecto/build/login"><i className="fa fa-sign-in"></i></Link></li>
-                    <li className="Hprofile"><Link to="/react-proyecto/build/acount"><i className="fa fa-user"></i></Link></li>
+                    <li className="Hlogin"><Link to="/login"><i className="fa fa-sign-in"></i></Link></li>
+                    <li className="Hprofile"><Link to="/acount"><i className="fa fa-user"></i></Link></li>
                 </ul>
             </div>
             <div className="Hbars__menu" onClick={() => setbarsAnimate(!barsAnimate)}>
