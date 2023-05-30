@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 /* Importamos todos los componentes */
 import Header from './Header';
@@ -7,8 +7,6 @@ import Body from './Body';
 import Footer from './Footer';
 import Error404 from './Error404';
 import Signup from './Signup';
-/* Importamos el hook useState */
-import { useState } from 'react';
 /* Importamos el archivo data.js que contiene los productos */
 import {data} from '../Js/data.js'
 /* Importamos los componentes Routes, Route y BrowserRouter al cual asignamos el alias Router */
@@ -34,6 +32,7 @@ function App() {
   /* Declaramos la constante contacto para indicar si se debe mostrar el formulario de contacto y le asignamos el valor false*/
   const [contacto, setContacto] = useState(false);
 
+  const sectionProductos = useRef(null);
   return (
     <div className="App">
       {/* Utilizamos el alias Router que hace referencia al componente BrowserRouter para proveer de rutas a la aplicación */}
@@ -45,7 +44,8 @@ function App() {
         setProducts = {setProducts}
         setCategorias = {setCategorias}
         animate = {animate} setAnimate = {setAnimate}
-        contacto = {contacto} setContacto = {setContacto}/>
+        contacto = {contacto} setContacto = {setContacto}
+        sectionProductos = {sectionProductos}/>
 
         {/* Utilizamos el componente Routes que se encarga de renderizar el componente Route cuya ruta coincida con la URL ingresada por el usuario */}
         <Routes>
@@ -59,7 +59,8 @@ function App() {
             countProducts = {countProducts} setCountProducts = {setCountProducts}
             products = {products}
             categorias = {categorias}
-            setAnimate = {setAnimate}/>
+            setAnimate = {setAnimate}
+            sectionProductos = {sectionProductos}/>
             </>} />
             <Route path='/login' element={<Signup/>}/>
             <Route path='/about' element={<About></About>}/>  
@@ -72,7 +73,8 @@ function App() {
         <Footer
         setProducts = {setProducts}
         setCategorias = {setCategorias}
-        setContacto = {setContacto}/>
+        setContacto = {setContacto}
+        sectionProductos = {sectionProductos}/>
       </Router>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import '../Styles/Header.css';
 // Importamos los Hooks useState y useEffect
 import { useState, useEffect} from 'react';
@@ -10,7 +10,7 @@ import {data} from '../Js/data.js'
 import { Link } from 'react-router-dom';
 
 // Creamos la constante Header con sus parametros
-const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto}) => {
+const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto, sectionProductos}) => {
 
     /*Creamos la constante active que sirve para determinar si se deben mostrar los productos del carrito de compras*/
     const [active, setActive] = useState(false);
@@ -114,6 +114,15 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     }
 
 
+    
+
+    const scrollToSection = (ref) => {
+        if (ref.current) {
+          ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+      
+      
 
     
 
@@ -144,19 +153,19 @@ return (
                         <ul className={`Hdropdown ${barsAnimate ? 'HactiveDropdown' : ''}`}>
                             {/* Al precionar se ejecuta la funcion selectCategoria y se le envia como parametro el nombre de la categoria */}
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Ofertas</p></a>
+                                <p className="HdropLink" onClick={() => scrollToSection(sectionProductos)}>Ofertas</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Camperas</p></a>
+                                <p className="HdropLink" onClick={() => scrollToSection(sectionProductos)}>Camperas</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Pantalones</p></a>
+                                <p className="HdropLink" onClick={() => scrollToSection(sectionProductos)}>Pantalones</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Shorts</p></a>
+                                <p className="HdropLink" onClick={() => scrollToSection(sectionProductos)}>Shorts</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Remeras</p></a>
+                                <p className="HdropLink" onClick={() => scrollToSection(sectionProductos)}>Remeras</p>
                             </li>
                         </ul>
                     </li>
