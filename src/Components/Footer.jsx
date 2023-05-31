@@ -3,7 +3,7 @@ import '../Styles/Footer.css';
 import {data} from '../Js/data.js'
 import { Link } from 'react-router-dom';
 
-const Footer = ({setProducts, setCategorias, setContacto, sectionProductos}) => {
+const Footer = ({setProducts, setCategorias, setContacto, sectionProductos, sectionInicio}) => {
       /*Funcion para filtrar los productos por categorias*/
       function selectCategoria(filter, section){
         /*Filtramos los productos utilizando la funcion filter para 
@@ -21,7 +21,7 @@ const Footer = ({setProducts, setCategorias, setContacto, sectionProductos}) => 
 
     const scrollToSection = (ref) => {
       if (ref.current) {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
+        ref.current.scrollIntoView();
       }
     };
   
@@ -31,7 +31,7 @@ const Footer = ({setProducts, setCategorias, setContacto, sectionProductos}) => 
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
             <h4>Menu</h4>
-            <Link to="/">
+            <Link to="/" onClick={() => scrollToSection(sectionInicio)}>
             <p>Inicio</p>
             </Link>
               {/* Abrimos el formulario de contacto */}
@@ -47,7 +47,7 @@ const Footer = ({setProducts, setCategorias, setContacto, sectionProductos}) => 
           </div>
           <div className='sb__footer-links_div'>
             <h4>Empresa</h4>
-            <Link to="/about">
+            <Link to="/about" onClick={() => scrollToSection(sectionInicio)}>
               <p>Quienes somos</p>
             </Link>
             <a href="#">
@@ -56,7 +56,7 @@ const Footer = ({setProducts, setCategorias, setContacto, sectionProductos}) => 
             <a href="#">
               <p>¿Cómo comprar?</p>
             </a>
-            <Link to="/login">
+            <Link to="/login" onClick={() => scrollToSection(sectionInicio)}>
               <p>Mi cuenta</p>
             </Link>
           </div>

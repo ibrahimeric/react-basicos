@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Styles/About.css'
+import thomas from '../img/Integrantes/Thomas.webp'
 
 export const About = () => {
   return (
@@ -19,7 +20,7 @@ export const About = () => {
         <div className="container2">
             <div className="box">
                 <div className="imgBox">
-                    <img src="https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.6435-9/46764405_950168848516160_5131393545327869952_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=19026a&_nc_ohc=4dT8rfVhNJ4AX99waEE&_nc_ht=scontent.ftuc1-1.fna&oh=00_AfCAIJlJIUw8VQEgxgXlijgeJZ1uJOFTp9E8TvwkD97XVA&oe=649B62B2"/>
+                    <img src={thomas}/>
                 </div>
                 <div className="content">
                     <h2>Thomas Valla

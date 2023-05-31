@@ -32,7 +32,8 @@ function App() {
   /* Declaramos la constante contacto para indicar si se debe mostrar el formulario de contacto y le asignamos el valor false*/
   const [contacto, setContacto] = useState(false);
 
-  const sectionProductos = useRef(null);
+  const sectionProductos = useRef(null),
+  sectionInicio = useRef(null);
   return (
     <div className="App">
       {/* Utilizamos el alias Router que hace referencia al componente BrowserRouter para proveer de rutas a la aplicación */}
@@ -45,7 +46,8 @@ function App() {
         setCategorias = {setCategorias}
         animate = {animate} setAnimate = {setAnimate}
         contacto = {contacto} setContacto = {setContacto}
-        sectionProductos = {sectionProductos}/>
+        sectionProductos = {sectionProductos}
+        sectionInicio = {sectionInicio}/>
 
         {/* Utilizamos el componente Routes que se encarga de renderizar el componente Route cuya ruta coincida con la URL ingresada por el usuario */}
         <Routes>
@@ -60,7 +62,8 @@ function App() {
             products = {products}
             categorias = {categorias}
             setAnimate = {setAnimate}
-            sectionProductos = {sectionProductos}/>
+            sectionProductos = {sectionProductos}
+            sectionInicio = {sectionInicio}/>
             </>} />
             <Route path='/login' element={<Signup/>}/>
             <Route path='/about' element={<About></About>}/>  
@@ -74,7 +77,8 @@ function App() {
         setProducts = {setProducts}
         setCategorias = {setCategorias}
         setContacto = {setContacto}
-        sectionProductos = {sectionProductos}/>
+        sectionProductos = {sectionProductos}
+        sectionInicio = {sectionInicio}/>
       </Router>
     </div>
   );

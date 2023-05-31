@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "a30c9ba6dc91bac5d91a",
+    "revision": "94c50f7eb68361f701cd",
     "url": "/react-proyecto/build/static/css/main.17f3afe1.chunk.css"
   },
   {
-    "revision": "a30c9ba6dc91bac5d91a",
-    "url": "/react-proyecto/build/static/js/main.1fdbac47.chunk.js"
+    "revision": "94c50f7eb68361f701cd",
+    "url": "/react-proyecto/build/static/js/main.69dcbd3f.chunk.js"
   },
   {
     "revision": "b8d1836ed842e1d8efc7",
     "url": "/react-proyecto/build/static/js/runtime~main.df2269ba.js"
   },
   {
-    "revision": "a06314a0fce75e902ab0",
+    "revision": "e3bf49daf0fa07eb7445",
     "url": "/react-proyecto/build/static/css/2.ea13d538.chunk.css"
   },
   {
-    "revision": "a06314a0fce75e902ab0",
-    "url": "/react-proyecto/build/static/js/2.e474ef78.chunk.js"
+    "revision": "e3bf49daf0fa07eb7445",
+    "url": "/react-proyecto/build/static/js/2.b44b9ecc.chunk.js"
   },
   {
     "revision": "c46c57de4ff0cbd5701874910ae4a1cd",
@@ -276,6 +276,10 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/slider3.7d1ed05f.webp"
   },
   {
+    "revision": "309b29f7d018a4f4c293a61ad1323d60",
+    "url": "/react-proyecto/build/static/media/Thomas.309b29f7.webp"
+  },
+  {
     "revision": "24844e4f23b4db167b5e56a5238026cd",
     "url": "/react-proyecto/build/static/media/fondo.24844e4f.webp"
   },
@@ -288,7 +292,7 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/SignUp.ea5be8bd.webp"
   },
   {
-    "revision": "c297dc61be9f412ce40589e643e730cd",
+    "revision": "7676c4fa9e601f222ed07a36dc2c5e3f",
     "url": "/react-proyecto/build/index.html"
   }
 ];

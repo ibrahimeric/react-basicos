@@ -2,7 +2,7 @@ import React from 'react'
 import '../Styles/Body.css'
 
 
-const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal, products, categorias, setAnimate, sectionProductos}) => {
+const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal, products, categorias, setAnimate, sectionProductos, sectionInicio}) => {
   
   // Metodo para añadir productos al carrito
   const onAddProduct = product => {
