@@ -4,6 +4,12 @@
   font-size: 20px;
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 h1{
   text-align: center;

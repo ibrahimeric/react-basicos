@@ -1,27 +1,83 @@
 self.__precacheManifest = [
   {
-    "revision": "94c50f7eb68361f701cd",
-    "url": "/react-proyecto/build/static/css/main.17f3afe1.chunk.css"
+    "revision": "76c59d4498d64c58cf73",
+    "url": "/react-proyecto/build/static/css/main.3f7c6db9.chunk.css"
   },
   {
-    "revision": "94c50f7eb68361f701cd",
-    "url": "/react-proyecto/build/static/js/main.69dcbd3f.chunk.js"
+    "revision": "76c59d4498d64c58cf73",
+    "url": "/react-proyecto/build/static/js/main.dec9a913.chunk.js"
   },
   {
-    "revision": "b8d1836ed842e1d8efc7",
-    "url": "/react-proyecto/build/static/js/runtime~main.df2269ba.js"
+    "revision": "02cd1ef73c2715f33c62",
+    "url": "/react-proyecto/build/static/js/runtime~main.7d5c1b34.js"
   },
   {
-    "revision": "e3bf49daf0fa07eb7445",
+    "revision": "df1e3e18766a8acedf49",
     "url": "/react-proyecto/build/static/css/2.ea13d538.chunk.css"
   },
   {
-    "revision": "e3bf49daf0fa07eb7445",
-    "url": "/react-proyecto/build/static/js/2.b44b9ecc.chunk.js"
+    "revision": "df1e3e18766a8acedf49",
+    "url": "/react-proyecto/build/static/js/2.a849a448.chunk.js"
   },
   {
-    "revision": "c46c57de4ff0cbd5701874910ae4a1cd",
-    "url": "/react-proyecto/build/static/media/Logo-Tienda-de-ropa.c46c57de.png"
+    "revision": "af72fb9cb080c3c29639",
+    "url": "/react-proyecto/build/static/js/3.6b7fa2fb.chunk.js"
+  },
+  {
+    "revision": "f115504e760bf117f0d4",
+    "url": "/react-proyecto/build/static/css/4.1f154d0e.chunk.css"
+  },
+  {
+    "revision": "f115504e760bf117f0d4",
+    "url": "/react-proyecto/build/static/js/4.9d2d409e.chunk.js"
+  },
+  {
+    "revision": "cab5a2182759ba492a02",
+    "url": "/react-proyecto/build/static/css/5.23d60d30.chunk.css"
+  },
+  {
+    "revision": "cab5a2182759ba492a02",
+    "url": "/react-proyecto/build/static/js/5.3927db48.chunk.js"
+  },
+  {
+    "revision": "dc0c74c010a638706c38",
+    "url": "/react-proyecto/build/static/css/6.5c392d7c.chunk.css"
+  },
+  {
+    "revision": "dc0c74c010a638706c38",
+    "url": "/react-proyecto/build/static/js/6.be11a065.chunk.js"
+  },
+  {
+    "revision": "f07c7f764bf7d48b7283",
+    "url": "/react-proyecto/build/static/css/7.b2d909b0.chunk.css"
+  },
+  {
+    "revision": "f07c7f764bf7d48b7283",
+    "url": "/react-proyecto/build/static/js/7.a5b7c714.chunk.js"
+  },
+  {
+    "revision": "cbe32b2b9c6072c4e858",
+    "url": "/react-proyecto/build/static/css/8.724af97a.chunk.css"
+  },
+  {
+    "revision": "cbe32b2b9c6072c4e858",
+    "url": "/react-proyecto/build/static/js/8.42d0e5d9.chunk.js"
+  },
+  {
+    "revision": "c021887bdc9da32403a8",
+    "url": "/react-proyecto/build/static/css/9.0fec0b9d.chunk.css"
+  },
+  {
+    "revision": "c021887bdc9da32403a8",
+    "url": "/react-proyecto/build/static/js/9.67c3df65.chunk.js"
+  },
+  {
+    "revision": "b05222182e592c881c73",
+    "url": "/react-proyecto/build/static/css/10.557e0278.chunk.css"
+  },
+  {
+    "revision": "b05222182e592c881c73",
+    "url": "/react-proyecto/build/static/js/10.43e2433d.chunk.js"
   },
   {
     "revision": "afc3f56b9ad94b0e0295077f40d3d4d7",
@@ -264,6 +320,10 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/remera9.b8a406c2.webp"
   },
   {
+    "revision": "c46c57de4ff0cbd5701874910ae4a1cd",
+    "url": "/react-proyecto/build/static/media/Logo-Tienda-de-ropa.c46c57de.png"
+  },
+  {
     "revision": "bd83c711dce9b2a82fceafa5fbee0b46",
     "url": "/react-proyecto/build/static/media/slider1.bd83c711.webp"
   },
@@ -274,10 +334,6 @@ self.__precacheManifest = [
   {
     "revision": "7d1ed05f30065478e04aed822329d355",
     "url": "/react-proyecto/build/static/media/slider3.7d1ed05f.webp"
-  },
-  {
-    "revision": "309b29f7d018a4f4c293a61ad1323d60",
-    "url": "/react-proyecto/build/static/media/Thomas.309b29f7.webp"
   },
   {
     "revision": "24844e4f23b4db167b5e56a5238026cd",
@@ -292,7 +348,11 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/SignUp.ea5be8bd.webp"
   },
   {
-    "revision": "7676c4fa9e601f222ed07a36dc2c5e3f",
+    "revision": "309b29f7d018a4f4c293a61ad1323d60",
+    "url": "/react-proyecto/build/static/media/Thomas.309b29f7.webp"
+  },
+  {
+    "revision": "00e3ce2b0eef5a63cce21f90cf41aed8",
     "url": "/react-proyecto/build/index.html"
   }
 ];

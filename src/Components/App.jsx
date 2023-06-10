@@ -1,17 +1,17 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, Suspense, lazy } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-/* Importamos todos los componentes */
-import Header from './Header';
-import Slider from './Slider';
-import Body from './Body';
-import Footer from './Footer';
-import Error404 from './Error404';
-import Signup from './Signup';
 /* Importamos el archivo data.js que contiene los productos */
 import {data} from '../Js/data.js'
 /* Importamos los componentes Routes, Route y BrowserRouter al cual asignamos el alias Router */
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { About } from './About';
+import Loading from './Loading.jsx';
+const Header = lazy(() => import('./Header'));
+const Slider = lazy(() => import('./Slider'));
+const Body = lazy(() => import('./Body'));
+const Footer = lazy(() => import('./Footer'));
+const Error404 = lazy(() => import('./Error404'));
+const Signup = lazy(() => import('./Signup'));
+const About = lazy(() => import('./About'));
 
 function App() {
   /* Declaramos la constante allproducts para almacenar los productos del carrito y le asignamos como valor una matriz vacia */
@@ -34,10 +34,12 @@ function App() {
 
   const sectionProductos = useRef(null),
   sectionInicio = useRef(null);
+  
   return (
     <div className="App">
       {/* Utilizamos el alias Router que hace referencia al componente BrowserRouter para proveer de rutas a la aplicación */}
       <Router>
+      <Suspense fallback={<Loading/>}>
         {/* Iniciamos el componente Header y le pasamos los parametros necesarios */}
         <Header allProducts = {allProducts} setAllProducts = {setAllProducts} 
         total = {total} setTotal = {setTotal} 
@@ -51,27 +53,29 @@ function App() {
 
         {/* Utilizamos el componente Routes que se encarga de renderizar el componente Route cuya ruta coincida con la URL ingresada por el usuario */}
         <Routes>
-          {/* Utilizamos el componente Route para llamar a los componentes que necesitamos cargar en caso de que el usuario ingrese una ruta especifica */}
-          <Route path="/" element={<>
-          {/* Iniciamos el componente Slider */}
-            <Slider/>
-            {/* Iniciamos el componente Body y le pasamos los parametros necesarios */}
-            <Body allProducts = {allProducts} setAllProducts = {setAllProducts} 
-            total = {total} setTotal = {setTotal} 
-            countProducts = {countProducts} setCountProducts = {setCountProducts}
-            products = {products}
-            categorias = {categorias}
-            setAnimate = {setAnimate}
-            sectionProductos = {sectionProductos}
-            sectionInicio = {sectionInicio}/>
-            </>} />
-            <Route path='/login' element={<Signup/>}/>
-            <Route path='/about' element={<About></About>}/>  
-            {/* en caso de que la URL ingresada por el usuario no coincida con la ruta de ningun Route Mostramos el Error 404 colocando un asterisco como valor en la ruta del Route */}
-            <Route path='*' element={<Error404/>}/>
-            
+            {/* Utilizamos el componente Route para llamar a los componentes que necesitamos cargar en caso de que el usuario ingrese una ruta especifica */}
+            <Route path="/" element={<>
+              <Suspense fallback={<Loading/>}>
+                {/* Iniciamos el componente Slider */}
+                <Slider/>
+                {/* Iniciamos el componente Body y le pasamos los parametros necesarios */}
+                <Body allProducts = {allProducts} setAllProducts = {setAllProducts} 
+                total = {total} setTotal = {setTotal} 
+                countProducts = {countProducts} setCountProducts = {setCountProducts}
+                products = {products}
+                categorias = {categorias}
+                setAnimate = {setAnimate}
+                sectionProductos = {sectionProductos}
+                sectionInicio = {sectionInicio}/>
+              </Suspense>
+              </>} />
+              <Route path='/login' element={
+              <Suspense fallback={<Loading/>}><Signup/></Suspense>}/>
+              <Route path='/about' element={
+              <Suspense fallback={<Loading/>}><About/></Suspense>}/>
+              {/* en caso de que la URL ingresada por el usuario no coincida con la ruta de ningun Route Mostramos el Error 404 colocando un asterisco como valor en la ruta del Route */}
+              <Route path='*' element={<Suspense fallback={<Loading/>}><Error404/></Suspense>}/>
         </Routes>
-
         {/* Iniciamos el componente Header y le pasamos los parametros necesarios */}
         <Footer
         setProducts = {setProducts}
@@ -79,6 +83,7 @@ function App() {
         setContacto = {setContacto}
         sectionProductos = {sectionProductos}
         sectionInicio = {sectionInicio}/>
+        </Suspense>
       </Router>
     </div>
   );
