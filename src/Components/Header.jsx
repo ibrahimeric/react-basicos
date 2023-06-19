@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import '../Styles/Header.css';
 // Importamos los Hooks useState y useEffect
 import { useState, useEffect} from 'react';
