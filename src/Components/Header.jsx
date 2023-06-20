@@ -231,6 +231,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }})
         .then(({data}) => {
+            
             if(data.toString() === 'error1'){
                 alert('Su sesión expiró.\nDebe inicar sesión nuevamente para poder actualizar su contraseña.')
                 setUserUpdate(false)

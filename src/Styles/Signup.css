@@ -45,6 +45,7 @@
     border: solid black 1px;
     color: black;
 }
+
 .incorrectLogin{
     display: none;
     width: max-content;
@@ -56,9 +57,11 @@
     border-radius: 5px;
     margin: 5px auto 10px;
     padding: 15px 10px;
-}.activeincorrectLogin{
+}
+.activeincorrectLogin{
     display: block;
 }
+
 .containerSignUp input[type="button"]{
     background-color: rgb(40, 40, 163);
     width: 85%;

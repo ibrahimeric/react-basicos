@@ -105,13 +105,14 @@ const Signup = () => {
         <div className="containerRegister">
             <div className="img"/>
             <h3>Crea una cuenta</h3>
+            
             <form action="">
+
               <h6>Usuario:</h6>
               <input 
               type="text"  
               id="username" 
               name="username" 
-              // value={loginData.username}
               onChange={inputChange}
               placeholder="Usuario"/>
 
