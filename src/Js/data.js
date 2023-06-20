@@ -1,9 +1,4 @@
 // Importamos las imagenes que vamos a utilizar
-import short_boca from '../img/short_boca.webp'
-import short_adidas from '../img/short adidas.webp'
-import short_nike from '../img/short nike.png'
-import campera_nike from '../img/campera_nike.jpg'
-import chaleco_columbia from '../img/chaleco_hombre_columbia.webp'
 
 //categoria shorts
 import short1 from '../img/img_Shorts/short adidas camo.webp'
@@ -19,6 +14,9 @@ import short10 from '../img/img_Shorts/short_o neill.webp'
 import short11 from '../img/img_Shorts/short_oneil vert.webp'
 import short12 from '../img/img_Shorts/short_topper baumm.webp'
 import short13 from '../img/img_Shorts/short_topper rx3.webp'
+import short14 from '../img/img_Shorts/short_boca.webp'
+import short15 from '../img/img_Shorts/short adidas.webp'
+import short16 from '../img/img_Shorts/short-nike.webp'
 
 
 // CAMPERAS
@@ -35,6 +33,8 @@ import campera10 from '../img/imgCamperas/campera 10.webp'
 import campera11 from '../img/imgCamperas/campera 11.webp'
 import campera12 from '../img/imgCamperas/campera 12.webp'
 import campera13 from '../img/imgCamperas/campera 13.webp'
+import campera14 from '../img/imgCamperas/campera_nike.webp'
+import campera15 from '../img/imgCamperas/chaleco_hombre_columbia.webp'
 
 
 // PANTALONES
@@ -63,13 +63,13 @@ import pantalon20 from '../img/Pantalones/pantalon20.webp'
 //REMERAS
 import remera1 from '../img/imgRemeras/remera1.webp'
 import remera2 from '../img/imgRemeras/remera2.webp'
-import remera3 from '../img/imgRemeras/remera3.jpeg'
+import remera3 from '../img/imgRemeras/remera3.webp'
 import remera4 from '../img/imgRemeras/remera4.webp'
 import remera5 from '../img/imgRemeras/remera5.webp'
 import remera6 from '../img/imgRemeras/remera6.jpg'
-import remera7 from '../img/imgRemeras/remera7.jpg'
-import remera8 from '../img/imgRemeras/remera8.jpg'
-import remera9 from '../img/imgRemeras/remera9.jpg'
+import remera7 from '../img/imgRemeras/remera7.webp'
+import remera8 from '../img/imgRemeras/remera8.webp'
+import remera9 from '../img/imgRemeras/remera9.webp'
 
 
 export const data = [
@@ -84,17 +84,16 @@ export const data = [
         // Aqui colocamos el precio sin signo peso, solo el número
         price: 12002,
         // Aqui colocamos la ruta de la imagen
-        urlImage: short_boca,
+        urlImage: short14,
         // quantity es la cantidad. Debe ser siempre "1" para que se sume un producto al carrito al seleccionarlo.
         quantity: 1,
     },
-    
     {
         id: 5,
         categoria: 'ofertas shorts',
         nameProduct: 'Short ADIDAS',
         price: 7303,
-        urlImage: short_adidas,
+        urlImage: short15,
         quantity: 1,
     },
     {
@@ -102,7 +101,7 @@ export const data = [
         categoria: 'ofertas shorts',
         nameProduct: 'Short NIKE',
         price: 4203,
-        urlImage: short_nike,
+        urlImage: short16,
         quantity: 1,
     },
     {
@@ -110,7 +109,7 @@ export const data = [
         categoria: 'ofertas camperas',
         nameProduct: 'Campera NIKE', //cola
         price: 10203,
-        urlImage: campera_nike,
+        urlImage: campera14,
         quantity: 1,
     },
     {
@@ -118,7 +117,7 @@ export const data = [
         categoria: 'camperas',
         nameProduct: 'Chaleco COLUMBIA',
         price: 30203,
-        urlImage: chaleco_columbia,
+        urlImage: campera15,
         quantity: 1,
     },
     {

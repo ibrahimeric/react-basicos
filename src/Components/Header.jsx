@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import '../Styles/Header.css';
 // Importamos los Hooks useState y useEffect
 import { useState, useEffect} from 'react';
@@ -10,7 +10,7 @@ import {data} from '../Js/data.js'
 import { Link } from 'react-router-dom';
 
 // Creamos la constante Header con sus parametros
-const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto}) => {
+const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto, sectionProductos, sectionInicio}) => {
 
     /*Creamos la constante active que sirve para determinar si se deben mostrar los productos del carrito de compras*/
     const [active, setActive] = useState(false);
@@ -98,6 +98,8 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         dato.categoria.toLowerCase().includes(filter.toLocaleLowerCase())))
         /*Almacenamos en la constante categorias el valor del parametro filter en mayusculas*/
         setCategorias(filter.toUpperCase())
+
+        scrollToSection(sectionProductos)
     }
 
     /*Funcion para ejecutar una animación*/
@@ -114,13 +116,22 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     }
 
 
+    
+
+    const scrollToSection = (ref) => {
+        if (ref.current) {
+          ref.current.scrollIntoView();
+        }
+    };
+      
+      
 
     
 
 
 
 return (
-    <div className='header'>
+    <div className='header' ref={sectionInicio}>
         {/* Linkeamos un archivo con extensión css que servira para utilizar algunos iconos*/}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         {/* Asignando las clases de esta manera podemos verificar si se cumple una condicion para asignar una clase.*/}
@@ -133,7 +144,7 @@ return (
                 <ul className={`HnavList ${barsAnimate ? 'HactiveNavList' : ''}`}>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         {/* Utilizamos la etiqueta Link para redireccionar a otra pagina del proyecto. Al utilizar esta etiqueta solo se realiza el renderizado de los componentes que no estaban cargados en la pagina. La diferencia con utilizar la etiqueta <a></a> es que dicha etiqueta recarga toda la pagina.*/}
-                        <Link className="HnavLink" to="/react-proyecto/build/" onClick={() => setbarsAnimate(false)}>Inicio</Link>
+                        <Link className="HnavLink" to="/" onClick={() => {setbarsAnimate(false); scrollToSection(sectionInicio)}}>Inicio</Link>
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         {/* Al hacer click en contactanos se asigna el valor true a la constante contacto y el valor false a la variable barsAnimate. De modo que se oculta el menu (Solo se puede observar en dispositivos con ancho de pantalla inferior a 1030px) y se muestra la tarjeta de contacto.*/}
@@ -144,19 +155,19 @@ return (
                         <ul className={`Hdropdown ${barsAnimate ? 'HactiveDropdown' : ''}`}>
                             {/* Al precionar se ejecuta la funcion selectCategoria y se le envia como parametro el nombre de la categoria */}
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Ofertas</p></a>
+                                <p className="HdropLink">Ofertas</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Camperas</p></a>
+                                <p className="HdropLink">Camperas</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Pantalones</p></a>
+                                <p className="HdropLink">Pantalones</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Shorts</p></a>
+                                <p className="HdropLink">Shorts</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <a href="#categorias"><p className="HdropLink">Remeras</p></a>
+                                <p className="HdropLink">Remeras</p>
                             </li>
                         </ul>
                     </li>
@@ -243,8 +254,8 @@ return (
             </div>
             <div className="Huser">
                 <ul className='HuserList'>
-                    <li className="Hlogin"><Link to="/react-proyecto/build/login"><i className="fa fa-sign-in"></i></Link></li>
-                    <li className="Hprofile"><Link to="/react-proyecto/build/acount"><i className="fa fa-user"></i></Link></li>
+                    <li className="Hlogin"><Link to="/login" onClick={() => scrollToSection(sectionInicio)}><i className="fa fa-sign-in"></i></Link></li>
+                    <li className="Hprofile"><Link to="/acount" onClick={() => scrollToSection(sectionInicio)}><i className="fa fa-user"></i></Link></li>
                 </ul>
             </div>
             <div className="Hbars__menu" onClick={() => setbarsAnimate(!barsAnimate)}>

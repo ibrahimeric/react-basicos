@@ -2,7 +2,7 @@ import React from 'react'
 import '../Styles/Body.css'
 
 
-const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal, products, categorias, setAnimate}) => {
+const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal, products, categorias, setAnimate, sectionProductos, sectionInicio}) => {
   
   // Metodo para añadir productos al carrito
   const onAddProduct = product => {
@@ -52,7 +52,7 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
     // comentario
     <div className="body" >
         {/* Mostramos con el h1 el valor de la constante categoria */}
-         <h1 className='title' id='categorias'>{categorias}</h1>
+         <h1 className='title' ref={sectionProductos}>{categorias}</h1>
         
         <div className="fondo"></div>
         <div className="container">

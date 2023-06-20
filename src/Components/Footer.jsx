@@ -3,9 +3,9 @@ import '../Styles/Footer.css';
 import {data} from '../Js/data.js'
 import { Link } from 'react-router-dom';
 
-const Footer = ({setProducts, setCategorias, setContacto}) => {
+const Footer = ({setProducts, setCategorias, setContacto, sectionProductos, sectionInicio}) => {
       /*Funcion para filtrar los productos por categorias*/
-      function selectCategoria(filter){
+      function selectCategoria(filter, section){
         /*Filtramos los productos utilizando la funcion filter para 
         comparar si las categorias de los productos almacenados en 
         data contienen el nombre de la categoria recibida por el 
@@ -16,7 +16,14 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
         /*Almacenamos en la constante categorias el valor del 
         parametro filter en mayusculas*/
         setCategorias(filter.toUpperCase())
+        scrollToSection(section)
     }
+
+    const scrollToSection = (ref) => {
+      if (ref.current) {
+        ref.current.scrollIntoView();
+      }
+    };
   
   return (
     <div className="footer">
@@ -24,7 +31,7 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
         <div className='sb__footer-links'>
           <div className='sb__footer-links_div'>
             <h4>Menu</h4>
-            <Link to="/react-proyecto/build/">
+            <Link to="/" onClick={() => scrollToSection(sectionInicio)}>
             <p>Inicio</p>
             </Link>
               {/* Abrimos el formulario de contacto */}
@@ -33,22 +40,14 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
           <div className='sb__footer-links_div'>
             <h4>Productos</h4>
             {/* Con el evento onClick seleccionamos la categoria */}
-            <a href="#categorias" onClick={evt => selectCategoria(evt.target.textContent)}>
-              <p>Camperas</p>
-            </a>
-            <a href="#categorias" onClick={evt => selectCategoria(evt.target.textContent)}>
-              <p>Remeras</p>
-            </a>
-            <a href="#categorias" onClick={evt => selectCategoria(evt.target.textContent)}>
-              <p>Pantalones</p>
-            </a>
-            <a href="#categorias" onClick={evt => selectCategoria(evt.target.textContent)}>
-              <p>Shorts</p>
-            </a>
+            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Camperas</p>
+            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Remeras</p>
+            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Pantalones</p>
+            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Shorts</p>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Empresa</h4>
-            <Link to="/react-proyecto/build/about">
+            <Link to="/about" onClick={() => scrollToSection(sectionInicio)}>
               <p>Quienes somos</p>
             </Link>
             <a href="#">
@@ -57,7 +56,7 @@ const Footer = ({setProducts, setCategorias, setContacto}) => {
             <a href="#">
               <p>¿Cómo comprar?</p>
             </a>
-            <Link to="/react-proyecto/build/login">
+            <Link to="/login" onClick={() => scrollToSection(sectionInicio)}>
               <p>Mi cuenta</p>
             </Link>
           </div>
