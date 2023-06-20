@@ -48,11 +48,7 @@
     padding: 26px 20px 27px 20px;
     margin: 0;
 }
-
-
-
-
-.containerInfoContact{
+.containerModal{
     visibility: hidden;
     position: fixed;
     inset: 0 0 0 0;
@@ -63,11 +59,11 @@
     opacity: .0;
     transition: all 0.3s;
 }
-.activecontainerInfoContact{
+.activecontainerModal{
     visibility: visible;
     opacity: 1;
 }
-.infoContact{
+.Modal{
     position: absolute;
     inset: 20% 0 0 0;
     margin: 0 auto;
@@ -79,18 +75,18 @@
     z-index: 100;
     opacity: .0;
 }
-.activeinfoContact{
+.activeModal{
     opacity: 1;
 }
-.infoContact h6{
+.Modal h6{
     font-size: 24px;
     text-align: center;
 }
-.infoContact svg{
+.Modal svg{
     position: absolute;
     right: 10px;
 }
-.infoContact p{
+.Modal p{
     margin: 0;
     margin-bottom: 5px;
     width: 95%;
@@ -141,6 +137,30 @@
 }.HiconContact .fa-twitter{
     background-color: var(--twitter);
 }
+.Modal p{
+    font-size: 18px;
+}
+.Modal form{
+    display: flex;
+    flex-direction: column;
+}
+.Modal form label{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.Modal form input[type="text"]{
+    font-size: 18px;
+    border-radius: 5px;
+    border: solid 1px black;
+    padding: 0 5px;
+}
+.Modal form input[type="button"]{
+    width: min-content;
+    padding: 0 10px;
+    border: solid 1px rgb(182, 182, 182);
+    border-radius: 5px;
+    margin: 5px auto;
+}
 .Hdropdown{
     display: none;
     text-align: left;
@@ -152,6 +172,7 @@
     background-color: rgb(247, 247, 247);
     border-radius: 0 3% 3% 3%;
     padding-left: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
 }
 .HdropdowsItem{
     padding-top: 5px;
@@ -212,9 +233,9 @@
 .Htwitter:hover{
     background: var(--twitter);
 }
-
 .Huser{
-    width: 50px;
+    width: 22px;
+    margin-right: 28px;
 }
 .HuserList{
     display: block;
@@ -222,9 +243,40 @@
     list-style: none;
     padding: 0;
 }
-.HuserList a{
+.HuserList a, .HuserList i{
     font-size: 25px;
     color: #3b5999;
+}
+.Hprofile:hover .HConfUser{
+    display: block;
+}
+.HConfUser{
+    display: none;
+    position: absolute;
+    right: 0;
+    list-style: none;
+    text-align: left;
+    padding: 15px 25px 15px 15px;
+    margin: 0;
+    background-color: #f1f0f0;
+    border-radius: 0 0 0 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+}
+.HConfUser p, .HConfUser p i{
+    color: #000;
+    margin-bottom: 5px;
+}
+.HConfUser li{
+    cursor: pointer;
+}
+.HConfUser li:nth-child(2):hover{
+    color: #276ae6;
+}
+.HConfUser li:nth-child(3):hover{
+    color: red;
+}
+.HConfUser li:nth-child(4):hover{
+    color: rgb(176, 32, 32);
 }
 .HdropdowsItem a{
     color: #000;

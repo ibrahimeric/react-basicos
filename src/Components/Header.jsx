@@ -7,7 +7,8 @@ import logoImg from '../img/Logo-Tienda-de-ropa.png';
 // Importamos el archivo data.js que contiene todos los productos.
 import {data} from '../Js/data.js'
 /* Importamos Link de react-router-dom que permite redirigirnos a otras paginas de manera similar que la etiqueta "<a><a/>"*/
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 // Creamos la constante Header con sus parametros
 const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto, sectionProductos, sectionInicio}) => {
@@ -125,7 +126,136 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     };
       
       
+    const navigate = useNavigate();
 
+    function SignOff(){
+        localStorage.setItem('token', '')
+        navigate("/login");
+    }
+
+    const [userDelete, setUserDelete] = useState(false)
+
+    const [password, setPassword] = useState('');
+
+    const inputChange = ({target}) => {
+        const {name, value} = target
+        setPassword({[name]: value})
+    }
+
+    function selectConfigUser(action){
+        axios.get('http://localhost:5000/token', {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+          })
+        .then(({data}) => {
+          if(data.toString() === 'existe'){
+            if(action === 'update')
+                setUserUpdate(true)
+            else if(action === 'delete')
+                setUserDelete(true)
+            return
+          }
+          alert('Su sesión expiró.\nDebe inicar sesión nuevamente para poder continuar.')
+          navigate("/login");
+        })
+        .catch(() => {
+            alert('Su sesión expiró.\nDebe inicar sesión nuevamente para poder continuar.')
+            navigate("/login");
+        })
+    }
+
+
+
+    // Eliminar usuario
+    function deleteUser(){
+        axios.post('http://localhost:5000/api/deleteUser', password, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }})
+        .then(({data}) => {
+            if(data.toString() === 'error1'){
+                alert('Su sesión expiró.\nDebe inicar sesión nuevamente para poder eliminar su cuenta.')
+                setUserDelete(false)
+                document.getElementById("password").value = "";
+                setPassword('')
+                navigate("/login");
+            }
+            else if(data.toString() === 'error2'){
+                alert('Contraseña incorrecta.')
+            }
+            else if(data.toString() === 'exito'){
+              setUserDelete(false)
+              document.getElementById("password").value = "";
+              setPassword('')
+              alert('Usuario eliminado correctamente')
+              localStorage.setItem('token', '')
+              navigate("/");
+              return
+            }
+        })
+        .catch(() => {
+            alert('Ocurrió un error inesperado.\nPor favor intente mas tarde')
+        })
+    }
+
+
+
+
+
+
+
+
+
+
+
+    const [userUpdate, setUserUpdate] = useState(false)
+    const [body, setBody] = useState({newPassword: '', passwordActual: ''});
+    
+    const newPasswordChange = ({target}) => {
+        const {name, value} = target
+        setBody({
+            ...body,
+            [name]: value})
+    }
+
+
+    // Actualizar contraseña
+    function updatePassword(){
+        if(body.newPassword.length < 8){
+            alert('La nueva contraseña debe ser mayor a 8 caracteres')
+            return
+        }
+        axios.post('http://localhost:5000/api/updateUser', body, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }})
+        .then(({data}) => {
+            if(data.toString() === 'error1'){
+                alert('Su sesión expiró.\nDebe inicar sesión nuevamente para poder actualizar su contraseña.')
+                setUserUpdate(false)
+                document.getElementById("passwordActual").value = "";
+                document.getElementById("newPassword").value = "";
+                setBody({newPassword: '', password: ''})
+                navigate("/login");
+            }
+            else if(data.toString() === 'error2'){
+                alert('Contraseña incorrecta.')
+            }
+            else if(data.toString() === 'exito'){
+              setUserUpdate(false)
+              document.getElementById("passwordActual").value = "";
+              document.getElementById("newPassword").value = "";
+              setBody({newPassword: '', password: ''})
+              alert('Contraseña actualizada correctamente')
+              navigate("/");
+              return
+            }
+        })
+        .catch(() => {
+            alert('Ocurrió un error inesperado.\nPor favor intente mas tarde')
+        })
+    }
     
 
 
@@ -255,7 +385,14 @@ return (
             <div className="Huser">
                 <ul className='HuserList'>
                     <li className="Hlogin"><Link to="/login" onClick={() => scrollToSection(sectionInicio)}><i className="fa fa-sign-in"></i></Link></li>
-                    <li className="Hprofile"><Link to="/acount" onClick={() => scrollToSection(sectionInicio)}><i className="fa fa-user"></i></Link></li>
+                    <li className="Hprofile"><i className="fa fa-user"></i>
+                    <ul className='HConfUser'>
+                        <p><i className="fa fa-gear"></i> Config. de usuario</p>
+                        <li onClick={() => selectConfigUser('update')}>Modificar contraseña</li>
+                        <li onClick={() => selectConfigUser('delete')}>Eliminar usuario</li>
+                        <li onClick={SignOff}>Cerrar sesión</li>
+                    </ul>
+                    </li>
                 </ul>
             </div>
             <div className="Hbars__menu" onClick={() => setbarsAnimate(!barsAnimate)}>
@@ -265,13 +402,88 @@ return (
             </div>
         </nav>
 
+        
+        <div className={`containerModal ${userDelete? 'activecontainerModal' : ''}`}>
+            <div className={`Modal ${userDelete? 'activeModal' : ''}`}>
+                {/* Este svg es la X y al precionarla cierra el formulario de contacto. */}
+                <svg xmlns="http://www.w3.org/2000/svg"
+		        	fill="none"
+		        	viewBox="0 0 24 24"
+		        	strokeWidth="1.5"
+		        	stroke="currentColor"
+		        	className="Hicon-close"
+                    onClick={function(){setUserDelete(false); setPassword(''); document.getElementById("password").value = "";}}>
+		        	<path
+		        		strokeLinecap="round"
+		        		strokeLinejoin="round"
+		        		d="M6 18L18 6M6 6l12 12"
+		        	/>
+		        </svg>
+                <h6>Lamentamos que debas irte</h6>
+                <p>Para continuar debes ingresar nuevamente tu contraseña</p>
+                <form >
+                    <label htmlFor="password">Contraseña:</label>
+                    <input type="text"
+                    name='password'
+                    id='password'
+                    placeholder='Contraseña'
+                    autoComplete='off'
+                    onChange={inputChange}/>
+                    <input type="button" 
+                    value="Eliminar cuenta"
+                    onClick={deleteUser}/>
+                </form>
+            </div>
+        </div>
+        
 
+        <div className={`containerModal ${userUpdate? 'activecontainerModal' : ''}`}>
+            <div className={`Modal ${userUpdate? 'activeModal' : ''}`}>
+                {/* Este svg es la X y al precionarla cierra el formulario de contacto. */}
+                <svg xmlns="http://www.w3.org/2000/svg"
+		        	fill="none"
+		        	viewBox="0 0 24 24"
+		        	strokeWidth="1.5"
+		        	stroke="currentColor"
+		        	className="Hicon-close"
+                    onClick={function(){setUserUpdate(false); setBody({newPassword: '', password: ''}); document.getElementById("passwordActual").value = ""; document.getElementById("newPassword").value = "";}}>
+		        	<path
+		        		strokeLinecap="round"
+		        		strokeLinejoin="round"
+		        		d="M6 18L18 6M6 6l12 12"
+		        	/>
+		        </svg>
+                <h6>Lamentamos que debas irte</h6>
+                <p>Para continuar debes ingresar nuevamente tu contraseña</p>
+                <form >
+                    <label htmlFor="passwordActual">Contraseña actual:</label>
+                    <input type="text"
+                    name='passwordActual'
+                    id='passwordActual'
+                    placeholder='Contraseña actual'
+                    autoComplete='off'
+                    onChange={newPasswordChange}/>
+
+                    <label htmlFor="newPassword">Nueva contraseña:</label>
+                    <input type="text"
+                    name='newPassword'
+                    id='newPassword'
+                    placeholder='Nueva contraseña'
+                    autoComplete='off'
+                    onChange={newPasswordChange}/>
+
+                    <input type="button" 
+                    value="Eliminar cuenta"
+                    onClick={updatePassword}/>
+                </form>
+            </div>
+        </div>
 
 
         {/* Formulario de contacto */}
         {/* Se comprueba si contacto es true. En caso de cumplirse la condicion se asigna la clase para mostrar el formulario de contacto. */}
-        <div className={`containerInfoContact ${contacto? 'activecontainerInfoContact' : ''}`}>
-            <div className={`infoContact ${contacto? 'activeinfoContact' : ''}`}>
+        <div className={`containerModal ${contacto? 'activecontainerModal' : ''}`}>
+            <div className={`Modal ${contacto? 'activeModal' : ''}`}>
                 {/* Este svg es la X y al precionarla cierra el formulario de contacto. */}
                 <svg xmlns="http://www.w3.org/2000/svg"
 		        	fill="none"

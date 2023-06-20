@@ -11,6 +11,7 @@ const Body = lazy(() => import('./Body'));
 const Footer = lazy(() => import('./Footer'));
 const Error404 = lazy(() => import('./Error404'));
 const Signup = lazy(() => import('./Signup'));
+const Register = lazy(() => import('./Register'));
 const About = lazy(() => import('./About'));
 
 function App() {
@@ -71,6 +72,8 @@ function App() {
               </>} />
               <Route path='/login' element={
               <Suspense fallback={<Loading/>}><Signup/></Suspense>}/>
+              <Route path='/register' element={
+              <Suspense fallback={<Loading/>}><Register/></Suspense>}/>
               <Route path='/about' element={
               <Suspense fallback={<Loading/>}><About/></Suspense>}/>
               {/* en caso de que la URL ingresada por el usuario no coincida con la ruta de ningun Route Mostramos el Error 404 colocando un asterisco como valor en la ruta del Route */}
