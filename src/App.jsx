@@ -1,18 +1,18 @@
 import React, { useRef, useState, Suspense, lazy } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 /* Importamos el archivo data.js que contiene los productos */
-import {data} from '../Js/data.js'
+import {data} from './Js/data.js'
 /* Importamos los componentes Routes, Route y BrowserRouter al cual asignamos el alias Router */
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Loading from './Loading.jsx';
-const Header = lazy(() => import('./Header'));
-const Slider = lazy(() => import('./Slider'));
-const Body = lazy(() => import('./Body'));
-const Footer = lazy(() => import('./Footer'));
-const Error404 = lazy(() => import('./Error404'));
-const Signup = lazy(() => import('./Signup'));
-const Register = lazy(() => import('./Register'));
-const About = lazy(() => import('./About'));
+import Loading from './Components/Loading.jsx';
+const Header = lazy(() => import('./Components/Header'));
+const Slider = lazy(() => import('./Components/Slider'));
+const Body = lazy(() => import('./Components/Body'));
+const Footer = lazy(() => import('./Components/Footer'));
+const Error404 = lazy(() => import('./Components/Error404'));
+const Signup = lazy(() => import('./Components/Signup'));
+const Register = lazy(() => import('./Components/Register'));
+const About = lazy(() => import('./Components/About'));
 
 function App() {
   /* Declaramos la constante allproducts para almacenar los productos del carrito y le asignamos como valor una matriz vacia */

@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/js/0.b46dcf6a.chunk.js"
   },
   {
-    "revision": "1f424b270e1e70b7d283",
+    "revision": "b7b8de634dccc26236f8",
     "url": "/react-proyecto/build/static/css/main.3f7c6db9.chunk.css"
   },
   {
-    "revision": "1f424b270e1e70b7d283",
-    "url": "/react-proyecto/build/static/js/main.46e3e3bb.chunk.js"
+    "revision": "b7b8de634dccc26236f8",
+    "url": "/react-proyecto/build/static/js/main.7bd60801.chunk.js"
   },
   {
     "revision": "c502f7460894a9cc93fc",
@@ -364,7 +364,7 @@ self.__precacheManifest = [
     "url": "/react-proyecto/build/static/media/Thomas.309b29f7.webp"
   },
   {
-    "revision": "14b76a54f93d66f1da5a340cc1679e52",
+    "revision": "73310e7a60de049985db2d6ae7f1f697",
     "url": "/react-proyecto/build/index.html"
   }
 ];
