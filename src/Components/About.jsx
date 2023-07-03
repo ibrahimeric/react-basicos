@@ -13,7 +13,7 @@ export const About = () => {
                     </div>
                     <div className="content">
                         <h2>Eric Ibrahim
-                            <span>Licenciado en Psicologia</span>
+                            <span> Psicólogo. Est de Programación</span>
                         </h2>
                     </div>
                 </div>
