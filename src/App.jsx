@@ -1,7 +1,11 @@
-import React, { useRef, useState, Suspense, lazy } from 'react';
+import React, { useRef, useState, useEffect, Suspense, lazy } from 'react';
+import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
+
 /* Importamos el archivo data.js que contiene los productos */
-import {data} from './Js/data.js'
+// import {data} from './Js/data.js'
+
+
 /* Importamos los componentes Routes, Route y BrowserRouter al cual asignamos el alias Router */
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Loading from './Components/Loading.jsx';
@@ -24,8 +28,12 @@ function App() {
   /* Declaramos la constante categorias para almacenar la categoria de productos que se debe mostrar y le asignamos el valor 'OFERTAS' para que sea la primera categoria que se muestre */
   const [categorias, setCategorias] = useState('OFERTAS');
 
-  let product = (data.filter((dato) =>
-    dato.categoria.toLowerCase().includes('oferta'.toLocaleLowerCase())))
+  // let product = (data.filter((dato) =>
+  //   dato.categoria.toLowerCase().includes('oferta'.toLocaleLowerCase())))
+
+  let product = {};
+  const [response, setResponse] = useState(null);
+
   /* Declaramos la constante products para almacenar los productos que se deben mostrar y le asignamos como valor el contenido de la variable product */
   const [products, setProducts] = useState(product);
   /* Declaramos la constante animate para indicar si se debe mostrar una animacion y le asignamos el valor 0 */
@@ -36,11 +44,41 @@ function App() {
   const sectionProductos = useRef(null),
   sectionInicio = useRef(null);
   
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let dataResponse = await axios.get('http://localhost:5000/productos')
+          setProducts(product = (dataResponse.data.filter((dato) =>
+            dato.categoria.toLowerCase().includes('ofertas'.toLocaleLowerCase()))))
+        setResponse(dataResponse.data)
+      } catch (error) {
+        alert('Ocurrió un error inesperado.\nPor favor intente mas tarde')
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // axios.get('http://localhost:5000/productos')
+  // .then(({data}) => {
+  //   setProducts(product = (data.filter((dato) =>
+  //     dato.categoria.toLowerCase().includes('ofertas'.toLocaleLowerCase()))))
+  // })
+  // .catch(() => {
+  //   alert('Ocurrió un error inesperado.\nPor favor intente mas tarde')
+  // });
+
+
+
+
+
   return (
     <div className="App">
       {/* Utilizamos el alias Router que hace referencia al componente BrowserRouter para proveer de rutas a la aplicación */}
       <Router>
-      <Suspense fallback={<Loading/>}>
+        <Suspense fallback={<Loading/>}>
         {/* Iniciamos el componente Header y le pasamos los parametros necesarios */}
         <Header allProducts = {allProducts} setAllProducts = {setAllProducts} 
         total = {total} setTotal = {setTotal} 
@@ -50,7 +88,8 @@ function App() {
         animate = {animate} setAnimate = {setAnimate}
         contacto = {contacto} setContacto = {setContacto}
         sectionProductos = {sectionProductos}
-        sectionInicio = {sectionInicio}/>
+        sectionInicio = {sectionInicio}
+        data = {response}/>
 
         {/* Utilizamos el componente Routes que se encarga de renderizar el componente Route cuya ruta coincida con la URL ingresada por el usuario */}
         <Routes>
@@ -72,10 +111,13 @@ function App() {
               </>} />
               <Route path='/login' element={
               <Suspense fallback={<Loading/>}><Signup/></Suspense>}/>
+              
               <Route path='/register' element={
               <Suspense fallback={<Loading/>}><Register/></Suspense>}/>
+              
               <Route path='/about' element={
               <Suspense fallback={<Loading/>}><About/></Suspense>}/>
+              
               {/* en caso de que la URL ingresada por el usuario no coincida con la ruta de ningun Route Mostramos el Error 404 colocando un asterisco como valor en la ruta del Route */}
               <Route path='*' element={<Suspense fallback={<Loading/>}><Error404/></Suspense>}/>
         </Routes>
@@ -85,7 +127,8 @@ function App() {
         setCategorias = {setCategorias}
         setContacto = {setContacto}
         sectionProductos = {sectionProductos}
-        sectionInicio = {sectionInicio}/>
+        sectionInicio = {sectionInicio}
+        data = {response}/>
         </Suspense>
       </Router>
     </div>

@@ -10,10 +10,10 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
     producto almacenado en el carrito */
     if(allProducts.find(item => item.id === product.id)){
 
-      const products = allProducts.map(item => item.id === product.id? {...item, quantity: item.quantity + 1} : item);
+      const products = allProducts.map(item => item.id === product.id? {...item, stock: item.stock + 1} : item);
       
-      setTotal(total + product.price * product.quantity);
-      setCountProducts(countProducts + product.quantity);
+      setTotal(total + product.precio * product.stock);
+      setCountProducts(countProducts + product.stock);
       animationSum();
       return setAllProducts([...products]);
     }
@@ -21,10 +21,10 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
     */
     /* Asignamos a la constante total el nuevo monto sumando el 
     precio por la cantidad del producto agregado */
-    setTotal(total + product.price * product.quantity);
+    setTotal(total + product.precio * product.stock);
     /* Asignamos a la constante countProducts la nueva cantidad 
     sumando la cantidad agregada */
-    setCountProducts(countProducts + product.quantity);
+    setCountProducts(countProducts + product.stock);
     /* Asignamos a la variable allProducts los productos agregados 
     anteriormente mas el nuevo producto */
     setAllProducts([...allProducts, product]);
@@ -62,12 +62,12 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
               {products.length ? products.map(product => (
                 // Creamos un div y le añadimos la clase card y el id del producto con product.id
                 <div className="card" key={product.id}>
-                  {/* Cargamos la imagen con product.urlImage y el nombre del producto en alt con product.nameProduct */}
-                  <center>   <img src={product.urlImage} alt={product.nameProduct} /> </center>
-                  {/* Mostramos el nombre del producto con product.nameProduct */}
-                  <h6>{product.nameProduct}</h6>
-                  {/* Mostramos el precio del producto con product.price */}
-                  <p>${product.price}</p>
+                  {/* Cargamos la imagen con product.urlImage y el nombre del producto en alt con product.nombre */}
+                  <center>   <img src={`http://localhost:5000/imagenes/${product.urlImage}`} alt={product.urlImage} /> </center>
+                  {/* Mostramos el nombre del producto con product.nombre */}
+                  <h6>{product.nombre}</h6>
+                  {/* Mostramos el precio del producto con product.precio */}
+                  <p>${product.precio}</p>
                   {/* Creamos un boton y le añadimos el evento onClick para que cuando se precione ejecute el metodo onAddProduct que 
                   añade el producto al carrito*/}
                   <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>

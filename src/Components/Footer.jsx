@@ -1,9 +1,8 @@
 import React from 'react'
 import '../Styles/Footer.css';
-import {data} from '../Js/data.js'
 import { Link } from 'react-router-dom';
 
-const Footer = ({setProducts, setCategorias, setContacto, sectionProductos, sectionInicio}) => {
+const Footer = ({setProducts, setCategorias, setContacto, sectionProductos, sectionInicio, data}) => {
       /*Funcion para filtrar los productos por categorias*/
       function selectCategoria(filter, section){
         /*Filtramos los productos utilizando la funcion filter para 

@@ -4,14 +4,12 @@ import '../Styles/Header.css';
 import { useState, useEffect} from 'react';
 // Importamos el logo de la tienda de ropa
 import logoImg from '../img/Logo-Tienda-de-ropa.png';
-// Importamos el archivo data.js que contiene todos los productos.
-import {data} from '../Js/data.js'
 /* Importamos Link de react-router-dom que permite redirigirnos a otras paginas de manera similar que la etiqueta "<a><a/>"*/
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 // Creamos la constante Header con sus parametros
-const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto, sectionProductos, sectionInicio}) => {
+const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto, sectionProductos, sectionInicio, data}) => {
 
     /*Creamos la constante active que sirve para determinar si se deben mostrar los productos del carrito de compras*/
     const [active, setActive] = useState(false);
