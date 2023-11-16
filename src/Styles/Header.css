@@ -424,23 +424,32 @@
     padding: 20px 0 0 0;
     text-align: center;
 }
-.Hbtn-clear-all{
+.buttons_buy_clear{
+    display: flex;
+}
+.buttons_buy_clear button, .buttons_buy_clear a{
+    text-align: center;
     border: none;
-    background-color: #000;
-    color: #fff;
     padding: 15px 0;
-    display: block;
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    width: 50%;
     font-family: inherit;
     cursor: pointer;
-    font-size: 16px;
     transition: all 0.3s ease;
     margin: 0;
+    font-size: 20px;
 }
-.Hbtn-clear-all:hover{
-    background-color: #515151;
+.Hbtn-buy{
+    background-color: rgb(92, 243, 32);
+    color: #000;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+}
+.Hbtn-clear-all{
+    background-color: #000;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+}
+.buttons_buy_clear button:hover, .buttons_buy_clear a:hover{
     transform: scale(1.03);
     border-radius: 10px;
 }

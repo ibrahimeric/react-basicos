@@ -11,6 +11,7 @@ import axios from 'axios';
 // Creamos la constante Header con sus parametros
 const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto, sectionProductos, sectionInicio, data}) => {
 
+    const [allProductsMessaje, setAllProductsMessaje] = useState("")
     /*Creamos la constante active que sirve para determinar si se deben mostrar los productos del carrito de compras*/
     const [active, setActive] = useState(false);
     /*Creamos la constante barsAnimate que sirve para determinar si se debe activar el menu hamburguesa en resoluciones con un ancho menor a 1030px*/
@@ -34,6 +35,20 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         localStorage.setItem('cart', JSON.stringify(allProducts))
         localStorage.setItem('count', countProducts)
         localStorage.setItem('total', total)
+        if (!allProducts){
+            return
+        }
+        let productsMessaje = "";
+        let count = 1;
+        for (const product of allProducts){
+            productsMessaje += "*Nombre*: " + product.nombre + "%0A";
+            productsMessaje += "*Precio*: $" + product.precio + "%0A";
+            productsMessaje += "*Cantidad*: " + product.stock + "%0A"
+            productsMessaje += "_______________%0A%0A";
+            count++;
+        }
+
+        setAllProductsMessaje(productsMessaje)
     }, [allProducts])
 
     /*Funcion para eliminar un producto del carrito de compras que recibe como parametro los datos del producto a eliminar*/
@@ -287,6 +302,9 @@ return (
                         <ul className={`Hdropdown ${barsAnimate ? 'HactiveDropdown' : ''}`}>
                             {/* Al precionar se ejecuta la funcion selectCategoria y se le envia como parametro el nombre de la categoria */}
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
+                                <p className="HdropLink">Todos</p>
+                            </li>
+                            <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
                                 <p className="HdropLink">Ofertas</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
@@ -366,10 +384,16 @@ return (
                                     <h3>Total:</h3>
                                     <span className="Htotal-pagar">${total}</span>
                                 </div>
-                                {/* Al precionar el boton se ejecuta la funcion onCloanCart que elimina todos los productos del carrito */}
-                                <button className="Hbtn-clear-all" onClick={() => onCleanCart()}>
-                                    Vaciar carrito
-                                </button>
+
+                                <div className="buttons_buy_clear">
+                                    <a className="Hbtn-buy" href={`https://api.whatsapp.com/send?phone=3865-396343&text=Hola, quisiera comprar estos productos:%0A_______________%0A%0A${allProductsMessaje}*Total*: $${total}`} target='_blank' rel="noopener noreferrer" onClick={() => {onCleanCart(); setActive(false)}}>
+                                        Comprar ahora
+                                    </a>
+                                    {/* Al precionar el boton se ejecuta la funcion onCloanCart que elimina todos los productos del carrito */}
+                                    <button className="Hbtn-clear-all" onClick={() => onCleanCart()}>
+                                        Vaciar carrito
+                                    </button>
+                                </div>
                             </>
                         ) : (
                             <p className="Hcart-empty">El carrito está vacío</p>
