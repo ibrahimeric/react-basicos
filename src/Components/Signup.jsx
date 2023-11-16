@@ -20,7 +20,7 @@ const Signup = () => {
   const navigate = useNavigate();
   
   const onSubmit=()=>{
-    axios.post('http://localhost:5000/api/login', body)
+    axios.post('http://localhost:5000/login', body)
     .then(({data}) => {
       if(data.toString() === 'false'){
         setIncorrect(true)

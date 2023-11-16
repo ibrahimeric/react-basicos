@@ -42,11 +42,11 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
         setAllProducts(allProducts.filter(item => item.id !== product.id));
 
         /*Almacenamos en la constante total el nuevo monto luego de descontar el precio del producto eliminado por la cantidad del mismo*/
-        setTotal(total - product.price * product.quantity);
+        setTotal(total - product.precio * product.stock);
         /*Almacenamos en la constante countProducts la nueva contidad luego de descontar la cantidad del producto eliminado*/
-        setCountProducts(countProducts - product.quantity);
+        setCountProducts(countProducts - product.stock);
         /*Llamamos a la funcion animationSubstract para que se ejecute una animacion*/
-        animationSubstract('-' + product.quantity);
+        animationSubstract('-' + product.stock);
     };
     
     /*Funcion para eliminar todos los productos del carrito*/
@@ -167,7 +167,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
 
     // Eliminar usuario
     function deleteUser(){
-        axios.post('http://localhost:5000/api/deleteUser', password, {
+        axios.post('http://localhost:5000/deleteUser', password, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }})
@@ -176,13 +176,17 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
                 alert('Su sesión expiró.\nDebe inicar sesión nuevamente para poder eliminar su cuenta.')
                 setUserDelete(false)
                 document.getElementById("password").value = "";
+                localStorage.setItem('token', '')
                 setPassword('')
                 navigate("/login");
             }
             else if(data.toString() === 'error2'){
+                alert('Ocurrió un error.\nPor favor intente mas tarde.')
+            }
+            else if(data.toString() === 'inexistente'){
                 alert('Contraseña incorrecta.')
             }
-            else if(data.toString() === 'exito'){
+            else if(data.toString() === 'correcto'){
               setUserDelete(false)
               document.getElementById("password").value = "";
               setPassword('')
@@ -192,7 +196,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
               return
             }
         })
-        .catch(() => {
+        .catch(function () {
             alert('Ocurrió un error inesperado.\nPor favor intente mas tarde')
         })
     }
@@ -224,7 +228,7 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
             alert('La nueva contraseña debe ser mayor a 8 caracteres')
             return
         }
-        axios.post('http://localhost:5000/api/updateUser', body, {
+        axios.post('http://localhost:5000/updateUser', body, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }})
@@ -266,8 +270,7 @@ return (
         {/* Asignando las clases de esta manera podemos verificar si se cumple una condicion para asignar una clase.*/}
         {/* En este caso verificamos si el valor booleano almacenado en la constante Scroll es true. En caso de cumplirse la condicion se asigna la clase HnavUp para ocultar la barra de navegación */}
         <nav className={`Hnav ${Scroll ? 'HnavUp' : ''}`}>
-            <a className="Hnavlogo" href="https://ibrahimeric.github.io/react-proyecto/build/"><img src={logoImg} alt="logo"/></a>
-
+            <Link className="Hnavlogo" to={"/"}><img src={logoImg} alt="logo"/></Link>
             <div className="HnavDiv">
                 {/* En caso de que barsAnimate sea true se asigna una clase para mostrar el menu. Esto sirve para dispositivos con un ancho de pantalla menor a 600px */}
                 <ul className={`HnavList ${barsAnimate ? 'HactiveNavList' : ''}`}>
@@ -287,16 +290,16 @@ return (
                                 <p className="HdropLink">Ofertas</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <p className="HdropLink">Camperas</p>
+                                <p className="HdropLink">Celulares</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <p className="HdropLink">Pantalones</p>
+                                <p className="HdropLink">Componentes</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <p className="HdropLink">Shorts</p>
+                                <p className="HdropLink">Tablets</p>
                             </li>
                             <li className="HdropdowsItem" onClick={evt => selectCategoria(evt.target.textContent)}>
-                                <p className="HdropLink">Remeras</p>
+                                <p className="HdropLink">Impresoras</p>
                             </li>
                         </ul>
                     </li>
@@ -336,11 +339,11 @@ return (
                                         <div className="Hcart-product" key={product.id}>
 					            	    	<div className="Hinfo-cart-product">
                                                 {/* Ingresamos la cantidad almacenada del producto */}
-                	                            <span className="Hcantidad-producto-carrito">{product.quantity}</span>
+                	                            <span className="Hcantidad-producto-carrito">{product.stock}</span>
                                                     {/* Ingresamos el nombre del producto */}
-                	                                <p className="Htitulo-producto-carrito">{product.nameProduct}</p>
+                	                                <p className="Htitulo-producto-carrito">{product.nombre}</p>
                                                 {/* Ingresamos el precio del producto */}
-                	                            <span className="Hprecio-producto-carrito">${product.price}</span>
+                	                            <span className="Hprecio-producto-carrito">${product.precio}</span>
                 	                        </div>
                                             {/* Este svg es la X y al precionarla elimina el producto del carrito */}
 					            	    	<svg xmlns="http://www.w3.org/2000/svg"
@@ -420,17 +423,17 @@ return (
 		        </svg>
                 <h6>Lamentamos que debas irte</h6>
                 <p>Para continuar debes ingresar nuevamente tu contraseña</p>
-                <form >
+                <form onSubmit={(event) => event.preventDefault()}>
                     <label htmlFor="password">Contraseña:</label>
                     <input type="text"
-                    name='password'
-                    id='password'
-                    placeholder='Contraseña'
-                    autoComplete='off'
-                    onChange={inputChange}/>
+                        name='password'
+                        id='password'
+                        placeholder='Contraseña'
+                        autoComplete='off'
+                        onChange={inputChange}/>
                     <input type="button" 
-                    value="Eliminar cuenta"
-                    onClick={deleteUser}/>
+                        value="Eliminar cuenta"
+                        onClick={deleteUser}/>
                 </form>
             </div>
         </div>
@@ -457,23 +460,23 @@ return (
                 <form >
                     <label htmlFor="passwordActual">Contraseña actual:</label>
                     <input type="text"
-                    name='passwordActual'
-                    id='passwordActual'
-                    placeholder='Contraseña actual'
-                    autoComplete='off'
-                    onChange={newPasswordChange}/>
+                        name='passwordActual'
+                        id='passwordActual'
+                        placeholder='Contraseña actual'
+                        autoComplete='off'
+                        onChange={newPasswordChange}/>
 
                     <label htmlFor="newPassword">Nueva contraseña:</label>
                     <input type="text"
-                    name='newPassword'
-                    id='newPassword'
-                    placeholder='Nueva contraseña'
-                    autoComplete='off'
-                    onChange={newPasswordChange}/>
+                        name='newPassword'
+                        id='newPassword'
+                        placeholder='Nueva contraseña'
+                        autoComplete='off'
+                        onChange={newPasswordChange}/>
 
                     <input type="button" 
-                    value="Eliminar cuenta"
-                    onClick={updatePassword}/>
+                        value="Modificar contraseña"
+                        onClick={updatePassword}/>
                 </form>
             </div>
         </div>

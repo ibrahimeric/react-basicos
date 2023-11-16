@@ -75,9 +75,9 @@ const Signup = () => {
       setIncorrect(true)
       return
     }
-    axios.post('http://localhost:5000/api/register', body)
+    axios.post('http://localhost:5000/register', body)
     .then(({data}) => {
-      if(data.toString() === 'existent'){
+      if(data.toString() === 'existe'){
         setIncorrect(true)
         localStorage.setItem('token', '')
         return
