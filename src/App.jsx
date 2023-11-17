@@ -2,9 +2,6 @@ import React, { useRef, useState, useEffect, Suspense, lazy } from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-/* Importamos el archivo data.js que contiene los productos */
-// import {data} from './Js/data.js'
-
 
 /* Importamos los componentes Routes, Route y BrowserRouter al cual asignamos el alias Router */
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
@@ -50,8 +47,8 @@ function App() {
     const fetchData = async () => {
       try {
         // En caso de querer que funcione en el telefono cambiar localhost por la ip de la Pc de la siguiente manera:
-        let dataResponse = await axios.get('http://192.168.1.20:5000/productos')
-        // let dataResponse = await axios.get('http://localhost:5000/productos')
+        // let dataResponse = await axios.get('http://192.168.3.10:5000/productos')
+        let dataResponse = await axios.get('http://localhost:5000/productos')
           setProducts(product = (dataResponse.data.filter((dato) =>
             dato.categoria.toLowerCase().includes('ofertas'.toLocaleLowerCase()))))
         setResponse(dataResponse.data)
@@ -62,18 +59,6 @@ function App() {
 
     fetchData();
   }, []);
-
-  // axios.get('http://localhost:5000/productos')
-  // .then(({data}) => {
-  //   setProducts(product = (data.filter((dato) =>
-  //     dato.categoria.toLowerCase().includes('ofertas'.toLocaleLowerCase()))))
-  // })
-  // .catch(() => {
-  //   alert('Ocurrió un error inesperado.\nPor favor intente mas tarde')
-  // });
-
-
-
 
 
   return (

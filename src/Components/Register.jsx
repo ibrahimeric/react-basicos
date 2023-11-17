@@ -121,10 +121,8 @@ const Signup = () => {
               <input 
               name="password" 
               spellCheck="false"
-              type="password" 
-              // value={loginData.password}
+              type="password"
               placeholder="Contraseña"
-              // onChange={evt => changePassword(evt)}
               onChange={evt => changePassword(evt)}/>
 
               {/* Asignamos una clase con el nombre almacenado en la constante strength */}
