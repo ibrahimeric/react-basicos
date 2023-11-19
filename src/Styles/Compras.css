@@ -20,10 +20,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 .container_compra{
-    /* background-color: rgb(240, 240, 240); */
     width: 100%;
     height: 150px;
     border: solid 1px rgb(229, 229, 229);
@@ -93,18 +91,18 @@
 
 
 .container_modal_details{
-    visibility: hidden;
     position: fixed;
     inset: 0 0 0 0;
     z-index: 99;
     width: 100%;
     height: 120vh;
     background-color: rgba(0, 0, 0, .8);
+    display: none;
     opacity: .0;
     transition: all 0.3s;
 }
 .activecontainerModal{
-    visibility: visible;
+    display: block;
     opacity: 1;
 }
 .container_details{
@@ -120,7 +118,6 @@
     background-color: rgb(245, 245, 245);
     width: 95%;
     height: max-content;
-    border-radius: 20px;
     padding: 5px 10px;
     z-index: 100;
     opacity: .0;
@@ -161,7 +158,6 @@
     padding: 0 30px;
 }
 .not_found_details h1{
-    
     font-family: 'Times New Roman', Times, serif;
     font-weight: 400;
     margin: auto;
@@ -171,11 +167,14 @@
 .modal_container_compra{
     width: 100%;
     margin: 5px auto;
-    
+    display: flex;
+    justify-content: center;
 }
 .modal_info_compra{
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 15px 0;
 }
 .modal_info_compra p{

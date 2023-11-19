@@ -9,8 +9,8 @@ const Compras = () => {
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
 
-    const [detailsModal, setDetailsModal] = useState({});
     const [shoppingModal, setShoppingModal] = useState({});
+    const [detailsModal, setDetailsModal] = useState({});
 
     useEffect(() => {
         const purchasingData = async () => {
@@ -96,7 +96,7 @@ const Compras = () => {
 		                	strokeWidth="1.5"
 		                	stroke="currentColor"
 		                	className="Hicon_close_details"
-                            onClick={() => {setModal(false); setShopping({});}}>
+                            onClick={() => {setModal(false); setShoppingModal({}); setDetailsModal({});}}>
 		                	<path
 		                		strokeLinecap="round"
 		                		strokeLinejoin="round"
@@ -107,7 +107,7 @@ const Compras = () => {
                         {shoppingModal ? (
                             <div className="modal_container_compra">
                                 <div className="modal_info_compra">
-                                    <p>Fecha: {moment(shoppingModal.fecha).format('DD-MM-YYYY HH:mm:ss')}</p>
+                                    <p>Fecha: {shoppingModal.fecha ? moment(shoppingModal.fecha).format('DD-MM-YYYY HH:mm:ss'): ""}</p>
                                     <p>Nº Compra: {shoppingModal.id}</p>
                                     <p>Total: ${shoppingModal.total}</p>
                                 </div>
