@@ -115,49 +115,15 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
 		          			<span class="prev_price">${productModal.precio - 1000}</span>
 		          		</div>
 		          	</div>
-		          	<div class="card__content__action">
-		          		<button class="cart"><i className="fa fa-shopping-cart"></i> Añadir al carrito</button>
-		          	</div>
+		          	<button className='card__content__action' onClick={() => onAddProduct(productModal)}><i className="fa fa-shopping-cart"></i> Añadir al carrito</button>
 		          </div>
             </div>
           ) : (
             <div className="productNotFound">
-                <h1>Aún no realizaste compras.</h1>
+                <h1>Ocurrió un error al intentar mostrar el producto. Por favor intente mas tarde.</h1>
             </div>
           )}
         </div>
-        {/* <div className="container_details">
-          <div className={`modal_details ${detailModal? 'activeModal' : ''}`}>
-            {/* Este svg es la X y al precionarla cierra el formulario de contacto. 
-            <svg xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="Hicon_close_details"
-              onClick={() => {setDetailModal(false); setProductModal({});}}>
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-            </svg>
-
-            {productModal ? (
-                <div className="modal_container_compra">
-                    <div className="modal_info_compra">
-                        <p>Id: {productModal.id}</p>
-                        <p>Nombre: {productModal.nombre}</p>
-                        <p>Precio: ${productModal.precio}</p>
-                    </div>
-                </div>
-            ) : (
-                <div className="productNotFound">
-                    <h1>Aún no realizaste compras.</h1>
-                </div>
-            )}
-          </div>
-        </div> */}
       </div>
     </div>
   );
