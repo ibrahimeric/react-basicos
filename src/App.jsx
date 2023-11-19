@@ -46,9 +46,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // En caso de querer que funcione en el telefono cambiar localhost por la ip de la Pc de la siguiente manera:
+        // En caso de querer que funcione en el telefono cambiar 192.168.1.20 por la ip de la Pc de la siguiente manera:
         // let dataResponse = await axios.get('http://193.158.3.10:5000/productos')
-        let dataResponse = await axios.get('http://localhost:5000/productos')
+        let dataResponse = await axios.get('http://192.168.1.20:5000/productos')
           setProducts(product = (dataResponse.data.filter((dato) =>
             dato.categoria.toLowerCase().includes('ofertas'.toLocaleLowerCase()))))
         setResponse(dataResponse.data)
