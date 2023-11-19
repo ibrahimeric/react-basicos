@@ -360,6 +360,10 @@ return (
                             </li>
                         </ul>
                     </li>
+                    <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
+                        {/* Utilizamos la etiqueta Link para redireccionar a otra pagina del proyecto. Al utilizar esta etiqueta solo se realiza el renderizado de los componentes que no estaban cargados en la pagina. La diferencia con utilizar la etiqueta <a></a> es que dicha etiqueta recarga toda la pagina.*/}
+                        <Link className="HnavLink" to="/compras">Compras</Link>
+                    </li>
                 </ul>
             </div>
             <div className="Hcart">
