@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Styles/Body.css'
 
 
 const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal, products, categorias, setAnimate, sectionProductos, sectionInicio}) => {
-  
+  const [detailModal, setDetailModal] = useState(false);
+  const [productModal, setProductModal] = useState({});
   // Metodo para añadir productos al carrito
   const onAddProduct = product => {
     /* Verificamos si el id del producto coincide con el id de algun 
@@ -51,34 +52,113 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
   return (
     // comentario
     <div className="body" >
-        {/* Mostramos con el h1 el valor de la constante categoria */}
-         <h1 className='title' ref={sectionProductos}>{categorias}</h1>
-        
-        <div className="fondo"></div>
-        <div className="container">
-          {/* Comprobamos si products es distinto de nulo. En caso de cumplirse la condicion se muestran los productos. En caso contrario se muestra un mensaje indicando que no se encontraron productos */}
-          {/* Aquí ejecutamos un map para mostrar todos los productos que se encuentran cargados en el archivo data.js */}
-          {/* Con la constante product vamos añadiendo todos los productos que se encuentran en data.js */}
-              {products.length ? products.map(product => (
-                // Creamos un div y le añadimos la clase card y el id del producto con product.id
-                <div className="card" key={product.id}>
-                  {/* Cargamos la imagen con product.urlImage y el nombre del producto en alt con product.nombre */}
-                  <center>   <img src={`http://localhost:5000/imagenes/${product.urlImage}`} alt={product.urlImage} /> </center>
-                  {/* Mostramos el nombre del producto con product.nombre */}
-                  <h6>{product.nombre}</h6>
-                  {/* Mostramos el precio del producto con product.precio */}
-                  <p>${product.precio}</p>
-                  {/* Creamos un boton y le añadimos el evento onClick para que cuando se precione ejecute el metodo onAddProduct que 
-                  añade el producto al carrito*/}
-                  <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
+      {/* Mostramos con el h1 el valor de la constante categoria */}
+        <h1 className='title' ref={sectionProductos}>{categorias}</h1>
+      
+      <div className="fondo"></div>
+      <div className="container">
+        {/* Comprobamos si products es distinto de nulo. En caso de cumplirse la condicion se muestran los productos. En caso contrario se muestra un mensaje indicando que no se encontraron productos */}
+        {/* Aquí ejecutamos un map para mostrar todos los productos que se encuentran cargados en el archivo data.js */}
+        {/* Con la constante product vamos añadiendo todos los productos que se encuentran en data.js */}
+            {products.length ? products.map(product => (
+              // Creamos un div y le añadimos la clase card y el id del producto con product.id
+              <div className="card" key={product.id}>
+                {/* Cargamos la imagen con product.urlImage y el nombre del producto en alt con product.nombre */}
+                <center>   <img src={`http://localhost:5000/imagenes/${product.urlImage}`} alt={product.urlImage} /> </center>
+                {/* Mostramos el nombre del producto con product.nombre */}
+                <h6>{product.nombre}</h6>
+                {/* Mostramos el precio del producto con product.precio */}
+                <p>${product.precio}</p>
+                <p className='detail_product' onClick={() => {setDetailModal(true); setProductModal(product)}}>Ver detalles</p>
+                {/* Creamos un boton y le añadimos el evento onClick para que cuando se precione ejecute el metodo onAddProduct que 
+                añade el producto al carrito*/}
+                <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
+              </div>
+            )): (
+              <div className="productNotFound">
+                <h1>No se encontraron productos en esta categoria</h1>
+              </div>
+            )}
+      </div> 
+      {/* Formulario de contacto */}
+      {/* Se comprueba si contacto es true. En caso de cumplirse la condicion se asigna la clase para mostrar el formulario de contacto. */}
+      <div className={`container_modal_products_details ${detailModal? 'activecontainerModal' : ''}`}>
+        <div className="container_details">
+          
+          {productModal ? (
+            <div class="card_details">
+              <svg xmlns="http://www.w3.org/2000/svg"
+		        fill="none"
+		        viewBox="0 0 24 24"
+		        strokeWidth="1.5"
+		        stroke="currentColor"
+		        className="Hicon-close"
+                  onClick={() => {setDetailModal(false); setProductModal({})}}>
+		        <path
+		        	strokeLinecap="round"
+		        	strokeLinejoin="round"
+		        	d="M6 18L18 6M6 6l12 12"
+		        />
+		      </svg>
+		          <div class="card__image">
+              <img src={`http://localhost:5000/imagenes/${productModal.urlImage}`} alt={productModal.urlImage} />
+		          </div>
+		          <div class="card__content">
+		          	<div class="card__content__tag">
+		          		<span class="tag">{productModal.categoria ? (productModal.categoria).substring(6): ""}</span>
+		          	</div>
+		          	<p class="card__content__title">{productModal.nombre}</p>
+		          	<p class="card__content__info">{productModal.descripcion}</p>
+		          	<div class="card__content__config">
+		          		<div class="price">
+		          			<span class="price">${productModal.precio}</span>
+		          			<span class="prev_price">${productModal.precio - 1000}</span>
+		          		</div>
+		          	</div>
+		          	<div class="card__content__action">
+		          		<button class="cart"><i className="fa fa-shopping-cart"></i> Añadir al carrito</button>
+		          	</div>
+		          </div>
+            </div>
+          ) : (
+            <div className="productNotFound">
+                <h1>Aún no realizaste compras.</h1>
+            </div>
+          )}
+        </div>
+        {/* <div className="container_details">
+          <div className={`modal_details ${detailModal? 'activeModal' : ''}`}>
+            {/* Este svg es la X y al precionarla cierra el formulario de contacto. 
+            <svg xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="Hicon_close_details"
+              onClick={() => {setDetailModal(false); setProductModal({});}}>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+            </svg>
+
+            {productModal ? (
+                <div className="modal_container_compra">
+                    <div className="modal_info_compra">
+                        <p>Id: {productModal.id}</p>
+                        <p>Nombre: {productModal.nombre}</p>
+                        <p>Precio: ${productModal.precio}</p>
+                    </div>
                 </div>
-              )): (
+            ) : (
                 <div className="productNotFound">
-                  <h1>No se encontraron productos en esta categoria</h1>
+                    <h1>Aún no realizaste compras.</h1>
                 </div>
-              )}
-        </div> 
-        <div className="imgn"></div>
+            )}
+          </div>
+        </div> */}
+      </div>
     </div>
   );
 };

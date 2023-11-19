@@ -96,7 +96,7 @@ const Compras = () => {
 		                	strokeWidth="1.5"
 		                	stroke="currentColor"
 		                	className="Hicon_close_details"
-                            onClick={() => setModal(false)}>
+                            onClick={() => {setModal(false); setShopping({});}}>
 		                	<path
 		                		strokeLinecap="round"
 		                		strokeLinejoin="round"

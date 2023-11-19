@@ -337,6 +337,10 @@ return (
                         <p className="HnavLink" onClick={() => {setContacto(true); setbarsAnimate(false)}}>Contactanos</p>
                     </li>
                     <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
+                        {/* Utilizamos la etiqueta Link para redireccionar a otra pagina del proyecto. Al utilizar esta etiqueta solo se realiza el renderizado de los componentes que no estaban cargados en la pagina. La diferencia con utilizar la etiqueta <a></a> es que dicha etiqueta recarga toda la pagina.*/}
+                        <Link className="HnavLink" to="/compras"  onClick={() => {setbarsAnimate(false); scrollToSection(sectionInicio)}}>Compras</Link>
+                    </li>
+                    <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
                         <p className="HnavLink">Categorias <i className="Htoggle-dropdown dropdown-toggle"></i></p>
                         <ul className={`Hdropdown ${barsAnimate ? 'HactiveDropdown' : ''}`}>
                             {/* Al precionar se ejecuta la funcion selectCategoria y se le envia como parametro el nombre de la categoria */}
@@ -359,10 +363,6 @@ return (
                                 <p className="HdropLink">Impresoras</p>
                             </li>
                         </ul>
-                    </li>
-                    <li className={`HnavItem ${barsAnimate ? 'HactiveNavItem' : ''}`}>
-                        {/* Utilizamos la etiqueta Link para redireccionar a otra pagina del proyecto. Al utilizar esta etiqueta solo se realiza el renderizado de los componentes que no estaban cargados en la pagina. La diferencia con utilizar la etiqueta <a></a> es que dicha etiqueta recarga toda la pagina.*/}
-                        <Link className="HnavLink" to="/compras">Compras</Link>
                     </li>
                 </ul>
             </div>

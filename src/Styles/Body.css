@@ -73,7 +73,17 @@ img{
     margin-top: auto;
     width: 100%;
 }
-
+.detail_product{
+    cursor: pointer;
+    text-align: right;
+    width: 100%;
+    color: rgb(0, 102, 255);
+    font-size: 18px;
+}
+.detail_product:hover{
+    color: rgb(0, 195, 255);
+    text-decoration: underline;
+}
 .productNotFound{
     background-color: #fff;
     height: 100px;
@@ -87,4 +97,150 @@ img{
     font-weight: 400;
     margin: auto;
     line-height: 100px;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@100&display=swap');
+
+.container_modal_products_details{
+    font-family: 'Abel', sans-serif;
+    visibility: hidden;
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 99;
+    width: 100%;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: .0;
+    transition: all 0.3s;
+}
+.activecontainerModal{
+    visibility: visible;
+    opacity: 1;
+}
+.container_details{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_details {
+    position: relative;
+	display: flex;
+	height: 500px;
+    max-width: 90%;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.30);
+}
+.card_details .Hicon-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+.card__image {
+    height: 500px;
+    background-color: #fff;
+}
+
+.card__image img {
+	object-fit: contain;
+	height: 100%;
+}
+
+.card__content {
+	width: 350px;
+	background: #FFF;
+    padding: 30px 20px;
+}
+
+.card__content__tag {
+	display: flex;
+	gap: 1rem;
+}
+
+.card__content__tag span {
+	background: #E9E9E9;
+    font-size: 15px;
+	border-radius: 8px;
+    padding: 3px 5px;
+}
+
+.card__content__title {
+	margin: 10px 0;
+    font-size: 20px;
+	font-weight: 700;
+    height: 100px;
+    overflow: scroll;
+}
+
+.card__content__info {
+	text-align: justify;
+    font-size: 14px;
+	line-height: 1.4;
+	color: #333;
+    height: 180px;
+    margin: 0;
+    overflow: scroll;
+}
+
+.card__content__config {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card__content__config .price {
+    font-size: 34px;
+}
+
+.card__content__config .prev_price {
+    font-size: 16px;
+	text-decoration: line-through;
+	font-weight: 700;
+	margin-left: 0.25rem;
+	color: #dc2626;
+}
+
+
+.card__content__action {
+	margin-top: 10px;
+	display: flex;
+	gap: 0.5rem;
+}
+
+.card__content__action button {
+	all: unset;
+	background: #232343;
+	color: #FFF;
+	padding: 0.5rem 0.75rem;
+    padding: 5px 10px;
+	text-transform: uppercase;
+	text-align: center;
+    font-size: 17px;
 }
