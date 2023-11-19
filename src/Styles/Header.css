@@ -90,6 +90,7 @@
     margin: 0;
     margin-bottom: 5px;
     width: 95%;
+    font-size: 18px;
 }
 .contactanos{
     list-style: none;
@@ -136,9 +137,6 @@
     background-color: var(--instagram);
 }.HiconContact .fa-twitter{
     background-color: var(--twitter);
-}
-.Modal p{
-    font-size: 18px;
 }
 .Modal form{
     display: flex;

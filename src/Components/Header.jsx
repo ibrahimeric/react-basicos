@@ -12,6 +12,7 @@ import axios from 'axios';
 const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, setCountProducts, setProducts, setCategorias, animate, setAnimate, contacto, setContacto, sectionProductos, sectionInicio, data}) => {
 
     const [allProductsMessaje, setAllProductsMessaje] = useState("")
+    const [shoppingHistory, setShoppingHistory] = useState("")
     /*Creamos la constante active que sirve para determinar si se deben mostrar los productos del carrito de compras*/
     const [active, setActive] = useState(false);
     /*Creamos la constante barsAnimate que sirve para determinar si se debe activar el menu hamburguesa en resoluciones con un ancho menor a 1030px*/
@@ -39,16 +40,20 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
             return
         }
         let productsMessaje = "";
+        let letShoppingHistory = [];
         let count = 1;
         for (const product of allProducts){
             productsMessaje += "*Nombre*: " + product.nombre + "%0A";
             productsMessaje += "*Precio*: $" + product.precio + "%0A";
             productsMessaje += "*Cantidad*: " + product.stock + "%0A"
             productsMessaje += "_______________%0A%0A";
+
+            letShoppingHistory.push("'" + product.nombre + "'," + product.precio + "," +  product.stock + ")");
+
             count++;
         }
-
         setAllProductsMessaje(productsMessaje)
+        setShoppingHistory(letShoppingHistory)
     }, [allProducts])
 
     /*Funcion para eliminar un producto del carrito de compras que recibe como parametro los datos del producto a eliminar*/
@@ -276,6 +281,40 @@ const Header = ({allProducts, setAllProducts, total, setTotal, countProducts, se
     }
     
 
+    function cargarCompra(){
+        const body = {shoppingHistory, total}
+        axios.post('http://localhost:5000/cargar-venta', body, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }})
+        .then(({data}) => {
+            if(data.toString() === 'error1' || data.toString() === 'inexistente'){
+                console.log("Error1")
+                alert('Su sesión expiró.\nDebe inicar sesión nuevamente para poder realizar la compra.')
+                setActive(false);
+                navigate("/login");
+            }
+            else if(data.toString() === 'error2'){
+                console.log("Error2")
+                setActive(false);
+                alert('Ocurrió un error al intentar cargar la compra y no aparecerá en el historial.\nPor favor intente nuevamente mas tarde.')
+            }
+            else if(data.toString() === 'correcto'){
+                onCleanCart();
+                setActive(false);
+                const numeroTelefono = '3865-396343';  // Reemplaza con el número de teléfono deseado
+                const mensaje = `Hola, quisiera comprar estos productos:%0A_______________%0A%0A${allProductsMessaje}*Total*: $${total}`;
+                
+                const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${mensaje}`;
+                window.open(urlWhatsApp, '_blank', 'noopener,noreferrer');
+                return
+            }
+        })
+        .catch(() => {
+            console.log('Ocurrió un error inesperado.\nPor favor intente mas tarde')
+        })
+    }
+
 
 
 return (
@@ -386,9 +425,10 @@ return (
                                 </div>
 
                                 <div className="buttons_buy_clear">
-                                    <a className="Hbtn-buy" href={`https://api.whatsapp.com/send?phone=3865-396343&text=Hola, quisiera comprar estos productos:%0A_______________%0A%0A${allProductsMessaje}*Total*: $${total}`} target='_blank' rel="noopener noreferrer" onClick={() => {onCleanCart(); setActive(false)}}>
+                                    <button className="Hbtn-buy" onClick={() => {cargarCompra()}} >Comprar ahora</button>
+                                    {/* <a className="Hbtn-buy" href={`https://api.whatsapp.com/send?phone=3865-396343&text=Hola, quisiera comprar estos productos:%0A_______________%0A%0A${allProductsMessaje}*Total*: $${total}`} target='_blank' rel="noopener noreferrer" onClick={() => {cargarCompra()}}>
                                         Comprar ahora
-                                    </a>
+                                    </a> */}
                                     {/* Al precionar el boton se ejecuta la funcion onCloanCart que elimina todos los productos del carrito */}
                                     <button className="Hbtn-clear-all" onClick={() => onCleanCart()}>
                                         Vaciar carrito

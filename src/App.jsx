@@ -13,7 +13,7 @@ const Footer = lazy(() => import('./Components/Footer'));
 const Error404 = lazy(() => import('./Components/Error404'));
 const Signup = lazy(() => import('./Components/Signup'));
 const Register = lazy(() => import('./Components/Register'));
-const About = lazy(() => import('./Components/About'));
+const Compras = lazy(() => import('./Components/Compras'));
 
 function App() {
   /* Declaramos la constante allproducts para almacenar los productos del carrito y le asignamos como valor una matriz vacia */
@@ -47,7 +47,7 @@ function App() {
     const fetchData = async () => {
       try {
         // En caso de querer que funcione en el telefono cambiar localhost por la ip de la Pc de la siguiente manera:
-        // let dataResponse = await axios.get('http://192.168.3.10:5000/productos')
+        // let dataResponse = await axios.get('http://193.158.3.10:5000/productos')
         let dataResponse = await axios.get('http://localhost:5000/productos')
           setProducts(product = (dataResponse.data.filter((dato) =>
             dato.categoria.toLowerCase().includes('ofertas'.toLocaleLowerCase()))))
@@ -102,9 +102,9 @@ function App() {
               <Route path='/register' element={
               <Suspense fallback={<Loading/>}><Register/></Suspense>}/>
               
-              <Route path='/about' element={
-              <Suspense fallback={<Loading/>}><About/></Suspense>}/>
-              
+              <Route path='/compras' element={
+              <Suspense fallback={<Loading/>}><Compras/></Suspense>}/>
+
               {/* en caso de que la URL ingresada por el usuario no coincida con la ruta de ningun Route Mostramos el Error 404 colocando un asterisco como valor en la ruta del Route */}
               <Route path='*' element={<Suspense fallback={<Loading/>}><Error404/></Suspense>}/>
         </Routes>

@@ -46,9 +46,6 @@ const Footer = ({setProducts, setCategorias, setContacto, sectionProductos, sect
           </div>
           <div className='sb__footer-links_div'>
             <h4>Empresa</h4>
-            <Link to="/about" onClick={() => scrollToSection(sectionInicio)}>
-              <p>Quienes somos</p>
-            </Link>
             <a href="#">
               <p>Favoritos</p>
             </a>
