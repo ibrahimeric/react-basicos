@@ -3,7 +3,7 @@ import '../Styles/Header.css';
 // Importamos los Hooks useState y useEffect
 import { useState, useEffect} from 'react';
 // Importamos el logo de la tienda de ropa
-import logoImg from '../img/Logo-Tienda-de-ropa.png';
+import logoImg from '../img/logo.png';
 /* Importamos Link de react-router-dom que permite redirigirnos a otras paginas de manera similar que la etiqueta "<a><a/>"*/
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
