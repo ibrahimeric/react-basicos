@@ -64,7 +64,7 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
               // Creamos un div y le añadimos la clase card y el id del producto con product.id
               <div className="card" key={product.id}>
                 {/* Cargamos la imagen con product.urlImage y el nombre del producto en alt con product.nombre */}
-                <center>   <img src={`http://192.168.1.20:5000/imagenes/${product.urlImage}`} alt={product.urlImage} /> </center>
+                <center>   <img src={`http://localhost:5000/imagenes/${product.urlImage}`} alt={product.urlImage} /> </center>
                 {/* Mostramos el nombre del producto con product.nombre */}
                 <h6>{product.nombre}</h6>
                 {/* Mostramos el precio del producto con product.precio */}
@@ -101,7 +101,7 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
 		        />
 		      </svg>
 		          <div class="card__image">
-              <img src={`http://192.168.1.20:5000/imagenes/${productModal.urlImage}`} alt={productModal.urlImage} />
+              <img src={`http://localhost:5000/imagenes/${productModal.urlImage}`} alt={productModal.urlImage} />
 		          </div>
 		          <div class="card__content">
 		          	<div class="card__content__tag">
