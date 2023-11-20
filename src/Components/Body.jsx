@@ -69,9 +69,10 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
                 <h6>{product.nombre}</h6>
                 {/* Mostramos el precio del producto con product.precio */}
                 <p>${product.precio}</p>
-                <p className='detail_product' onClick={() => {setDetailModal(true); setProductModal(product)}}>Ver detalles</p>
-                {/* Creamos un boton y le añadimos el evento onClick para que cuando se precione ejecute el metodo onAddProduct que 
-                añade el producto al carrito*/}
+                <div className="detail_product">
+                  <p onClick={() => {setDetailModal(true); setProductModal(product)}}>Ver detalles</p>
+                </div>
+                {/* Creamos un boton y le añadimos el evento onClick para que cuando se precione ejecute el metodo onAddProduct que añade el producto al carrito*/}
                 <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
               </div>
             )): (
@@ -112,7 +113,7 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
 		          	<div class="card__content__config">
 		          		<div class="price">
 		          			<span class="price">${productModal.precio}</span>
-		          			<span class="prev_price">${productModal.precio - 1000}</span>
+		          			<span class="prev_price">${productModal.precio / 1.1}</span>
 		          		</div>
 		          	</div>
 		          	<button className='card__content__action' onClick={() => onAddProduct(productModal)}><i className="fa fa-shopping-cart"></i> Añadir al carrito</button>

@@ -39,18 +39,15 @@ const Footer = ({setProducts, setCategorias, setContacto, sectionProductos, sect
           <div className='sb__footer-links_div'>
             <h4>Productos</h4>
             {/* Con el evento onClick seleccionamos la categoria */}
-            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Camperas</p>
-            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Remeras</p>
-            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Pantalones</p>
-            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Shorts</p>
+            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Celulares</p>
+            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Componentes</p>
+            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Tablets</p>
+            <p onClick={evt => selectCategoria(evt.target.textContent, sectionProductos)}>Impresoras</p>
           </div>
           <div className='sb__footer-links_div'>
             <h4>Empresa</h4>
             <a href="#">
               <p>Favoritos</p>
-            </a>
-            <a href="#">
-              <p>¿Cómo comprar?</p>
             </a>
             <Link to="/login" onClick={() => scrollToSection(sectionInicio)}>
               <p>Mi cuenta</p>
@@ -72,7 +69,7 @@ const Footer = ({setProducts, setCategorias, setContacto, sectionProductos, sect
         <div className='sb__footer-below'>
           <div className='sb__footer-copyright'>
             <p>
-              ©{new Date().getFullYear()} Total Look, Tucumán, Argentina
+              ©{new Date().getFullYear()} Game-Store, Juan Bautista Alberdi. Tucumán
             </p>
           </div>
           <div className='sb__footer-below-links'>
