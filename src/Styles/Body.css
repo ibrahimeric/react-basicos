@@ -42,8 +42,8 @@
     margin: auto;
 }
 .card{
-    width: 410px;
-    height: 600px; /* comentario pruebaa*/
+    width: 400px;
+    height: 355px; /* comentario pruebaa*/
     border-radius: 15px;
     box-shadow: 0 2px 2px rgba(228, 53, 53, 0.2);
     overflow: hidden;
