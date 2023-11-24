@@ -29,7 +29,8 @@
 }
 .card{
     width: 410px;
-    height: 450px; /* comentario pruebaa*/
+    height: max-content;
+    min-height: 450px;
     border-radius: 15px;
     box-shadow: 0 2px 2px rgba(228, 53, 53, 0.2);
     overflow: hidden;
@@ -218,7 +219,7 @@
 	margin: 10px 0;
     font-size: 20px;
 	font-weight: 700;
-    height: 100px;
+    height: 60px;
     overflow-y: auto;
 }
 
@@ -227,7 +228,7 @@
     font-size: 17px;
 	line-height: 1.4;
 	color: #333;
-    height: 180px;
+    height: 220px;
     margin: 0;
     overflow-y: auto;
 }

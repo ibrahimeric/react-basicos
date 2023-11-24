@@ -549,7 +549,6 @@ return (
             </div>
         </div>
 
-
         {/* Formulario de contacto */}
         {/* Se comprueba si contacto es true. En caso de cumplirse la condicion se asigna la clase para mostrar el formulario de contacto. */}
         <div className={`containerModal ${contacto? 'activecontainerModal' : ''}`}>
@@ -568,7 +567,7 @@ return (
 		        		d="M6 18L18 6M6 6l12 12"
 		        	/>
 		        </svg>
-                <h6>Total Look - Contactos</h6>
+                <h6>Gamer Store - Contactos</h6>
                 <ul className='contactanos'>
                     {/* Redirigimos a la ubicacion de la empresa en google maps */}
                     <li className='contactos'><a className='direccion' href="https://www.google.com.gt/maps/place/La+Oferta/@-27.3477648,-65.5910017,18z/data=!4m10!1m2!2m1!1sla+oferta!3m6!1s0x9423cf5c99bfe997:0x1e14071c27ac474d!8m2!3d-27.3466769!4d-65.5894634!15sCglsYSBvZmVydGFaCyIJbGEgb2ZlcnRhkgEOY2xvdGhpbmdfc3RvcmXgAQA!16s%2Fg%2F11b7xmqvg8?entry=ttu" target='_blank' rel="noopener noreferrer"><i className="mail fa fa-map-marker"></i> Buenos Aires 60, Concepción, Tucumán, Argentina.</a></li>
@@ -577,7 +576,7 @@ return (
                     {/* Redirigimos a la aplicación de telefono con el numero de la empresa ingresado para poder llamar o agregar el contacto */}
                     <li className='contactos'><a className='celular' href="tel:+5493865-396343" target='_blank' rel="noopener noreferrer"><i className="fa fa-phone"></i> +54 9 3865-396343</a></li>
                     {/* Redirigimos a la aplicacion de correo electronico predeterminada para enviar un correo a la empresa con un asunto predeterminado */}
-                    <li className='contactos'><a className='mail' href="mailto:totallook@totallook.com?Subject=Me%20Interesa%20un%20producto" target='_blank' rel="noopener noreferrer"><i className="mail fa fa-envelope-o"></i> totallook@totallook.com</a></li>
+                    <li className='contactos'><a className='mail' href="mailto:GameStore@gmail.com?Subject=Me%20Interesa%20un%20producto" target='_blank' rel="noopener noreferrer"><i className="mail fa fa-envelope-o"></i> GameStore@gmail.com</a></li>
                 </ul>
                 <h6>Nuestras redes sociales</h6>
                 <div className="HiconsContact">

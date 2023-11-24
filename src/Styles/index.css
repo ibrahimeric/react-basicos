@@ -19,3 +19,12 @@ h1{
 div{
   text-align:left;
 }
+.record_compras .product_not_found_compras{
+  width: max-content;
+  max-width: 95%;
+}
+.record_compras .product_not_found_compras h1{
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}

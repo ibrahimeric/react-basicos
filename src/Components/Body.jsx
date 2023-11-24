@@ -113,7 +113,7 @@ const Principal = ({allProducts, setAllProducts, countProducts, setCountProducts
 		          	<div class="card__content__config">
 		          		<div class="price">
 		          			<span class="price">${productModal.precio}</span>
-		          			<span class="prev_price">${productModal.precio / 1.1}</span>
+		          			<span class="prev_price">${Math.round(productModal.precio * 1.1)}</span>
 		          		</div>
 		          	</div>
 		          	<button className='card__content__action' onClick={() => onAddProduct(productModal)}><i className="fa fa-shopping-cart"></i> Añadir al carrito</button>

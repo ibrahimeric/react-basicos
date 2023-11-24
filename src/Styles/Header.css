@@ -68,7 +68,8 @@
     inset: 20% 0 0 0;
     margin: 0 auto;
     background-color: rgb(245, 245, 245);
-    width: 500px;
+    width: 95%;
+    max-width: 500px;
     height: max-content;
     border-radius: 20px;
     padding: 5px 10px;
@@ -232,7 +233,6 @@
     background: var(--twitter);
 }
 .Huser{
-    width: 22px;
     margin-right: 28px;
 }
 .HuserList{
@@ -526,14 +526,12 @@
         top: 80px;
         height: calc(100vh - 80px);
         padding: 0;
-        border-radius: 0 0 0 100%;
         text-align: center;
         width: 100%;
         padding-top: 10vh;
     }
     .HactiveNavList{
         background-color: #000;
-        border-radius: 0 0 0 50%;
         translate: -100vw;
     }
     .HnavItem{
@@ -624,6 +622,7 @@
     }
     .HuserList{
         display: flex;
+        align-items: center;
         margin: auto 0;
     }
     .Hlogin{

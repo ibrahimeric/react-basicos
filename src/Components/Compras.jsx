@@ -76,8 +76,8 @@ const Compras = () => {
                         </div>
                     </div>
                 )): (
-                    <div className="productNotFound">
-                        <h1>Aún no realizaste compras.</h1>
+                    <div className="productNotFound product_not_found_compras">
+                        <h1>Cuando realices una compra aparecerá aquí.</h1>
                     </div>
                 )}
             </div>
