@@ -48,7 +48,7 @@ function App() {
       try {
         // En caso de querer que funcione en el telefono cambiar 192.168.58.199 por la ip de la Pc de la siguiente manera:
         // let dataResponse = await axios.get('http://193.158.3.10:5000/productos')
-        let dataResponse = await axios.get('http://192.168.58.199:5000/productos')
+        let dataResponse = await axios.get('http://localhost:5000/productos')
           setProducts(product = (dataResponse.data.filter((dato) =>
             dato.categoria.toLowerCase().includes('ofertas'.toLocaleLowerCase()))))
         setResponse(dataResponse.data)
